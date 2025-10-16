@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import qaiLogo from "@/assets/qai-logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-4">
-              QAI
-            </div>
+            <img 
+              src={qaiLogo} 
+              alt="QAI Logo" 
+              className="h-10 w-auto mb-4"
+            />
             <p className="text-sm text-muted-foreground mb-4">
               Leading ISO certification consultancy in Malaysia since 1995. Inspiring excellence through quality and integrity.
             </p>

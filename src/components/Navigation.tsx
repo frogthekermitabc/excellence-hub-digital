@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import qaiLogo from "@/assets/qai-logo.png";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -30,10 +31,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              QAI
-            </div>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={qaiLogo} 
+              alt="QAI - Quality Assurance International" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
