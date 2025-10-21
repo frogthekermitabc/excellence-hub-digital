@@ -35,23 +35,24 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Who We Are</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              QAI Sdn Bhd (Quality Assurance International) was incorporated in August 1995 with a clear vision — 
-              to inspire and empower organizations to achieve excellence through quality, integrity, and continuous improvement.
+              QAI Sdn Bhd (Quality Assurance International) was incorporated in August 1995 with a clear vision — to
+              inspire and empower organizations to achieve excellence through quality, integrity, and continuous
+              improvement.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Beginning with a focus on ISO 9001 (Quality Management System), QAI has progressively expanded its 
-              expertise to include ISO 14001 (Environmental Management System), ISO 27001 (Information Security Management System), 
-              ISO 45001 (Occupational Health and Safety Management System), and ISO 37001 (Anti-Bribery Management System), 
-              along with Kaizen and Lean Management practices.
+              Beginning with a focus on ISO 9001 (Quality Management System), QAI has progressively expanded its
+              expertise to include ISO 14001 (Environmental Management System), ISO 27001 (Information Security
+              Management System), ISO 45001 (Occupational Health and Safety Management System), and ISO 37001
+              (Anti-Bribery Management System), along with Kaizen and Lean Management practices.
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              For nearly three decades, QAI has been a trusted partner in providing training, consulting, and auditing 
+              For nearly three decades, QAI has been a trusted partner in providing training, consulting, and auditing
               services across Malaysia and ASEAN countries, including Indonesia and Singapore.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Through unwavering commitment, professionalism, and adaptability, QAI has successfully sustained its growth 
-              and reputation amidst the changing business and economic landscapes — continuing to uphold its mission of 
-              enhancing organizational performance and promoting a culture of excellence.
+              Through unwavering commitment, professionalism, and adaptability, QAI has successfully sustained its
+              growth and reputation amidst the changing business and economic landscapes — continuing to uphold its
+              mission of enhancing organizational performance and promoting a culture of excellence.
             </p>
           </div>
         </div>
@@ -69,10 +70,10 @@ const About = () => {
                 <h3 className="text-2xl font-bold">Our Vision</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                To assist clients to operate cost effective competitive businesses using the ISO Quality Management 
-                System Standards as the basis for continual improvement. QAI achieves this by facilitating clients 
-                to proactively look at areas of potential and achievable improvements and adopt innovative, practical 
-                and realistic targets over a set timeframe.
+                To assist clients to operate cost effective competitive businesses using the ISO Quality Management
+                System Standards as the basis for continual improvement. QAI achieves this by facilitating clients to
+                proactively look at areas of potential and achievable improvements and adopt innovative, practical and
+                realistic targets over a set timeframe.
               </p>
             </Card>
 
@@ -106,8 +107,8 @@ const About = () => {
             </div>
             <Card className="p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Committed in providing value and excellent training and consulting services that comply with 
-                clients' requirements through continual improvement and effective quality management system.
+                Committed in providing value and excellent training and consulting services that comply with clients'
+                requirements through continual improvement and effective quality management system.
               </p>
             </Card>
           </div>
@@ -150,10 +151,7 @@ const About = () => {
                   <strong className="text-primary">Registration Number:</strong>
                   <p className="text-muted-foreground">199501025484 (354689-V)</p>
                 </div>
-                <div>
-                  <strong className="text-primary">Bank Account:</strong>
-                  <p className="text-muted-foreground">Maybank - 512482102866</p>
-                </div>
+
                 <div>
                   <strong className="text-primary">MOF Certificate No:</strong>
                   <p className="text-muted-foreground">K60765123024091531</p>
