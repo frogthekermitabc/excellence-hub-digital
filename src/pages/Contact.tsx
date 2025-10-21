@@ -226,12 +226,27 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Visit Our Office</h2>
           <div className="max-w-5xl mx-auto">
-            <div className="bg-muted rounded-lg h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                <p className="text-muted-foreground">
-                  No.11-3A, Jalan Bandar 12, Pusat Bandar Puchong, 47160 Puchong, Selangor
-                </p>
+            <div className="bg-muted rounded-lg h-96 flex flex-col items-center justify-center p-8">
+              <MapPin className="h-16 w-16 text-primary mb-4" />
+              <p className="text-muted-foreground text-center mb-6 max-w-md">
+                No.11-3A, Jalan Bandar 12, Pusat Bandar Puchong, 47160 Puchong, Selangor
+              </p>
+              <div className="flex gap-4 flex-wrap justify-center">
+                <Button
+                  variant="default"
+                  size="lg"
+                  onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=No.11-3A,+Jalan+Bandar+12,+Pusat+Bandar+Puchong,+47160+Puchong,+Selangor', '_blank')}
+                  className="bg-gradient-to-r from-primary to-secondary"
+                >
+                  Open in Google Maps
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => window.open('https://maps.apple.com/?q=No.11-3A,+Jalan+Bandar+12,+Pusat+Bandar+Puchong,+47160+Puchong,+Selangor', '_blank')}
+                >
+                  Open in Apple Maps
+                </Button>
               </div>
             </div>
           </div>
