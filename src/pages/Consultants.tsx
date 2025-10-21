@@ -30,44 +30,43 @@ const Consultants = () => {
     },
     {
       name: "Wan Zainal Abidin Wan Hanafi",
-      title: "Director / Senior Consultant",
+      title: "Director / Consultant",
       education: [
-        "MBA (Management)",
-        "Bachelor of Science"
+        "Master of Philosophy Materials Technology (Brunel University)"
       ],
-      experience: "25+ years in quality excellence and performance improvement",
+      experience: "30+ years in quality excellence and performance improvement",
       expertise: [
-        "Malcolm Baldrige",
-        "Business Excellence",
-        "Performance Management",
-        "ISO 9001",
-        "International Training"
+        "ISO 9001 Quality Management System",
+        "Malcolm Baldrige Award Criteria",
+        "Total Quality Management",
+        "Quality Auditing",
+        "Continuous Improvement",
+        "Self-Assessment Workshop",
+        "Prevention of Recurrence (SBK)"
       ],
       certifications: [
-        "APO Technical Expert",
-        "Malcolm Baldrige Examiner",
-        "Senior Quality Consultant"
+        "Lead Assessor (1992)",
+        "APO Technical Expert - Asian Productivity Organisation, Tokyo, Japan"
       ]
     },
     {
       name: "Abdul Wahab Ikhsan",
-      title: "Senior Consultant / Lead Auditor",
+      title: "Consultant",
       education: [
-        "MBA Cranfield University",
-        "Bachelor of Engineering"
+        "Master of Business Administration (Cranfield School of Management, UK)"
       ],
-      experience: "30+ years in auditing and quality assurance",
+      experience: "30+ years in auditing, consulting and quality assurance",
       expertise: [
-        "ISO 9001",
-        "ISO 14001",
+        "Quality Management Systems",
+        "Surveillance Audits",
+        "Second Party Audits",
         "Oil & Gas Industry",
-        "Internal Auditing",
-        "Quality Systems"
+        "Design Consultant Auditing",
+        "Fabricators & Manufacturers Auditing",
+        "ASEAN Region Consulting"
       ],
       certifications: [
-        "IRCA Registered Lead Auditor",
-        "ISO 9001 Lead Auditor",
-        "ISO 14001 Auditor"
+        "IRCA Registered Lead QMS Auditor"
       ]
     }
   ];

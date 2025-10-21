@@ -35,13 +35,23 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">Who We Are</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Quality Assurance International (QAI) has been a trusted partner in quality management since 1995. 
-              With over 30 years of experience, we have helped thousands of organizations across Malaysia, Indonesia, 
-              and Singapore achieve and maintain their ISO certifications.
+              QAI Sdn Bhd (Quality Assurance International) was incorporated in August 1995 with a clear vision — 
+              to inspire and empower organizations to achieve excellence through quality, integrity, and continuous improvement.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              Beginning with a focus on ISO 9001 (Quality Management System), QAI has progressively expanded its 
+              expertise to include ISO 14001 (Environmental Management System), ISO 27001 (Information Security Management System), 
+              ISO 45001 (Occupational Health and Safety Management System), and ISO 37001 (Anti-Bribery Management System), 
+              along with Kaizen and Lean Management practices.
+            </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              For nearly three decades, QAI has been a trusted partner in providing training, consulting, and auditing 
+              services across Malaysia and ASEAN countries, including Indonesia and Singapore.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Our comprehensive services include training, consulting, and auditing for various ISO standards, 
-              ensuring that your organization meets international quality benchmarks while driving operational excellence.
+              Through unwavering commitment, professionalism, and adaptability, QAI has successfully sustained its growth 
+              and reputation amidst the changing business and economic landscapes — continuing to uphold its mission of 
+              enhancing organizational performance and promoting a culture of excellence.
             </p>
           </div>
         </div>
@@ -59,8 +69,10 @@ const About = () => {
                 <h3 className="text-2xl font-bold">Our Vision</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                To be the leading ISO certification consultancy in Southeast Asia, recognized for excellence, 
-                integrity, and innovation in quality management solutions.
+                To assist clients to operate cost effective competitive businesses using the ISO Quality Management 
+                System Standards as the basis for continual improvement. QAI achieves this by facilitating clients 
+                to proactively look at areas of potential and achievable improvements and adopt innovative, practical 
+                and realistic targets over a set timeframe.
               </p>
             </Card>
 
@@ -71,10 +83,14 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl font-bold">Our Mission</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                To empower organizations with world-class ISO certification services, expert training, and 
-                strategic consulting that drives sustainable growth and operational excellence.
+              <p className="text-muted-foreground leading-relaxed mb-3">
+                Committed in providing excellent training and consultancy services to all clients by:
               </p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                <li>Ensuring innovative and effective knowledge transfer</li>
+                <li>Facilitating and enhancing management competency</li>
+                <li>Delivering effective solutions across the clients' organization</li>
+              </ul>
             </Card>
           </div>
         </div>
@@ -89,24 +105,10 @@ const About = () => {
               <h2 className="text-3xl font-bold">Quality Policy</h2>
             </div>
             <Card className="p-8">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                QAI is committed to delivering exceptional quality management solutions that exceed client expectations. 
-                We continuously improve our services through:
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Committed in providing value and excellent training and consulting services that comply with 
+                clients' requirements through continual improvement and effective quality management system.
               </p>
-              <ul className="space-y-3">
-                {[
-                  "Maintaining the highest standards of professional integrity and ethics",
-                  "Providing expert guidance by qualified and experienced consultants",
-                  "Ensuring customer satisfaction through personalized service delivery",
-                  "Continuous professional development of our team",
-                  "Adherence to international ISO standards and best practices",
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start space-x-3">
-                    <CheckCircle className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
             </Card>
           </div>
         </div>
@@ -141,19 +143,40 @@ const About = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Certifications & Registrations</h2>
-          <div className="flex flex-wrap gap-4 justify-center max-w-3xl mx-auto">
-            <Badge className="text-base px-6 py-3 bg-gradient-to-r from-primary to-secondary">
-              MOF Registered
-            </Badge>
-            <Badge className="text-base px-6 py-3 bg-gradient-to-r from-primary to-secondary">
-              HRD Corp Certified
-            </Badge>
-            <Badge className="text-base px-6 py-3 bg-gradient-to-r from-primary to-secondary">
-              Bumiputera Status
-            </Badge>
-            <Badge className="text-base px-6 py-3 bg-gradient-to-r from-primary to-secondary">
-              IRCA Registered Auditors
-            </Badge>
+          <div className="max-w-3xl mx-auto">
+            <Card className="p-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <strong className="text-primary">Registration Number:</strong>
+                  <p className="text-muted-foreground">199501025484 (354689-V)</p>
+                </div>
+                <div>
+                  <strong className="text-primary">Bank Account:</strong>
+                  <p className="text-muted-foreground">Maybank - 512482102866</p>
+                </div>
+                <div>
+                  <strong className="text-primary">MOF Certificate No:</strong>
+                  <p className="text-muted-foreground">K60765123024091531</p>
+                </div>
+                <div>
+                  <strong className="text-primary">MOF Reg. Ref. No:</strong>
+                  <p className="text-muted-foreground">357-02074092</p>
+                </div>
+                <div>
+                  <strong className="text-primary">MOF Validation Period:</strong>
+                  <p className="text-muted-foreground">03/02/2025 - 15/03/2028</p>
+                </div>
+                <div>
+                  <strong className="text-primary">Bumiputera Certificate No:</strong>
+                  <p className="text-muted-foreground">BP60765123024091531</p>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t">
+                <Badge className="bg-gradient-to-r from-primary to-secondary">
+                  HRD CORP Registered Training Provider
+                </Badge>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
@@ -164,7 +187,7 @@ const About = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">Our Geographic Reach</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { country: "Malaysia", description: "Headquarters in Subang Jaya with nationwide coverage" },
+              { country: "Malaysia", description: "Headquarters in Puchong with nationwide coverage" },
               { country: "Indonesia", description: "Serving major business centers across the archipelago" },
               { country: "Singapore", description: "Supporting enterprises in the financial hub of Southeast Asia" },
             ].map((location, idx) => (

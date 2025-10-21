@@ -25,10 +25,11 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Inspiring Excellence Through
-            <br />
-            Quality & Integrity Since 1995
+            Guide with Passion
           </h1>
+          <p className="text-2xl text-white/95 mb-4 font-semibold">
+            Inspiring Excellence Through Quality & Integrity Since 1995
+          </p>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Leading ISO certification consultancy serving Malaysia, Indonesia, and Singapore
           </p>

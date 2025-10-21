@@ -69,9 +69,10 @@ const Contact = () => {
               </div>
               <h3 className="font-semibold mb-2">Office Location</h3>
               <p className="text-sm text-muted-foreground">
-                Taipan Triangle<br />
-                Subang Jaya<br />
-                Selangor, Malaysia
+                No.11-3A, Jalan Bandar 12<br />
+                Pusat Bandar Puchong<br />
+                47160 Puchong<br />
+                Selangor Darul Ehsan
               </p>
             </Card>
 
@@ -83,8 +84,8 @@ const Contact = () => {
               </div>
               <h3 className="font-semibold mb-2">Phone</h3>
               <p className="text-sm text-muted-foreground">
-                +60 3-XXXX XXXX<br />
-                +60 12-XXX XXXX
+                +6012-469 1606<br />
+                +6016-260 1606
               </p>
             </Card>
 
@@ -96,8 +97,9 @@ const Contact = () => {
               </div>
               <h3 className="font-semibold mb-2">Email</h3>
               <p className="text-sm text-muted-foreground">
-                info@qai.com.my<br />
-                training@qai.com.my
+                info@qaims.com.my<br />
+                musri@qaims.com.my<br />
+                musritukiman@gmail.com
               </p>
             </Card>
 
@@ -228,7 +230,7 @@ const Contact = () => {
               <div className="text-center">
                 <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
                 <p className="text-muted-foreground">
-                  Taipan Triangle, Subang Jaya, Selangor, Malaysia
+                  No.11-3A, Jalan Bandar 12, Pusat Bandar Puchong, 47160 Puchong, Selangor
                 </p>
               </div>
             </div>
