@@ -11,29 +11,17 @@ const Consultants = () => {
       name: "Musri Tukiman",
       title: "Managing Director / Principal Consultant",
       education: [
-        "B. Civil Engineering",
-        "MSc Manufacturing Systems Engineering"
+        "B. Civil Engineering (University of Detroit, USA) ",
+        "Master of Science in Manufacturing Systems Engineering (University of Warwick, UK)",
       ],
       experience: "30+ years in quality management and ISO certification",
-      expertise: [
-        "ISO 9001",
-        "ISO 21001",
-        "Quality Management",
-        "Strategic Planning",
-        "Organizational Excellence"
-      ],
-      certifications: [
-        "Lead Assessor ISO 9000",
-        "Lead Assessor ISO 21001",
-        "Quality Management Expert"
-      ]
+      expertise: ["ISO 9001", "ISO 21001", "Quality Management", "Strategic Planning", "Organizational Excellence"],
+      certifications: ["Lead Assessor ISO 9000", "Lead Assessor ISO 21001", "Quality Management Expert"],
     },
     {
       name: "Wan Zainal Abidin Wan Hanafi",
       title: "Director / Consultant",
-      education: [
-        "Master of Philosophy Materials Technology (Brunel University)"
-      ],
+      education: ["Master of Philosophy Materials Technology (Brunel University)"],
       experience: "30+ years in quality excellence and performance improvement",
       expertise: [
         "ISO 9001 Quality Management System",
@@ -42,19 +30,14 @@ const Consultants = () => {
         "Quality Auditing",
         "Continuous Improvement",
         "Self-Assessment Workshop",
-        "Prevention of Recurrence (SBK)"
+        "Prevention of Recurrence (SBK)",
       ],
-      certifications: [
-        "Lead Assessor (1992)",
-        "APO Technical Expert - Asian Productivity Organisation, Tokyo, Japan"
-      ]
+      certifications: ["Lead Assessor (1992)", "APO Technical Expert - Asian Productivity Organisation, Tokyo, Japan"],
     },
     {
       name: "Abdul Wahab Ikhsan",
       title: "Consultant",
-      education: [
-        "Master of Business Administration (Cranfield School of Management, UK)"
-      ],
+      education: ["Master of Business Administration (Cranfield School of Management, UK)"],
       experience: "30+ years in auditing, consulting and quality assurance",
       expertise: [
         "Quality Management Systems",
@@ -63,12 +46,10 @@ const Consultants = () => {
         "Oil & Gas Industry",
         "Design Consultant Auditing",
         "Fabricators & Manufacturers Auditing",
-        "ASEAN Region Consulting"
+        "ASEAN Region Consulting",
       ],
-      certifications: [
-        "IRCA Registered Lead QMS Auditor"
-      ]
-    }
+      certifications: ["IRCA Registered Lead QMS Auditor"],
+    },
   ];
 
   return (
@@ -91,11 +72,11 @@ const Consultants = () => {
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-bold mb-6">Industry-Leading Expertise</h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Our consultants bring a wealth of knowledge from diverse industries and international markets. 
-              With advanced qualifications, professional certifications, and extensive hands-on experience, 
-              they provide strategic guidance that drives real results for your organization.
+              Our consultants bring a wealth of knowledge from diverse industries and international markets. With
+              advanced qualifications, professional certifications, and extensive hands-on experience, they provide
+              strategic guidance that drives real results for your organization.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="p-6 bg-muted rounded-lg">
                 <Users className="h-10 w-10 text-primary mx-auto mb-3" />
@@ -127,7 +108,7 @@ const Consultants = () => {
                 "Oil & Gas Companies",
                 "Manufacturing Sector",
                 "Healthcare Institutions",
-                "Educational Organizations"
+                "Educational Organizations",
               ].map((client, idx) => (
                 <div key={idx} className="p-4 bg-muted rounded-lg text-center text-sm font-medium">
                   {client}
@@ -156,7 +137,8 @@ const Consultants = () => {
           <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Work With Our Experts</h2>
             <p className="text-lg mb-8 opacity-90">
-              Connect with our consultants to discuss your ISO certification needs and find the right solution for your organization
+              Connect with our consultants to discuss your ISO certification needs and find the right solution for your
+              organization
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
