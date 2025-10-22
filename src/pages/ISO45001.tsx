@@ -123,7 +123,7 @@ const ISO45001 = () => {
                 </Button>
               </Link>
               <Link to="/courses">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
                   OH&S Training
                 </Button>
               </Link>
