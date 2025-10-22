@@ -235,7 +235,7 @@ const Courses = () => {
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
                   Request In-House Training
                 </Button>
               </Link>
