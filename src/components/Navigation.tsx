@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 import qaiLogo from "@/assets/qai-logo.png";
 import {
   NavigationMenu,
@@ -15,15 +17,16 @@ import {
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const isActive = (path: string) => location.pathname === path;
 
   const managementSystems = [
-    { title: "ISO 9001:2015", description: "Quality Management", path: "/iso-9001" },
-    { title: "ISO 14001:2015", description: "Environmental Management", path: "/iso-14001" },
-    { title: "ISO 45001:2018", description: "Occupational Health & Safety", path: "/iso-45001" },
-    { title: "ISO 27001:2022", description: "Information Security", path: "/iso-27001" },
-    { title: "ISO 37001:2018", description: "Anti-Bribery Management", path: "/iso-37001" },
+    { title: "ISO 9001:2015", description: t("iso.qualityManagement"), path: "/iso-9001" },
+    { title: "ISO 14001:2015", description: t("iso.environmentalManagement"), path: "/iso-14001" },
+    { title: "ISO 45001:2018", description: t("iso.occupationalHealthSafety"), path: "/iso-45001" },
+    { title: "ISO 27001:2022", description: t("iso.informationSecurity"), path: "/iso-27001" },
+    { title: "ISO 37001:2018", description: t("iso.antiBribery"), path: "/iso-37001" },
   ];
 
   return (
@@ -42,13 +45,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
             <Link to="/">
-              <Button variant={isActive("/") ? "default" : "ghost"}>Home</Button>
+              <Button variant={isActive("/") ? "default" : "ghost"}>{t("nav.home")}</Button>
             </Link>
             <Link to="/about">
-              <Button variant={isActive("/about") ? "default" : "ghost"}>About Us</Button>
+              <Button variant={isActive("/about") ? "default" : "ghost"}>{t("nav.about")}</Button>
             </Link>
             <Link to="/services">
-              <Button variant={isActive("/services") ? "default" : "ghost"}>Services</Button>
+              <Button variant={isActive("/services") ? "default" : "ghost"}>{t("nav.services")}</Button>
             </Link>
             
             {/* Management Systems Dropdown */}
@@ -56,7 +59,7 @@ const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent">
-                    Management Systems
+                    {t("nav.managementSystems")}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
@@ -82,20 +85,21 @@ const Navigation = () => {
             </NavigationMenu>
 
             <Link to="/consultants">
-              <Button variant={isActive("/consultants") ? "default" : "ghost"}>Our Consultants</Button>
+              <Button variant={isActive("/consultants") ? "default" : "ghost"}>{t("nav.consultants")}</Button>
             </Link>
             <Link to="/courses">
-              <Button variant={isActive("/courses") ? "default" : "ghost"}>Courses</Button>
+              <Button variant={isActive("/courses") ? "default" : "ghost"}>{t("nav.courses")}</Button>
             </Link>
             <Link to="/contact">
-              <Button variant={isActive("/contact") ? "default" : "ghost"}>Contact</Button>
+              <Button variant={isActive("/contact") ? "default" : "ghost"}>{t("nav.contact")}</Button>
             </Link>
+            <LanguageToggle />
           </div>
 
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-primary to-secondary">Get a Quote</Button>
+              <Button className="bg-gradient-to-r from-primary to-secondary">{t("nav.getQuote")}</Button>
             </Link>
           </div>
 
@@ -114,17 +118,17 @@ const Navigation = () => {
           <div className="lg:hidden pb-4 space-y-2">
             <Link to="/" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/") ? "default" : "ghost"} className="w-full justify-start">
-                Home
+                {t("nav.home")}
               </Button>
             </Link>
             <Link to="/about" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/about") ? "default" : "ghost"} className="w-full justify-start">
-                About Us
+                {t("nav.about")}
               </Button>
             </Link>
             <Link to="/services" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/services") ? "default" : "ghost"} className="w-full justify-start">
-                Services
+                {t("nav.services")}
               </Button>
             </Link>
             <div className="pl-4 space-y-1">
@@ -138,19 +142,22 @@ const Navigation = () => {
             </div>
             <Link to="/consultants" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/consultants") ? "default" : "ghost"} className="w-full justify-start">
-                Our Consultants
+                {t("nav.consultants")}
               </Button>
             </Link>
             <Link to="/courses" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/courses") ? "default" : "ghost"} className="w-full justify-start">
-                Courses
+                {t("nav.courses")}
               </Button>
             </Link>
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/contact") ? "default" : "ghost"} className="w-full justify-start">
-                Contact
+                {t("nav.contact")}
               </Button>
             </Link>
+            <div className="px-2">
+              <LanguageToggle />
+            </div>
           </div>
         )}
       </div>

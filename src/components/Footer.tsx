@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import qaiLogo from "@/assets/qai-logo.png";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-muted mt-20">
       <div className="container mx-auto px-4 py-12">
@@ -15,29 +18,29 @@ const Footer = () => {
               className="h-10 w-auto mb-4"
             />
             <p className="text-sm text-muted-foreground mb-4">
-              Leading ISO certification consultancy in Malaysia since 1995. Inspiring excellence through quality and integrity.
+              {t("footer.description")}
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <span className="font-semibold">MOF Registered</span>
+              <span className="font-semibold">{t("footer.mofRegistered")}</span>
               <span>•</span>
-              <span className="font-semibold">HRD Corp</span>
+              <span className="font-semibold">{t("footer.hrdCorp")}</span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/consultants" className="text-muted-foreground hover:text-primary transition-colors">Our Consultants</Link></li>
-              <li><Link to="/courses" className="text-muted-foreground hover:text-primary transition-colors">Courses</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.services")}</Link></li>
+              <li><Link to="/consultants" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.consultants")}</Link></li>
+              <li><Link to="/courses" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.courses")}</Link></li>
             </ul>
           </div>
 
           {/* ISO Standards */}
           <div>
-            <h3 className="font-semibold mb-4">ISO Standards</h3>
+            <h3 className="font-semibold mb-4">{t("footer.isoStandards")}</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/iso-9001" className="text-muted-foreground hover:text-primary transition-colors">ISO 9001:2015</Link></li>
               <li><Link to="/iso-14001" className="text-muted-foreground hover:text-primary transition-colors">ISO 14001:2015</Link></li>
@@ -49,7 +52,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact Us</h3>
+            <h3 className="font-semibold mb-4">{t("footer.contactUs")}</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
@@ -68,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Quality Assurance International. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Quality Assurance International. {t("footer.allRightsReserved")}</p>
         </div>
       </div>
     </footer>

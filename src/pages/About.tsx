@@ -1,18 +1,21 @@
-import { Award, Target, Eye, CheckCircle } from "lucide-react";
+import { Award, Target, Eye } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const About = () => {
+  const { t } = useLanguage();
+  
   const timeline = [
-    { year: "1995", event: "QAI established, beginning our journey in quality management consulting" },
-    { year: "2000", event: "Expanded services to include ISO 14001 environmental management" },
-    { year: "2005", event: "Reached milestone of 500+ successful certifications" },
-    { year: "2010", event: "Extended operations to Indonesia and Singapore" },
-    { year: "2015", event: "Celebrated 20 years of excellence with 2000+ clients served" },
-    { year: "2020", event: "Launched comprehensive online training programs" },
-    { year: "2025", event: "30 years of inspiring excellence in quality management" },
+    { year: "1995", event: t("about.timeline.1995") },
+    { year: "2000", event: t("about.timeline.2000") },
+    { year: "2005", event: t("about.timeline.2005") },
+    { year: "2010", event: t("about.timeline.2010") },
+    { year: "2015", event: t("about.timeline.2015") },
+    { year: "2020", event: t("about.timeline.2020") },
+    { year: "2025", event: t("about.timeline.2025") },
   ];
 
   return (
@@ -22,9 +25,9 @@ const About = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About QAI</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Three decades of excellence in ISO certification, training, and consulting services
+            {t("about.subtitle")}
           </p>
         </div>
       </section>
@@ -33,26 +36,18 @@ const About = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Who We Are</h2>
+            <h2 className="text-3xl font-bold mb-6 text-center">{t("about.whoWeAre")}</h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              QAI Sdn Bhd (Quality Assurance International) was incorporated in August 1995 with a clear vision — to
-              inspire and empower organizations to achieve excellence through quality, integrity, and continuous
-              improvement.
+              {t("about.para1")}
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Beginning with a focus on ISO 9001 (Quality Management System), QAI has progressively expanded its
-              expertise to include ISO 14001 (Environmental Management System), ISO 27001 (Information Security
-              Management System), ISO 45001 (Occupational Health and Safety Management System), and ISO 37001
-              (Anti-Bribery Management System), along with Kaizen and Lean Management practices.
+              {t("about.para2")}
             </p>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              For nearly three decades, QAI has been a trusted partner in providing training, consulting, and auditing
-              services across Malaysia and ASEAN countries, including Indonesia and Singapore.
+              {t("about.para3")}
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Through unwavering commitment, professionalism, and adaptability, QAI has successfully sustained its
-              growth and reputation amidst the changing business and economic landscapes — continuing to uphold its
-              mission of enhancing organizational performance and promoting a culture of excellence.
+              {t("about.para4")}
             </p>
           </div>
         </div>
@@ -67,13 +62,10 @@ const About = () => {
                 <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
                   <Eye className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Our Vision</h3>
+                <h3 className="text-2xl font-bold">{t("about.ourVision")}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed">
-                To assist clients to operate cost effective competitive businesses using the ISO Quality Management
-                System Standards as the basis for continual improvement. QAI achieves this by facilitating clients to
-                proactively look at areas of potential and achievable improvements and adopt innovative, practical and
-                realistic targets over a set timeframe.
+                {t("about.visionText")}
               </p>
             </Card>
 
@@ -82,15 +74,15 @@ const About = () => {
                 <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
                   <Target className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold">Our Mission</h3>
+                <h3 className="text-2xl font-bold">{t("about.ourMission")}</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed mb-3">
-                Committed in providing excellent training and consultancy services to all clients by:
+                {t("about.missionText")}
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                <li>Ensuring innovative and effective knowledge transfer</li>
-                <li>Facilitating and enhancing management competency</li>
-                <li>Delivering effective solutions across the clients' organization</li>
+                <li>{t("about.mission1")}</li>
+                <li>{t("about.mission2")}</li>
+                <li>{t("about.mission3")}</li>
               </ul>
             </Card>
           </div>
@@ -103,12 +95,11 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center space-x-3 mb-6">
               <Award className="h-8 w-8 text-primary" />
-              <h2 className="text-3xl font-bold">Quality Policy</h2>
+              <h2 className="text-3xl font-bold">{t("about.qualityPolicy")}</h2>
             </div>
             <Card className="p-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Committed in providing value and excellent training and consulting services that comply with clients'
-                requirements through continual improvement and effective quality management system.
+                {t("about.qualityPolicyText")}
               </p>
             </Card>
           </div>
@@ -118,7 +109,7 @@ const About = () => {
       {/* Timeline */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Journey</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("about.ourJourney")}</h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {timeline.map((item, idx) => (
@@ -143,35 +134,35 @@ const About = () => {
       {/* Certifications & Registrations */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Certifications & Registrations</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t("about.certificationsRegistrations")}</h2>
           <div className="max-w-3xl mx-auto">
             <Card className="p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 <div>
-                  <strong className="text-primary">Registration Number:</strong>
+                  <strong className="text-primary">{t("about.registrationNumber")}:</strong>
                   <p className="text-muted-foreground">199501025484 (354689-V)</p>
                 </div>
 
                 <div>
-                  <strong className="text-primary">MOF Certificate No:</strong>
+                  <strong className="text-primary">{t("about.mofCertificateNo")}:</strong>
                   <p className="text-muted-foreground">K60765123024091531</p>
                 </div>
                 <div>
-                  <strong className="text-primary">MOF Reg. Ref. No:</strong>
+                  <strong className="text-primary">{t("about.mofRegRefNo")}:</strong>
                   <p className="text-muted-foreground">357-02074092</p>
                 </div>
                 <div>
-                  <strong className="text-primary">MOF Validation Period:</strong>
+                  <strong className="text-primary">{t("about.mofValidationPeriod")}:</strong>
                   <p className="text-muted-foreground">03/02/2025 - 15/03/2028</p>
                 </div>
                 <div>
-                  <strong className="text-primary">Bumiputera Certificate No:</strong>
+                  <strong className="text-primary">{t("about.bumiputeraCertificateNo")}:</strong>
                   <p className="text-muted-foreground">BP60765123024091531</p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t">
                 <Badge className="bg-gradient-to-r from-primary to-secondary">
-                  HRD CORP Registered Training Provider
+                  {t("about.hrdCorpProvider")}
                 </Badge>
               </div>
             </Card>
@@ -182,12 +173,12 @@ const About = () => {
       {/* Geographic Reach */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Geographic Reach</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t("about.ourGeographicReach")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { country: "Malaysia", description: "Headquarters in Puchong with nationwide coverage" },
-              { country: "Indonesia", description: "Serving major business centers across the archipelago" },
-              { country: "Singapore", description: "Supporting enterprises in the financial hub of Southeast Asia" },
+              { country: "Malaysia", description: t("about.malaysiaDesc") },
+              { country: "Indonesia", description: t("about.indonesiaDesc") },
+              { country: "Singapore", description: t("about.singaporeDesc") },
             ].map((location, idx) => (
               <Card key={idx} className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-2 text-primary">{location.country}</h3>
