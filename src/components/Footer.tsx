@@ -31,10 +31,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.about")}</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.services")}</Link></li>
-              <li><Link to="/consultants" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.consultants")}</Link></li>
-              <li><Link to="/courses" className="text-muted-foreground hover:text-primary transition-colors">{t("nav.courses")}</Link></li>
+              <li><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/services" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">{t("nav.services")}</Link></li>
+              <li><Link to="/consultants" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">{t("nav.consultants")}</Link></li>
+              <li><Link to="/courses" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">{t("nav.courses")}</Link></li>
             </ul>
           </div>
 
@@ -42,11 +42,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">{t("footer.isoStandards")}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/iso-9001" className="text-muted-foreground hover:text-primary transition-colors">ISO 9001:2015</Link></li>
-              <li><Link to="/iso-14001" className="text-muted-foreground hover:text-primary transition-colors">ISO 14001:2015</Link></li>
-              <li><Link to="/iso-45001" className="text-muted-foreground hover:text-primary transition-colors">ISO 45001:2018</Link></li>
-              <li><Link to="/iso-27001" className="text-muted-foreground hover:text-primary transition-colors">ISO 27001:2022</Link></li>
-              <li><Link to="/iso-37001" className="text-muted-foreground hover:text-primary transition-colors">ISO 37001:2018</Link></li>
+              <li><Link to="/iso-9001" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">ISO 9001:2015</Link></li>
+              <li><Link to="/iso-14001" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">ISO 14001:2015</Link></li>
+              <li><Link to="/iso-45001" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">ISO 45001:2018</Link></li>
+              <li><Link to="/iso-27001" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">ISO 27001:2022</Link></li>
+              <li><Link to="/iso-37001" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-muted-foreground hover:text-primary transition-colors">ISO 37001:2018</Link></li>
             </ul>
           </div>
 
