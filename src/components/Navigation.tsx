@@ -143,7 +143,7 @@ const Navigation = () => {
               </Button>
             </Link>
             <div className="space-y-1">
-              <div className="px-3 py-2 text-sm font-semibold">{t("nav.company")}</div>
+              <div className="px-3 py-2 text-sm font-semibold">{t("Company")}</div>
               <div className="pl-4 space-y-1">
                 <Link to="/about" onClick={() => setIsOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start text-sm">
