@@ -35,11 +35,7 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
-              src={qaiLogo} 
-              alt="QAI - Quality Assurance International" 
-              className="h-12 w-auto"
-            />
+            <img src={qaiLogo} alt="QAI - Quality Assurance International" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,14 +43,12 @@ const Navigation = () => {
             <Link to="/">
               <Button variant={isActive("/") ? "default" : "ghost"}>{t("nav.home")}</Button>
             </Link>
-            
+
             {/* Company Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent">
-                    {t("nav.company")}
-                  </NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent">{t("Company")}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[200px] gap-3 p-4">
                       <li>
@@ -86,14 +80,12 @@ const Navigation = () => {
             <Link to="/services">
               <Button variant={isActive("/services") ? "default" : "ghost"}>{t("nav.services")}</Button>
             </Link>
-            
+
             {/* Management Systems Dropdown */}
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent">
-                    {t("nav.managementSystems")}
-                  </NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent">{t("nav.managementSystems")}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
                       {managementSystems.map((system) => (
@@ -136,10 +128,7 @@ const Navigation = () => {
           {/* Mobile Menu Button & Language Toggle */}
           <div className="flex lg:hidden items-center gap-2">
             <LanguageToggle />
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
+            <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
