@@ -23,10 +23,14 @@ const ISO27001 = () => {
               </div>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("iso27001.title")}</AnimatedText>
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+                {t("iso27001.title")}
+              </AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-2xl mb-4" delay={0.3}>{t("iso27001.subtitle")}</AnimatedText>
+              <AnimatedText className="text-2xl mb-4" delay={0.3}>
+                {t("iso27001.subtitle")}
+              </AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
               <AnimatedText className="text-lg opacity-90" delay={0.5}>
@@ -95,27 +99,6 @@ const ISO27001 = () => {
                 </div>
               </div>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary via-accent to-secondary rounded-2xl p-12 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">{t("iso27001.cta")}</h2>
-            <p className="text-lg mb-8 opacity-90">{t("iso27001.ctaDesc")}</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                  {t("iso27001.getProtected")}
-                </Button>
-              </Link>
-              <Link to="/courses">
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  {t("iso27001.securityTraining")}
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
