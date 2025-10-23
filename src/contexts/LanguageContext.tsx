@@ -28,19 +28,15 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
   const t = (key: string): string => {
     const keys = key.split(".");
     let value: any = translations[language];
-    
+
     for (const k of keys) {
       value = value?.[k];
     }
-    
+
     return value || key;
   };
 
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      {children}
-    </LanguageContext.Provider>
-  );
+  return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>;
 };
 
 const translations = {
@@ -56,7 +52,8 @@ const translations = {
       getQuote: "Get a Quote",
     },
     footer: {
-      description: "Leading ISO certification consultancy in Malaysia since 1995. Inspiring excellence through quality and integrity.",
+      description:
+        "Leading ISO certification consultancy in Malaysia since 1995. Inspiring excellence through quality and integrity.",
       quickLinks: "Quick Links",
       isoStandards: "ISO Standards",
       contactUs: "Contact Us",
@@ -75,7 +72,8 @@ const translations = {
       countriesServed: "Countries Served",
       certificationsCompleted: "Certifications Completed",
       isoManagementSystems: "ISO Management Systems",
-      isoManagementSystemsDesc: "Comprehensive certification, training, and consulting services for international quality standards",
+      isoManagementSystemsDesc:
+        "Comprehensive certification, training, and consulting services for international quality standards",
       iso9001Desc: "Quality Management System for operational excellence and customer satisfaction",
       iso14001Desc: "Environmental Management System for sustainable business practices",
       iso45001Desc: "Occupational Health & Safety Management for workplace protection",
@@ -85,9 +83,11 @@ const translations = {
       ourServices: "Our Services",
       ourServicesDesc: "End-to-end solutions for ISO certification and quality management",
       trainingServices: "Training Services",
-      trainingServicesDesc: "Public courses, in-house training, and customized programs. HRD Corp claimable courses available.",
+      trainingServicesDesc:
+        "Public courses, in-house training, and customized programs. HRD Corp claimable courses available.",
       consultingServices: "Consulting Services",
-      consultingServicesDesc: "ISO implementation, gap analysis, documentation development, and system maintenance support.",
+      consultingServicesDesc:
+        "ISO implementation, gap analysis, documentation development, and system maintenance support.",
       auditingServices: "Auditing Services",
       auditingServicesDesc: "Internal audits, surveillance audits, pre-certification, and second-party auditing.",
       readyToCertify: "Ready to Get Certified?",
@@ -99,19 +99,25 @@ const translations = {
       title: "About QAI",
       subtitle: "Three decades of excellence in ISO certification, training, and consulting services",
       whoWeAre: "Who We Are",
-      para1: "QAI Sdn Bhd (Quality Assurance International) was incorporated in August 1995 with a clear vision — to inspire and empower organizations to achieve excellence through quality, integrity, and continuous improvement.",
-      para2: "Beginning with a focus on ISO 9001 (Quality Management System), QAI has progressively expanded its expertise to include ISO 14001 (Environmental Management System), ISO 27001 (Information Security Management System), ISO 45001 (Occupational Health and Safety Management System), and ISO 37001 (Anti-Bribery Management System), along with Kaizen and Lean Management practices.",
-      para3: "For nearly three decades, QAI has been a trusted partner in providing training, consulting, and auditing services across Malaysia and ASEAN countries, including Indonesia and Singapore.",
-      para4: "Through unwavering commitment, professionalism, and adaptability, QAI has successfully sustained its growth and reputation amidst the changing business and economic landscapes — continuing to uphold its mission of enhancing organizational performance and promoting a culture of excellence.",
+      para1:
+        "QAI Sdn Bhd (Quality Assurance International) was incorporated in August 1995 with a clear vision — to inspire and empower organizations to achieve excellence through quality, integrity, and continuous improvement.",
+      para2:
+        "Beginning with a focus on ISO 9001 (Quality Management System), QAI has progressively expanded its expertise to include ISO 14001 (Environmental Management System), ISO 27001 (Information Security Management System), ISO 45001 (Occupational Health and Safety Management System), and ISO 37001 (Anti-Bribery Management System), along with Kaizen and Lean Management practices.",
+      para3:
+        "For nearly three decades, QAI has been a trusted partner in providing training, consulting, and auditing services across Malaysia and ASEAN countries, including Indonesia and Singapore.",
+      para4:
+        "Through unwavering commitment, professionalism, and adaptability, QAI has successfully sustained its growth and reputation amidst the changing business and economic landscapes — continuing to uphold its mission of enhancing organizational performance and promoting a culture of excellence.",
       ourVision: "Our Vision",
-      visionText: "To assist clients to operate cost effective competitive businesses using the ISO Quality Management System Standards as the basis for continual improvement. QAI achieves this by facilitating clients to proactively look at areas of potential and achievable improvements and adopt innovative, practical and realistic targets over a set timeframe.",
+      visionText:
+        "To assist clients to operate cost effective competitive businesses using the ISO Quality Management System Standards as the basis for continual improvement. QAI achieves this by facilitating clients to proactively look at areas of potential and achievable improvements and adopt innovative, practical and realistic targets over a set timeframe.",
       ourMission: "Our Mission",
       missionText: "Committed in providing excellent training and consultancy services to all clients by:",
       mission1: "Ensuring innovative and effective knowledge transfer",
       mission2: "Facilitating and enhancing management competency",
       mission3: "Delivering effective solutions across the clients' organization",
       qualityPolicy: "Quality Policy",
-      qualityPolicyText: "Committed in providing value and excellent training and consulting services that comply with clients' requirements through continual improvement and effective quality management system.",
+      qualityPolicyText:
+        "Committed in providing value and excellent training and consulting services that comply with clients' requirements through continual improvement and effective quality management system.",
       ourJourney: "Our Journey",
       timeline: {
         1995: "QAI established, beginning our journey in quality management consulting",
@@ -145,7 +151,8 @@ const translations = {
       title: "Our Services",
       subtitle: "Comprehensive ISO certification solutions tailored to your organization's needs",
       training: "Training Services",
-      trainingDesc: "Empower your team with expert-led ISO training programs designed to build competency and ensure successful implementation.",
+      trainingDesc:
+        "Empower your team with expert-led ISO training programs designed to build competency and ensure successful implementation.",
       publicCourses: "Public Training Courses",
       publicCoursesDesc: "Scheduled courses open to all participants with HRD Corp claimable options available.",
       inHouse: "In-House Training",
@@ -202,12 +209,14 @@ const translations = {
       title: "Training Courses",
       subtitle: "Professional ISO certification training programs designed to build competence and ensure success",
       publicCourses: "Public Courses",
-      publicCoursesDesc: "Join our scheduled training sessions with participants from various organizations. Perfect for individuals or small teams.",
+      publicCoursesDesc:
+        "Join our scheduled training sessions with participants from various organizations. Perfect for individuals or small teams.",
       hrdClaimable: "HRD Corp claimable courses available",
       networking: "Networking with industry professionals",
       earlyBird: "Early bird pricing available",
       inHouse: "In-House Training",
-      inHouseDesc: "Customized training delivered at your location, tailored to your organization's specific needs and industry context.",
+      inHouseDesc:
+        "Customized training delivered at your location, tailored to your organization's specific needs and industry context.",
       flexible: "Flexible scheduling at your convenience",
       customized: "Content customized to your processes",
       costEffective: "Cost-effective for larger teams",
@@ -278,17 +287,23 @@ const translations = {
       subtitle: "Quality Management System",
       tagline: "The world's most recognized quality management standard for operational excellence",
       whatIs: "What is ISO 9001:2015?",
-      description1: "ISO 9001:2015 is an international standard that specifies requirements for a quality management system (QMS). Organizations use the standard to demonstrate the ability to consistently provide products and services that meet customer and regulatory requirements.",
-      description2: "It is the most widely used quality management standard in the world, helping organizations of all sizes and sectors to improve their performance, meet customer expectations, and demonstrate their commitment to quality.",
+      description1:
+        "ISO 9001:2015 is an international standard that specifies requirements for a quality management system (QMS). Organizations use the standard to demonstrate the ability to consistently provide products and services that meet customer and regulatory requirements.",
+      description2:
+        "It is the most widely used quality management standard in the world, helping organizations of all sizes and sectors to improve their performance, meet customer expectations, and demonstrate their commitment to quality.",
       benefits: "Key Benefits",
       benefit1Title: "Enhanced Customer Satisfaction",
-      benefit1Desc: "Consistently meet customer requirements and enhance satisfaction through effective system application and continual improvement.",
+      benefit1Desc:
+        "Consistently meet customer requirements and enhance satisfaction through effective system application and continual improvement.",
       benefit2Title: "Improved Operational Efficiency",
-      benefit2Desc: "Streamline processes, reduce waste, and increase productivity through a systematic approach to quality management.",
+      benefit2Desc:
+        "Streamline processes, reduce waste, and increase productivity through a systematic approach to quality management.",
       benefit3Title: "Employee Engagement",
-      benefit3Desc: "Create a culture of quality awareness and continuous improvement, boosting employee engagement and competency.",
+      benefit3Desc:
+        "Create a culture of quality awareness and continuous improvement, boosting employee engagement and competency.",
       benefit4Title: "Competitive Advantage",
-      benefit4Desc: "Demonstrate commitment to quality, win more tenders, and gain a competitive edge in the marketplace.",
+      benefit4Desc:
+        "Demonstrate commitment to quality, win more tenders, and gain a competitive edge in the marketplace.",
       whoNeeds: "Who Needs ISO 9001?",
       manufacturing: "Manufacturing",
       services: "Services",
@@ -321,8 +336,10 @@ const translations = {
       subtitle: "Environmental Management System",
       tagline: "Demonstrate your commitment to environmental sustainability and regulatory compliance",
       whatIs: "What is ISO 14001:2015?",
-      description1: "ISO 14001:2015 is the international standard for Environmental Management Systems (EMS). It provides a framework for organizations to protect the environment, respond to changing environmental conditions, and balance this with socio-economic needs.",
-      description2: "Organizations implementing ISO 14001 can systematically reduce their environmental impact while potentially reducing costs through improved efficiency and waste reduction.",
+      description1:
+        "ISO 14001:2015 is the international standard for Environmental Management Systems (EMS). It provides a framework for organizations to protect the environment, respond to changing environmental conditions, and balance this with socio-economic needs.",
+      description2:
+        "Organizations implementing ISO 14001 can systematically reduce their environmental impact while potentially reducing costs through improved efficiency and waste reduction.",
       benefits: "Key Benefits",
       benefit1Title: "Environmental Protection",
       benefit1Desc: "Reduce environmental impact through systematic management of resources and waste.",
@@ -342,8 +359,10 @@ const translations = {
       subtitle: "Information Security Management System",
       tagline: "Protect your information assets and build trust with stakeholders",
       whatIs: "What is ISO 27001:2022?",
-      description1: "ISO 27001:2022 is the international standard for information security management. It provides a systematic approach to managing sensitive company information, ensuring it remains secure through people, processes, and technology controls.",
-      description2: "This standard helps organizations of any size or sector protect their information assets, comply with regulations, and demonstrate their commitment to information security to customers and partners.",
+      description1:
+        "ISO 27001:2022 is the international standard for information security management. It provides a systematic approach to managing sensitive company information, ensuring it remains secure through people, processes, and technology controls.",
+      description2:
+        "This standard helps organizations of any size or sector protect their information assets, comply with regulations, and demonstrate their commitment to information security to customers and partners.",
       benefits: "Key Benefits",
       benefit1Title: "Information Security",
       benefit1Desc: "Protect sensitive data from breaches, leaks, and cyber threats through systematic controls.",
@@ -363,8 +382,10 @@ const translations = {
       subtitle: "Anti-Bribery Management System",
       tagline: "Build a culture of integrity and prevent corruption in your organization",
       whatIs: "What is ISO 37001:2016?",
-      description1: "ISO 37001:2016 specifies requirements for establishing, implementing, maintaining, and improving an anti-bribery management system. It helps organizations prevent, detect, and address bribery risks.",
-      description2: "This standard is applicable to all organizations, regardless of size, sector, or location, and addresses bribery in both the public and private sectors.",
+      description1:
+        "ISO 37001:2016 specifies requirements for establishing, implementing, maintaining, and improving an anti-bribery management system. It helps organizations prevent, detect, and address bribery risks.",
+      description2:
+        "This standard is applicable to all organizations, regardless of size, sector, or location, and addresses bribery in both the public and private sectors.",
       benefits: "Key Benefits",
       benefit1Title: "Prevent Corruption",
       benefit1Desc: "Establish robust controls to prevent bribery and corruption in all business dealings.",
@@ -384,8 +405,10 @@ const translations = {
       subtitle: "Occupational Health & Safety Management System",
       tagline: "Create a safe and healthy workplace for your employees",
       whatIs: "What is ISO 45001:2018?",
-      description1: "ISO 45001:2018 is the international standard for occupational health and safety (OH&S) management systems. It provides a framework for organizations to improve employee safety, reduce workplace risks, and create better, safer working conditions.",
-      description2: "This standard helps organizations prevent work-related injury and ill health, as well as continually improve their OH&S performance.",
+      description1:
+        "ISO 45001:2018 is the international standard for occupational health and safety (OH&S) management systems. It provides a framework for organizations to improve employee safety, reduce workplace risks, and create better, safer working conditions.",
+      description2:
+        "This standard helps organizations prevent work-related injury and ill health, as well as continually improve their OH&S performance.",
       benefits: "Key Benefits",
       benefit1Title: "Workplace Safety",
       benefit1Desc: "Reduce workplace accidents, injuries, and illnesses through proactive risk management.",
@@ -406,6 +429,7 @@ const translations = {
       home: "Laman Utama",
       about: "Tentang Kami",
       services: "Perkhidmatan",
+      company: "Syarikat",
       managementSystems: "Sistem Pengurusan",
       consultants: "Perunding Kami",
       courses: "Kursus",
@@ -413,7 +437,8 @@ const translations = {
       getQuote: "Dapatkan Sebut Harga",
     },
     footer: {
-      description: "Perunding pensijilan ISO terkemuka di Malaysia sejak 1995. Memberi inspirasi kecemerlangan melalui kualiti dan integriti.",
+      description:
+        "Perunding pensijilan ISO terkemuka di Malaysia sejak 1995. Memberi inspirasi kecemerlangan melalui kualiti dan integriti.",
       quickLinks: "Pautan Pantas",
       isoStandards: "Piawaian ISO",
       contactUs: "Hubungi Kami",
@@ -432,7 +457,8 @@ const translations = {
       countriesServed: "Negara Dilayani",
       certificationsCompleted: "Pensijilan Selesai",
       isoManagementSystems: "Sistem Pengurusan ISO",
-      isoManagementSystemsDesc: "Pensijilan, latihan, dan perkhidmatan perundingan yang komprehensif untuk piawaian kualiti antarabangsa",
+      isoManagementSystemsDesc:
+        "Pensijilan, latihan, dan perkhidmatan perundingan yang komprehensif untuk piawaian kualiti antarabangsa",
       iso9001Desc: "Sistem Pengurusan Kualiti untuk kecemerlangan operasi dan kepuasan pelanggan",
       iso14001Desc: "Sistem Pengurusan Alam Sekitar untuk amalan perniagaan yang mampan",
       iso45001Desc: "Pengurusan Kesihatan & Keselamatan Pekerjaan untuk perlindungan tempat kerja",
@@ -442,9 +468,11 @@ const translations = {
       ourServices: "Perkhidmatan Kami",
       ourServicesDesc: "Penyelesaian menyeluruh untuk pensijilan ISO dan pengurusan kualiti",
       trainingServices: "Perkhidmatan Latihan",
-      trainingServicesDesc: "Kursus awam, latihan dalaman, dan program tersuai. Kursus boleh dituntut HRD Corp tersedia.",
+      trainingServicesDesc:
+        "Kursus awam, latihan dalaman, dan program tersuai. Kursus boleh dituntut HRD Corp tersedia.",
       consultingServices: "Perkhidmatan Perundingan",
-      consultingServicesDesc: "Pelaksanaan ISO, analisis jurang, pembangunan dokumentasi, dan sokongan penyelenggaraan sistem.",
+      consultingServicesDesc:
+        "Pelaksanaan ISO, analisis jurang, pembangunan dokumentasi, dan sokongan penyelenggaraan sistem.",
       auditingServices: "Perkhidmatan Audit",
       auditingServicesDesc: "Audit dalaman, audit pengawasan, pra-pensijilan, dan audit pihak kedua.",
       readyToCertify: "Bersedia untuk Disijilkan?",
@@ -456,19 +484,26 @@ const translations = {
       title: "Tentang QAI",
       subtitle: "Tiga dekad kecemerlangan dalam pensijilan ISO, latihan, dan perkhidmatan perundingan",
       whoWeAre: "Siapa Kami",
-      para1: "QAI Sdn Bhd (Quality Assurance International) telah diperbadankan pada Ogos 1995 dengan visi yang jelas — untuk memberi inspirasi dan memperkasakan organisasi untuk mencapai kecemerlangan melalui kualiti, integriti, dan penambahbaikan berterusan.",
-      para2: "Bermula dengan fokus kepada ISO 9001 (Sistem Pengurusan Kualiti), QAI telah mengembangkan kepakarannya secara progresif untuk merangkumi ISO 14001 (Sistem Pengurusan Alam Sekitar), ISO 27001 (Sistem Pengurusan Keselamatan Maklumat), ISO 45001 (Sistem Pengurusan Kesihatan dan Keselamatan Pekerjaan), dan ISO 37001 (Sistem Pengurusan Anti-Rasuah), bersama-sama dengan amalan Kaizen dan Lean Management.",
-      para3: "Selama hampir tiga dekad, QAI telah menjadi rakan kongsi yang dipercayai dalam menyediakan perkhidmatan latihan, perundingan, dan audit di seluruh Malaysia dan negara-negara ASEAN, termasuk Indonesia dan Singapura.",
-      para4: "Melalui komitmen yang tidak berbelah bahagi, profesionalisme, dan kebolehsuaian, QAI telah berjaya mengekalkan pertumbuhan dan reputasinya di tengah-tengah perubahan landskap perniagaan dan ekonomi — terus menegakkan misinya untuk meningkatkan prestasi organisasi dan mempromosikan budaya kecemerlangan.",
+      para1:
+        "QAI Sdn Bhd (Quality Assurance International) telah diperbadankan pada Ogos 1995 dengan visi yang jelas — untuk memberi inspirasi dan memperkasakan organisasi untuk mencapai kecemerlangan melalui kualiti, integriti, dan penambahbaikan berterusan.",
+      para2:
+        "Bermula dengan fokus kepada ISO 9001 (Sistem Pengurusan Kualiti), QAI telah mengembangkan kepakarannya secara progresif untuk merangkumi ISO 14001 (Sistem Pengurusan Alam Sekitar), ISO 27001 (Sistem Pengurusan Keselamatan Maklumat), ISO 45001 (Sistem Pengurusan Kesihatan dan Keselamatan Pekerjaan), dan ISO 37001 (Sistem Pengurusan Anti-Rasuah), bersama-sama dengan amalan Kaizen dan Lean Management.",
+      para3:
+        "Selama hampir tiga dekad, QAI telah menjadi rakan kongsi yang dipercayai dalam menyediakan perkhidmatan latihan, perundingan, dan audit di seluruh Malaysia dan negara-negara ASEAN, termasuk Indonesia dan Singapura.",
+      para4:
+        "Melalui komitmen yang tidak berbelah bahagi, profesionalisme, dan kebolehsuaian, QAI telah berjaya mengekalkan pertumbuhan dan reputasinya di tengah-tengah perubahan landskap perniagaan dan ekonomi — terus menegakkan misinya untuk meningkatkan prestasi organisasi dan mempromosikan budaya kecemerlangan.",
       ourVision: "Visi Kami",
-      visionText: "Untuk membantu pelanggan mengendalikan perniagaan yang kompetitif dengan kos efektif menggunakan Piawaian Sistem Pengurusan Kualiti ISO sebagai asas untuk penambahbaikan berterusan. QAI mencapai ini dengan memudahkan pelanggan untuk secara proaktif melihat bidang penambahbaikan yang berpotensi dan boleh dicapai serta menggunakan sasaran yang inovatif, praktikal dan realistik dalam jangka masa yang ditetapkan.",
+      visionText:
+        "Untuk membantu pelanggan mengendalikan perniagaan yang kompetitif dengan kos efektif menggunakan Piawaian Sistem Pengurusan Kualiti ISO sebagai asas untuk penambahbaikan berterusan. QAI mencapai ini dengan memudahkan pelanggan untuk secara proaktif melihat bidang penambahbaikan yang berpotensi dan boleh dicapai serta menggunakan sasaran yang inovatif, praktikal dan realistik dalam jangka masa yang ditetapkan.",
       ourMission: "Misi Kami",
-      missionText: "Komited dalam menyediakan perkhidmatan latihan dan perundingan yang cemerlang kepada semua pelanggan dengan:",
+      missionText:
+        "Komited dalam menyediakan perkhidmatan latihan dan perundingan yang cemerlang kepada semua pelanggan dengan:",
       mission1: "Memastikan pemindahan pengetahuan yang inovatif dan berkesan",
       mission2: "Memudahkan dan meningkatkan kecekapan pengurusan",
       mission3: "Menyampaikan penyelesaian yang berkesan di seluruh organisasi pelanggan",
       qualityPolicy: "Dasar Kualiti",
-      qualityPolicyText: "Komited dalam menyediakan nilai dan perkhidmatan latihan serta perundingan yang cemerlang yang mematuhi keperluan pelanggan melalui penambahbaikan berterusan dan sistem pengurusan kualiti yang berkesan.",
+      qualityPolicyText:
+        "Komited dalam menyediakan nilai dan perkhidmatan latihan serta perundingan yang cemerlang yang mematuhi keperluan pelanggan melalui penambahbaikan berterusan dan sistem pengurusan kualiti yang berkesan.",
       ourJourney: "Perjalanan Kami",
       timeline: {
         1995: "QAI ditubuhkan, memulakan perjalanan kami dalam perundingan pengurusan kualiti",
@@ -502,13 +537,15 @@ const translations = {
       title: "Perkhidmatan Kami",
       subtitle: "Penyelesaian pensijilan ISO yang komprehensif disesuaikan dengan keperluan organisasi anda",
       training: "Perkhidmatan Latihan",
-      trainingDesc: "Perkasakan pasukan anda dengan program latihan ISO yang dikendalikan pakar yang direka untuk membina kecekapan dan memastikan pelaksanaan yang berjaya.",
+      trainingDesc:
+        "Perkasakan pasukan anda dengan program latihan ISO yang dikendalikan pakar yang direka untuk membina kecekapan dan memastikan pelaksanaan yang berjaya.",
       publicCourses: "Kursus Latihan Awam",
       publicCoursesDesc: "Kursus berjadual terbuka untuk semua peserta dengan pilihan boleh tuntut HRD Corp tersedia.",
       inHouse: "Latihan Dalaman",
       inHouseDesc: "Program tersuai disampaikan di lokasi anda, disesuaikan dengan keperluan khusus anda.",
       online: "Latihan Dalam Talian/Maya",
-      onlineDesc: "Penyelesaian e-pembelajaran yang fleksibel dengan sesi secara langsung yang dikendalikan oleh pengajar dan bahan interaktif.",
+      onlineDesc:
+        "Penyelesaian e-pembelajaran yang fleksibel dengan sesi secara langsung yang dikendalikan oleh pengajar dan bahan interaktif.",
       awareness: "Kursus Kesedaran",
       awarenessDesc: "Pengenalan kepada piawaian ISO dan asas sistem pengurusan",
       implementer: "Kursus Pelaksana",
@@ -557,29 +594,35 @@ const translations = {
     },
     consultants: {
       title: "Perunding Pakar Kami",
-      subtitle: "Temui pasukan pakar pensijilan ISO yang berkelayakan tinggi kami dengan pengalaman gabungan berdekad-dekad",
+      subtitle:
+        "Temui pasukan pakar pensijilan ISO yang berkelayakan tinggi kami dengan pengalaman gabungan berdekad-dekad",
       expertise: "Kepakaran Terkemuka Industri",
-      expertiseDesc: "Perunding kami membawa kekayaan pengetahuan dari pelbagai industri dan pasaran antarabangsa. Dengan kelayakan lanjutan, pensijilan profesional, dan pengalaman praktikal yang luas, mereka menyediakan panduan strategik yang menghasilkan hasil sebenar untuk organisasi anda.",
+      expertiseDesc:
+        "Perunding kami membawa kekayaan pengetahuan dari pelbagai industri dan pasaran antarabangsa. Dengan kelayakan lanjutan, pensijilan profesional, dan pengalaman praktikal yang luas, mereka menyediakan panduan strategik yang menghasilkan hasil sebenar untuk organisasi anda.",
       yearsExp: "Tahun Pengalaman Gabungan",
       certifications: "Pensijilan Profesional",
       countriesServed: "Negara Dilayani",
       trustedBy: "Dipercayai oleh Organisasi Terkemuka",
       meetTeam: "Temui Pasukan Kami",
       workWithExperts: "Bekerja Dengan Pakar Kami",
-      workWithExpertsDesc: "Hubungi perunding kami untuk membincangkan keperluan pensijilan ISO anda dan cari penyelesaian yang sesuai untuk organisasi anda",
+      workWithExpertsDesc:
+        "Hubungi perunding kami untuk membincangkan keperluan pensijilan ISO anda dan cari penyelesaian yang sesuai untuk organisasi anda",
       requestConsultant: "Minta Perunding",
       viewTraining: "Lihat Program Latihan",
     },
     courses: {
       title: "Kursus Latihan",
-      subtitle: "Program latihan pensijilan ISO profesional yang direka untuk membina kecekapan dan memastikan kejayaan",
+      subtitle:
+        "Program latihan pensijilan ISO profesional yang direka untuk membina kecekapan dan memastikan kejayaan",
       publicCourses: "Kursus Awam",
-      publicCoursesDesc: "Sertai sesi latihan berjadual kami dengan peserta dari pelbagai organisasi. Sesuai untuk individu atau pasukan kecil.",
+      publicCoursesDesc:
+        "Sertai sesi latihan berjadual kami dengan peserta dari pelbagai organisasi. Sesuai untuk individu atau pasukan kecil.",
       hrdClaimable: "Kursus boleh tuntut HRD Corp tersedia",
       networking: "Rangkaian dengan profesional industri",
       earlyBird: "Harga awal tersedia",
       inHouse: "Latihan Dalaman",
-      inHouseDesc: "Latihan tersuai disampaikan di lokasi anda, disesuaikan dengan keperluan khusus organisasi anda dan konteks industri.",
+      inHouseDesc:
+        "Latihan tersuai disampaikan di lokasi anda, disesuaikan dengan keperluan khusus organisasi anda dan konteks industri.",
       flexible: "Penjadualan fleksibel mengikut kemudahan anda",
       customized: "Kandungan disesuaikan dengan proses anda",
       costEffective: "Kos efektif untuk pasukan yang lebih besar",
@@ -650,17 +693,23 @@ const translations = {
       subtitle: "Sistem Pengurusan Kualiti",
       tagline: "Piawaian pengurusan kualiti yang paling diiktiraf di dunia untuk kecemerlangan operasi",
       whatIs: "Apakah ISO 9001:2015?",
-      description1: "ISO 9001:2015 adalah piawaian antarabangsa yang menyatakan keperluan untuk sistem pengurusan kualiti (QMS). Organisasi menggunakan piawaian ini untuk menunjukkan keupayaan mereka untuk secara konsisten menyediakan produk dan perkhidmatan yang memenuhi keperluan pelanggan dan peraturan.",
-      description2: "Ia adalah piawaian pengurusan kualiti yang paling banyak digunakan di dunia, membantu organisasi dari semua saiz dan sektor meningkatkan prestasi mereka, memenuhi jangkaan pelanggan, dan menunjukkan komitmen mereka terhadap kualiti.",
+      description1:
+        "ISO 9001:2015 adalah piawaian antarabangsa yang menyatakan keperluan untuk sistem pengurusan kualiti (QMS). Organisasi menggunakan piawaian ini untuk menunjukkan keupayaan mereka untuk secara konsisten menyediakan produk dan perkhidmatan yang memenuhi keperluan pelanggan dan peraturan.",
+      description2:
+        "Ia adalah piawaian pengurusan kualiti yang paling banyak digunakan di dunia, membantu organisasi dari semua saiz dan sektor meningkatkan prestasi mereka, memenuhi jangkaan pelanggan, dan menunjukkan komitmen mereka terhadap kualiti.",
       benefits: "Faedah Utama",
       benefit1Title: "Kepuasan Pelanggan yang Dipertingkatkan",
-      benefit1Desc: "Memenuhi keperluan pelanggan secara konsisten dan meningkatkan kepuasan melalui aplikasi sistem yang berkesan dan penambahbaikan berterusan.",
+      benefit1Desc:
+        "Memenuhi keperluan pelanggan secara konsisten dan meningkatkan kepuasan melalui aplikasi sistem yang berkesan dan penambahbaikan berterusan.",
       benefit2Title: "Kecekapan Operasi yang Lebih Baik",
-      benefit2Desc: "Memperkemas proses, mengurangkan pembaziran, dan meningkatkan produktiviti melalui pendekatan sistematik kepada pengurusan kualiti.",
+      benefit2Desc:
+        "Memperkemas proses, mengurangkan pembaziran, dan meningkatkan produktiviti melalui pendekatan sistematik kepada pengurusan kualiti.",
       benefit3Title: "Penglibatan Pekerja",
-      benefit3Desc: "Mewujudkan budaya kesedaran kualiti dan penambahbaikan berterusan, meningkatkan penglibatan dan kecekapan pekerja.",
+      benefit3Desc:
+        "Mewujudkan budaya kesedaran kualiti dan penambahbaikan berterusan, meningkatkan penglibatan dan kecekapan pekerja.",
       benefit4Title: "Kelebihan Daya Saing",
-      benefit4Desc: "Menunjukkan komitmen terhadap kualiti, memenangi lebih banyak tender, dan mendapat kelebihan daya saing di pasaran.",
+      benefit4Desc:
+        "Menunjukkan komitmen terhadap kualiti, memenangi lebih banyak tender, dan mendapat kelebihan daya saing di pasaran.",
       whoNeeds: "Siapa Yang Memerlukan ISO 9001?",
       manufacturing: "Pembuatan",
       services: "Perkhidmatan",
@@ -693,17 +742,23 @@ const translations = {
       subtitle: "Sistem Pengurusan Alam Sekitar",
       tagline: "Tunjukkan komitmen anda terhadap kemampanan alam sekitar dan pematuhan peraturan",
       whatIs: "Apakah ISO 14001:2015?",
-      description1: "ISO 14001:2015 menetapkan kriteria untuk sistem pengurusan alam sekitar (EMS). Ia memetakan rangka kerja yang boleh diikuti oleh organisasi untuk menyediakan sistem pengurusan alam sekitar yang berkesan, membantu mereka meningkatkan prestasi alam sekitar melalui penggunaan sumber yang lebih cekap dan pengurangan pembaziran.",
-      description2: "Piawaian ini boleh digunakan untuk mana-mana organisasi, tanpa mengira saiz, jenis, atau sifat, dan boleh disepadukan dengan keperluan sistem pengurusan lain untuk membantu organisasi mencapai matlamat alam sekitar dan ekonomi.",
+      description1:
+        "ISO 14001:2015 menetapkan kriteria untuk sistem pengurusan alam sekitar (EMS). Ia memetakan rangka kerja yang boleh diikuti oleh organisasi untuk menyediakan sistem pengurusan alam sekitar yang berkesan, membantu mereka meningkatkan prestasi alam sekitar melalui penggunaan sumber yang lebih cekap dan pengurangan pembaziran.",
+      description2:
+        "Piawaian ini boleh digunakan untuk mana-mana organisasi, tanpa mengira saiz, jenis, atau sifat, dan boleh disepadukan dengan keperluan sistem pengurusan lain untuk membantu organisasi mencapai matlamat alam sekitar dan ekonomi.",
       benefits: "Faedah Alam Sekitar",
       benefit1Title: "Kecekapan Sumber",
-      benefit1Desc: "Mengurangkan pembaziran, mengoptimumkan penggunaan sumber, dan meminimumkan jejak alam sekitar melalui pengurusan alam sekitar yang sistematik.",
+      benefit1Desc:
+        "Mengurangkan pembaziran, mengoptimumkan penggunaan sumber, dan meminimumkan jejak alam sekitar melalui pengurusan alam sekitar yang sistematik.",
       benefit2Title: "Pematuhan Peraturan",
-      benefit2Desc: "Memastikan pematuhan dengan peraturan alam sekitar dan menunjukkan ketekunan wajar dalam perlindungan alam sekitar.",
+      benefit2Desc:
+        "Memastikan pematuhan dengan peraturan alam sekitar dan menunjukkan ketekunan wajar dalam perlindungan alam sekitar.",
       benefit3Title: "Penjimatan Kos",
-      benefit3Desc: "Mengurangkan penggunaan tenaga, kos pelupusan sisa, dan liabiliti alam sekitar sambil meningkatkan keuntungan.",
+      benefit3Desc:
+        "Mengurangkan penggunaan tenaga, kos pelupusan sisa, dan liabiliti alam sekitar sambil meningkatkan keuntungan.",
       benefit4Title: "Reputasi Jenama",
-      benefit4Desc: "Meningkatkan imej korporat dan keyakinan pihak berkepentingan melalui tanggungjawab alam sekitar yang ditunjukkan.",
+      benefit4Desc:
+        "Meningkatkan imej korporat dan keyakinan pihak berkepentingan melalui tanggungjawab alam sekitar yang ditunjukkan.",
       cta: "Mulakan Perjalanan Alam Sekitar Anda",
       ctaDesc: "Laksanakan ISO 14001 dan tunjukkan komitmen anda terhadap kemampanan alam sekitar",
       getStarted: "Mulakan",
@@ -714,17 +769,22 @@ const translations = {
       subtitle: "Sistem Pengurusan Keselamatan Maklumat",
       tagline: "Lindungi data anda dan tunjukkan amalan keselamatan maklumat bertaraf dunia",
       whatIs: "Apakah ISO 27001:2022?",
-      description1: "ISO 27001:2022 adalah piawaian antarabangsa untuk sistem pengurusan keselamatan maklumat (ISMS). Ia menyediakan pendekatan sistematik untuk mengurus maklumat syarikat yang sensitif, memastikan ia kekal selamat melalui kawalan orang, proses, dan teknologi.",
-      description2: "Pada era digital hari ini, melindungi aset maklumat adalah kritikal. ISO 27001 membantu organisasi mengurus keselamatan aset seperti maklumat kewangan, harta intelek, butiran pekerja, dan maklumat yang diamanahkan oleh pihak ketiga.",
+      description1:
+        "ISO 27001:2022 adalah piawaian antarabangsa untuk sistem pengurusan keselamatan maklumat (ISMS). Ia menyediakan pendekatan sistematik untuk mengurus maklumat syarikat yang sensitif, memastikan ia kekal selamat melalui kawalan orang, proses, dan teknologi.",
+      description2:
+        "Pada era digital hari ini, melindungi aset maklumat adalah kritikal. ISO 27001 membantu organisasi mengurus keselamatan aset seperti maklumat kewangan, harta intelek, butiran pekerja, dan maklumat yang diamanahkan oleh pihak ketiga.",
       benefits: "Faedah Keselamatan",
       benefit1Title: "Perlindungan Data",
-      benefit1Desc: "Melindungi maklumat sulit dan memastikan kerahsiaan, integriti, dan ketersediaan aset data kritikal.",
+      benefit1Desc:
+        "Melindungi maklumat sulit dan memastikan kerahsiaan, integriti, dan ketersediaan aset data kritikal.",
       benefit2Title: "Pengurusan Ancaman Siber",
-      benefit2Desc: "Mengenal pasti, menilai, dan mengurangkan risiko keselamatan siber melalui pendekatan pengurusan risiko yang sistematik.",
+      benefit2Desc:
+        "Mengenal pasti, menilai, dan mengurangkan risiko keselamatan siber melalui pendekatan pengurusan risiko yang sistematik.",
       benefit3Title: "Pematuhan Peraturan",
       benefit3Desc: "Memenuhi peraturan perlindungan data termasuk GDPR, PDPA, dan keperluan privasi lain.",
       benefit4Title: "Kepercayaan Pelanggan",
-      benefit4Desc: "Membina keyakinan pihak berkepentingan dan kelebihan daya saing melalui komitmen keselamatan yang ditunjukkan.",
+      benefit4Desc:
+        "Membina keyakinan pihak berkepentingan dan kelebihan daya saing melalui komitmen keselamatan yang ditunjukkan.",
       cta: "Amankan Aset Maklumat Anda",
       ctaDesc: "Laksanakan ISO 27001 dan lindungi organisasi anda dari ancaman keselamatan maklumat",
       getProtected: "Dapatkan Perlindungan",
@@ -735,15 +795,20 @@ const translations = {
       subtitle: "Sistem Pengurusan Anti-Rasuah",
       tagline: "Perangi rasuah dan tunjukkan komitmen anda terhadap amalan perniagaan yang beretika",
       whatIs: "Apakah ISO 37001:2018?",
-      description1: "ISO 37001:2018 menyatakan keperluan dan menyediakan panduan untuk mewujudkan, melaksanakan, mengekalkan, mengkaji, dan meningkatkan sistem pengurusan anti-rasuah (ABMS). Sistem ini boleh berdiri sendiri atau disepadukan ke dalam sistem pengurusan keseluruhan.",
-      description2: "Ia menangani rasuah dalam sektor awam, swasta, dan bukan keuntungan, membantu organisasi melaksanakan atau meningkatkan kawalan untuk membantu mencegah, mengesan, dan bertindak balas terhadap rasuah dan mematuhi undang-undang anti-rasuah dan komitmen sukarela.",
+      description1:
+        "ISO 37001:2018 menyatakan keperluan dan menyediakan panduan untuk mewujudkan, melaksanakan, mengekalkan, mengkaji, dan meningkatkan sistem pengurusan anti-rasuah (ABMS). Sistem ini boleh berdiri sendiri atau disepadukan ke dalam sistem pengurusan keseluruhan.",
+      description2:
+        "Ia menangani rasuah dalam sektor awam, swasta, dan bukan keuntungan, membantu organisasi melaksanakan atau meningkatkan kawalan untuk membantu mencegah, mengesan, dan bertindak balas terhadap rasuah dan mematuhi undang-undang anti-rasuah dan komitmen sukarela.",
       benefits: "Faedah Tadbir Urus",
       benefit1Title: "Pematuhan Undang-undang",
-      benefit1Desc: "Menunjukkan pematuhan dengan undang-undang anti-rasuah dan anti-rasuah termasuk Akta SPRM dan perundangan antarabangsa.",
+      benefit1Desc:
+        "Menunjukkan pematuhan dengan undang-undang anti-rasuah dan anti-rasuah termasuk Akta SPRM dan perundangan antarabangsa.",
       benefit2Title: "Tadbir Urus Korporat",
-      benefit2Desc: "Mengukuhkan rangka kerja tadbir urus dan menunjukkan komitmen terhadap tingkah laku perniagaan yang beretika di semua peringkat.",
+      benefit2Desc:
+        "Mengukuhkan rangka kerja tadbir urus dan menunjukkan komitmen terhadap tingkah laku perniagaan yang beretika di semua peringkat.",
       benefit3Title: "Keyakinan Pihak Berkepentingan",
-      benefit3Desc: "Membina kepercayaan dengan pelabur, rakan kongsi, dan pelanggan melalui dasar dan kawalan anti-rasuah yang telus.",
+      benefit3Desc:
+        "Membina kepercayaan dengan pelabur, rakan kongsi, dan pelanggan melalui dasar dan kawalan anti-rasuah yang telus.",
       benefit4Title: "Peluang Perniagaan",
       benefit4Desc: "Mengakses kontrak kerajaan dan pasaran antarabangsa yang memerlukan pensijilan anti-rasuah.",
       cta: "Kukuhkan Integriti Anda",
@@ -756,17 +821,23 @@ const translations = {
       subtitle: "Pengurusan Kesihatan & Keselamatan Pekerjaan",
       tagline: "Lindungi tenaga kerja anda dan cipta persekitaran kerja yang lebih selamat dan sihat",
       whatIs: "Apakah ISO 45001:2018?",
-      description1: "ISO 45001:2018 adalah piawaian antarabangsa dunia untuk kesihatan dan keselamatan pekerjaan (OH&S). Ia menyediakan rangka kerja untuk meningkatkan keselamatan, mengurangkan risiko tempat kerja, dan meningkatkan kesihatan dan kesejahteraan di tempat kerja, membolehkan organisasi meningkatkan prestasi OH&S mereka secara proaktif.",
-      description2: "Piawaian ini membantu organisasi menyediakan tempat kerja yang selamat dan sihat dengan mencegah kecederaan dan penyakit berkaitan kerja, serta dengan meningkatkan prestasi OH&S secara proaktif.",
+      description1:
+        "ISO 45001:2018 adalah piawaian antarabangsa dunia untuk kesihatan dan keselamatan pekerjaan (OH&S). Ia menyediakan rangka kerja untuk meningkatkan keselamatan, mengurangkan risiko tempat kerja, dan meningkatkan kesihatan dan kesejahteraan di tempat kerja, membolehkan organisasi meningkatkan prestasi OH&S mereka secara proaktif.",
+      description2:
+        "Piawaian ini membantu organisasi menyediakan tempat kerja yang selamat dan sihat dengan mencegah kecederaan dan penyakit berkaitan kerja, serta dengan meningkatkan prestasi OH&S secara proaktif.",
       benefits: "Faedah Keselamatan",
       benefit1Title: "Keselamatan Pekerja",
-      benefit1Desc: "Mengurangkan kemalangan tempat kerja, kecederaan, dan penyakit pekerjaan melalui pengurusan risiko dan pencegahan yang sistematik.",
+      benefit1Desc:
+        "Mengurangkan kemalangan tempat kerja, kecederaan, dan penyakit pekerjaan melalui pengurusan risiko dan pencegahan yang sistematik.",
       benefit2Title: "Pengurangan Risiko",
-      benefit2Desc: "Mengenal pasti, menilai, dan mengawal risiko kesihatan dan keselamatan secara proaktif untuk mencegah insiden sebelum ia berlaku.",
+      benefit2Desc:
+        "Mengenal pasti, menilai, dan mengawal risiko kesihatan dan keselamatan secara proaktif untuk mencegah insiden sebelum ia berlaku.",
       benefit3Title: "Semangat Pekerja",
-      benefit3Desc: "Meningkatkan penglibatan dan semangat pekerja dengan menunjukkan komitmen terhadap kesihatan, keselamatan, dan kesejahteraan mereka.",
+      benefit3Desc:
+        "Meningkatkan penglibatan dan semangat pekerja dengan menunjukkan komitmen terhadap kesihatan, keselamatan, dan kesejahteraan mereka.",
       benefit4Title: "Pematuhan Undang-undang",
-      benefit4Desc: "Memastikan pematuhan dengan perundangan kesihatan dan keselamatan pekerjaan dan mengurangkan liabiliti undang-undang.",
+      benefit4Desc:
+        "Memastikan pematuhan dengan perundangan kesihatan dan keselamatan pekerjaan dan mengurangkan liabiliti undang-undang.",
       cta: "Utamakan Keselamatan Tempat Kerja",
       ctaDesc: "Laksanakan ISO 45001 dan cipta persekitaran kerja yang lebih selamat dan sihat",
       scheduleConsultation: "Jadualkan Perundingan",
