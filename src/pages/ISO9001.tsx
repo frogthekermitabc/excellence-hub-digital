@@ -24,10 +24,14 @@ const ISO9001 = () => {
               </div>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("iso9001.title")}</AnimatedText>
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+                {t("iso9001.title")}
+              </AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-2xl mb-4" delay={0.3}>{t("iso9001.subtitle")}</AnimatedText>
+              <AnimatedText className="text-2xl mb-4" delay={0.3}>
+                {t("iso9001.subtitle")}
+              </AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
               <AnimatedText className="text-lg opacity-90" delay={0.5}>
@@ -43,12 +47,8 @@ const ISO9001 = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">{t("iso9001.whatIs")}</h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              {t("iso9001.description1")}
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t("iso9001.description2")}
-            </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("iso9001.description1")}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">{t("iso9001.description2")}</p>
           </div>
         </div>
       </section>
@@ -65,9 +65,7 @@ const ISO9001 = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit1Title")}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("iso9001.benefit1Desc")}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{t("iso9001.benefit1Desc")}</p>
                 </div>
               </div>
             </Card>
@@ -79,9 +77,7 @@ const ISO9001 = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit2Title")}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("iso9001.benefit2Desc")}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{t("iso9001.benefit2Desc")}</p>
                 </div>
               </div>
             </Card>
@@ -93,9 +89,7 @@ const ISO9001 = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit3Title")}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("iso9001.benefit3Desc")}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{t("iso9001.benefit3Desc")}</p>
                 </div>
               </div>
             </Card>
@@ -107,9 +101,7 @@ const ISO9001 = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit4Title")}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {t("iso9001.benefit4Desc")}
-                  </p>
+                  <p className="text-sm text-muted-foreground">{t("iso9001.benefit4Desc")}</p>
                 </div>
               </div>
             </Card>
@@ -135,7 +127,7 @@ const ISO9001 = () => {
                 t("iso9001.logistics"),
                 t("iso9001.financial"),
                 t("iso9001.retail"),
-                t("iso9001.professional")
+                t("iso9001.professional"),
               ].map((industry, idx) => (
                 <div key={idx} className="p-4 bg-muted rounded-lg text-center text-sm font-medium">
                   {industry}
@@ -155,23 +147,23 @@ const ISO9001 = () => {
               {
                 step: "1",
                 title: t("iso9001.step1"),
-                description: t("iso9001.step1Desc")
+                description: t("iso9001.step1Desc"),
               },
               {
                 step: "2",
                 title: t("iso9001.step2"),
-                description: t("iso9001.step2Desc")
+                description: t("iso9001.step2Desc"),
               },
               {
                 step: "3",
                 title: t("iso9001.step3"),
-                description: t("iso9001.step3Desc")
+                description: t("iso9001.step3Desc"),
               },
               {
                 step: "4",
                 title: t("iso9001.step4"),
-                description: t("iso9001.step4Desc")
-              }
+                description: t("iso9001.step4Desc"),
+              },
             ].map((phase, idx) => (
               <Card key={idx} className="p-6 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-2xl font-bold">
@@ -181,30 +173,6 @@ const ISO9001 = () => {
                 <p className="text-sm text-muted-foreground">{phase.description}</p>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">{t("iso9001.cta")}</h2>
-            <p className="text-lg mb-8 opacity-90">
-              {t("iso9001.ctaDesc")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                  {t("iso9001.requestConsultation")}
-                </Button>
-              </Link>
-              <Link to="/courses">
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  {t("iso9001.viewCourses")}
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
