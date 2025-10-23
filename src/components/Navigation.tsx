@@ -53,7 +53,7 @@ const Navigation = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent">
-                    Company
+                    {t("nav.company")}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[200px] gap-3 p-4">
@@ -63,7 +63,7 @@ const Navigation = () => {
                             to="/about"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">About</div>
+                            <div className="text-sm font-medium leading-none">{t("nav.about")}</div>
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -73,7 +73,7 @@ const Navigation = () => {
                             to="/consultants"
                             className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                           >
-                            <div className="text-sm font-medium leading-none">Consultants</div>
+                            <div className="text-sm font-medium leading-none">{t("nav.consultants")}</div>
                           </Link>
                         </NavigationMenuLink>
                       </li>
@@ -154,16 +154,16 @@ const Navigation = () => {
               </Button>
             </Link>
             <div className="space-y-1">
-              <div className="px-3 py-2 text-sm font-semibold">Company</div>
+              <div className="px-3 py-2 text-sm font-semibold">{t("nav.company")}</div>
               <div className="pl-4 space-y-1">
                 <Link to="/about" onClick={() => setIsOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start text-sm">
-                    About
+                    {t("nav.about")}
                   </Button>
                 </Link>
                 <Link to="/consultants" onClick={() => setIsOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start text-sm">
-                    Consultants
+                    {t("nav.consultants")}
                   </Button>
                 </Link>
               </div>
