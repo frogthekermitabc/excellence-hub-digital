@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 const Courses = () => {
   const { t } = useLanguage();
@@ -66,12 +67,12 @@ const Courses = () => {
             <GraduationCap className="h-16 w-16 mx-auto mb-6" />
           </AnimatedContent>
           <AnimatedContent>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("courses.title")}</h1>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("courses.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-xl max-w-3xl mx-auto opacity-90">
+            <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
               {t("courses.subtitle")}
-            </p>
+            </AnimatedText>
           </AnimatedContent>
         </div>
       </AnimatedHero>

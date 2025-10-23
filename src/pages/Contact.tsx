@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { z } from "zod";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 // Comprehensive validation schema with security measures
 const contactSchema = z.object({
@@ -113,12 +114,12 @@ const Contact = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">Contact Us</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-xl max-w-3xl mx-auto opacity-90">
+            <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
               Get in touch with our team to discuss your ISO certification needs
-            </p>
+            </AnimatedText>
           </AnimatedContent>
         </div>
       </AnimatedHero>

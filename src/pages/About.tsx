@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 const About = () => {
   const { t } = useLanguage();
@@ -27,12 +28,12 @@ const About = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("about.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-xl max-w-3xl mx-auto opacity-90">
+            <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
               {t("about.subtitle")}
-            </p>
+            </AnimatedText>
           </AnimatedContent>
         </div>
       </AnimatedHero>
@@ -41,7 +42,7 @@ const About = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">{t("about.whoWeAre")}</h2>
+            <AnimatedText className="text-3xl font-bold mb-6 text-center">{t("about.whoWeAre")}</AnimatedText>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               {t("about.para1")}
             </p>

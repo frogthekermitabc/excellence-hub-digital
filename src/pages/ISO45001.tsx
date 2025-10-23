@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 const ISO45001 = () => {
   return (
@@ -20,15 +21,15 @@ const ISO45001 = () => {
               </div>
             </AnimatedContent>
             <AnimatedContent>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 45001:2018</h1>
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">ISO 45001:2018</AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <p className="text-2xl mb-4">Occupational Health & Safety Management</p>
+              <AnimatedText className="text-2xl mb-4" delay={0.3}>Occupational Health & Safety Management</AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <p className="text-lg opacity-90">
+              <AnimatedText className="text-lg opacity-90" delay={0.5}>
                 Protect your workforce and create safer, healthier working environments
-              </p>
+              </AnimatedText>
             </AnimatedContent>
           </div>
         </div>

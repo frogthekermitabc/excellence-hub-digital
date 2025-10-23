@@ -4,6 +4,7 @@ import ConsultantCard from "@/components/ConsultantCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 const Consultants = () => {
   const consultants = [
@@ -60,12 +61,12 @@ const Consultants = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Expert Consultants</h1>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">Our Expert Consultants</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-xl max-w-3xl mx-auto opacity-90">
+            <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
               Meet our team of highly qualified ISO certification experts with decades of combined experience
-            </p>
+            </AnimatedText>
           </AnimatedContent>
         </div>
       </AnimatedHero>

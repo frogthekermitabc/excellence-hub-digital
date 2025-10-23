@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 const ISO14001 = () => {
   return (
@@ -20,15 +21,15 @@ const ISO14001 = () => {
               </div>
             </AnimatedContent>
             <AnimatedContent>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 14001:2015</h1>
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">ISO 14001:2015</AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <p className="text-2xl mb-4">Environmental Management System</p>
+              <AnimatedText className="text-2xl mb-4" delay={0.3}>Environmental Management System</AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <p className="text-lg opacity-90">
+              <AnimatedText className="text-lg opacity-90" delay={0.5}>
                 Demonstrate your commitment to environmental sustainability and regulatory compliance
-              </p>
+              </AnimatedText>
             </AnimatedContent>
           </div>
         </div>

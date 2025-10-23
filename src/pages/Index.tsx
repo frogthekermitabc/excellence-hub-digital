@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import StatCard from "@/components/StatCard";
 import ServiceCard from "@/components/ServiceCard";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 import heroImage from "@/assets/hero-office.jpg";
 
 const Index = () => {
@@ -29,19 +30,19 @@ const Index = () => {
         
         <div className="container mx-auto px-4 relative z-10 text-center">
           <AnimatedContent>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <AnimatedText className="text-4xl md:text-6xl font-bold text-white mb-6" type="word">
               {t("home.heroTitle")}
-            </h1>
+            </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-2xl text-white/95 mb-4 font-semibold">
+            <AnimatedText className="text-2xl text-white/95 mb-4 font-semibold" delay={0.3}>
               {t("home.heroSubtitle")}
-            </p>
+            </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <AnimatedText className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" delay={0.5}>
               {t("home.heroDescription")}
-            </p>
+            </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -76,10 +77,10 @@ const Index = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("home.isoManagementSystems")}</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.isoManagementSystems")}</AnimatedText>
+            <AnimatedText className="text-muted-foreground max-w-2xl mx-auto" delay={0.2}>
               {t("home.isoManagementSystemsDesc")}
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -127,10 +128,10 @@ const Index = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("home.ourServices")}</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.ourServices")}</AnimatedText>
+            <AnimatedText className="text-muted-foreground max-w-2xl mx-auto" delay={0.2}>
               {t("home.ourServicesDesc")}
-            </p>
+            </AnimatedText>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -159,10 +160,10 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("home.readyToCertify")}</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.readyToCertify")}</AnimatedText>
+          <AnimatedText className="text-xl mb-8 max-w-2xl mx-auto opacity-90" delay={0.2}>
             {t("home.readyToCertifyDesc")}
-          </p>
+          </AnimatedText>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button size="lg" className="bg-white text-primary hover:bg-white/90">

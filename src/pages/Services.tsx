@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import trainingImage from "@/assets/training-session.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import AnimatedText from "@/components/AnimatedText";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -18,12 +19,12 @@ const Services = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("services.title")}</h1>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("services.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <p className="text-xl max-w-3xl mx-auto opacity-90">
+            <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
               {t("services.subtitle")}
-            </p>
+            </AnimatedText>
           </AnimatedContent>
         </div>
       </AnimatedHero>
