@@ -4,8 +4,11 @@ import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { Card } from "@/components/ui/card";
 import trainingImage from "@/assets/training-session.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Services = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -13,9 +16,9 @@ const Services = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("services.title")}</h1>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Comprehensive ISO certification solutions tailored to your organization's needs
+            {t("services.subtitle")}
           </p>
         </div>
       </section>
@@ -27,28 +30,28 @@ const Services = () => {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <GraduationCap className="h-10 w-10 text-primary" />
-                <h2 className="text-3xl font-bold">Training Services</h2>
+                <h2 className="text-3xl font-bold">{t("services.training")}</h2>
               </div>
               <p className="text-lg text-muted-foreground mb-6">
-                Empower your team with expert-led ISO training programs designed to build competence and ensure successful implementation.
+                {t("services.trainingDesc")}
               </p>
               <div className="space-y-4">
                 <Card className="p-4">
-                  <h3 className="font-semibold mb-2">Public Training Courses</h3>
+                  <h3 className="font-semibold mb-2">{t("services.publicCourses")}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Scheduled courses open to all participants with HRD Corp claimable options available.
+                    {t("services.publicCoursesDesc")}
                   </p>
                 </Card>
                 <Card className="p-4">
-                  <h3 className="font-semibold mb-2">In-House Training</h3>
+                  <h3 className="font-semibold mb-2">{t("services.inHouse")}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Customized programs delivered at your location, tailored to your specific requirements.
+                    {t("services.inHouseDesc")}
                   </p>
                 </Card>
                 <Card className="p-4">
-                  <h3 className="font-semibold mb-2">Online/Virtual Training</h3>
+                  <h3 className="font-semibold mb-2">{t("services.online")}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Flexible e-learning solutions with live instructor-led sessions and interactive materials.
+                    {t("services.onlineDesc")}
                   </p>
                 </Card>
               </div>
@@ -65,23 +68,23 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard 
               icon={BookOpen}
-              title="Awareness Courses"
-              description="Introduction to ISO standards and management systems fundamentals"
+              title={t("services.awareness")}
+              description={t("services.awarenessDesc")}
             />
             <ServiceCard 
               icon={Target}
-              title="Implementer Courses"
-              description="Practical skills for implementing ISO management systems"
+              title={t("services.implementer")}
+              description={t("services.implementerDesc")}
             />
             <ServiceCard 
               icon={ClipboardList}
-              title="Internal Auditor"
-              description="Comprehensive training for conducting effective internal audits"
+              title={t("services.internalAuditor")}
+              description={t("services.internalAuditorDesc")}
             />
             <ServiceCard 
               icon={FileCheck}
-              title="Lead Auditor"
-              description="Advanced certification for ISO lead auditor qualification"
+              title={t("services.leadAuditor")}
+              description={t("services.leadAuditorDesc")}
             />
           </div>
         </div>
@@ -93,40 +96,40 @@ const Services = () => {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <Users className="h-10 w-10 text-primary" />
-              <h2 className="text-3xl font-bold">Consulting Services</h2>
+              <h2 className="text-3xl font-bold">{t("services.consulting")}</h2>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Expert guidance from initial gap analysis through successful certification and beyond
+              {t("services.consultingDesc")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <Card className="p-6 text-center hover:shadow-lg transition-all">
               <div className="text-4xl font-bold text-primary mb-2">1</div>
-              <h3 className="font-semibold mb-2">Gap Analysis</h3>
+              <h3 className="font-semibold mb-2">{t("services.gapAnalysis")}</h3>
               <p className="text-sm text-muted-foreground">
-                Assess current practices against ISO requirements
+                {t("services.gapAnalysisDesc")}
               </p>
             </Card>
             <Card className="p-6 text-center hover:shadow-lg transition-all">
               <div className="text-4xl font-bold text-primary mb-2">2</div>
-              <h3 className="font-semibold mb-2">System Design</h3>
+              <h3 className="font-semibold mb-2">{t("services.systemDesign")}</h3>
               <p className="text-sm text-muted-foreground">
-                Develop tailored management system framework
+                {t("services.systemDesignDesc")}
               </p>
             </Card>
             <Card className="p-6 text-center hover:shadow-lg transition-all">
               <div className="text-4xl font-bold text-primary mb-2">3</div>
-              <h3 className="font-semibold mb-2">Implementation</h3>
+              <h3 className="font-semibold mb-2">{t("services.implementation")}</h3>
               <p className="text-sm text-muted-foreground">
-                Guide your team through system deployment
+                {t("services.implementationDesc")}
               </p>
             </Card>
             <Card className="p-6 text-center hover:shadow-lg transition-all">
               <div className="text-4xl font-bold text-primary mb-2">4</div>
-              <h3 className="font-semibold mb-2">Certification Support</h3>
+              <h3 className="font-semibold mb-2">{t("services.certSupport")}</h3>
               <p className="text-sm text-muted-foreground">
-                Pre-audit preparation and certification assistance
+                {t("services.certSupportDesc")}
               </p>
             </Card>
           </div>
@@ -134,13 +137,13 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <ServiceCard 
               icon={FileCheck}
-              title="Documentation Development"
-              description="Creation of quality manuals, procedures, work instructions, and required documentation"
+              title={t("services.docDev")}
+              description={t("services.docDevDesc")}
             />
             <ServiceCard 
               icon={Target}
-              title="System Maintenance"
-              description="Ongoing support to maintain and improve your management system performance"
+              title={t("services.systemMaint")}
+              description={t("services.systemMaintDesc")}
             />
           </div>
         </div>
@@ -152,33 +155,33 @@ const Services = () => {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <ClipboardList className="h-10 w-10 text-primary" />
-              <h2 className="text-3xl font-bold">Auditing Services</h2>
+              <h2 className="text-3xl font-bold">{t("services.auditing")}</h2>
             </div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Professional audit services to verify compliance and drive continuous improvement
+              {t("services.auditingDesc")}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ServiceCard 
               icon={FileCheck}
-              title="Internal Audits"
-              description="Regular system audits to verify compliance and identify improvement opportunities"
+              title={t("services.internalAudits")}
+              description={t("services.internalAuditsDesc")}
             />
             <ServiceCard 
               icon={Target}
-              title="Surveillance Audits"
-              description="Ongoing monitoring to maintain certification status and system effectiveness"
+              title={t("services.surveillance")}
+              description={t("services.surveillanceDesc")}
             />
             <ServiceCard 
               icon={ClipboardList}
-              title="Pre-Certification Audits"
-              description="Mock audits to ensure readiness for official certification assessment"
+              title={t("services.preCert")}
+              description={t("services.preCertDesc")}
             />
             <ServiceCard 
               icon={Users}
-              title="Second-Party Audits"
-              description="Supplier and vendor audits to ensure supply chain quality standards"
+              title={t("services.secondParty")}
+              description={t("services.secondPartyDesc")}
             />
           </div>
         </div>
@@ -187,21 +190,21 @@ const Services = () => {
       {/* Industries Served */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Industries We Serve</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("services.industries")}</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
-              "Manufacturing",
-              "Oil & Gas",
-              "Healthcare",
-              "Education",
-              "Construction",
-              "Information Technology",
-              "Government Agencies",
-              "Financial Services",
-              "Hospitality",
-              "Logistics & Transportation",
-              "Food & Beverage",
-              "Professional Services",
+              t("services.manufacturing"),
+              t("services.oilGas"),
+              t("services.healthcare"),
+              t("services.education"),
+              t("services.construction"),
+              t("services.it"),
+              t("services.government"),
+              t("services.financial"),
+              t("services.hospitality"),
+              t("services.logistics"),
+              t("services.foodBev"),
+              t("services.professional"),
             ].map((industry, idx) => (
               <Card key={idx} className="p-4 text-center hover:shadow-lg transition-all">
                 <p className="font-medium text-sm">{industry}</p>
