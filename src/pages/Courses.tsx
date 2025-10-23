@@ -5,8 +5,10 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Courses = () => {
+  const { t } = useLanguage();
   const publicCourses = [
     {
       title: "ISO 9001:2015 Awareness",
@@ -59,9 +61,9 @@ const Courses = () => {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Training Courses</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("courses.title")}</h1>
           <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Professional ISO certification training programs designed to build competence and ensure success
+            {t("courses.subtitle")}
           </p>
         </div>
       </section>
@@ -73,24 +75,23 @@ const Courses = () => {
             <Card className="p-8 hover:shadow-lg transition-all">
               <div className="flex items-center space-x-3 mb-4">
                 <Calendar className="h-8 w-8 text-primary" />
-                <h3 className="text-2xl font-bold">Public Courses</h3>
+                <h3 className="text-2xl font-bold">{t("courses.publicCourses")}</h3>
               </div>
               <p className="text-muted-foreground mb-6">
-                Join our scheduled training sessions with participants from various organizations. 
-                Perfect for individuals or small teams.
+                {t("courses.publicCoursesDesc")}
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">HRD Corp claimable courses available</span>
+                  <span className="text-sm">{t("courses.hrdClaimable")}</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Networking with industry professionals</span>
+                  <span className="text-sm">{t("courses.networking")}</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Early bird pricing available</span>
+                  <span className="text-sm">{t("courses.earlyBird")}</span>
                 </li>
               </ul>
             </Card>
@@ -98,24 +99,23 @@ const Courses = () => {
             <Card className="p-8 hover:shadow-lg transition-all">
               <div className="flex items-center space-x-3 mb-4">
                 <Users className="h-8 w-8 text-primary" />
-                <h3 className="text-2xl font-bold">In-House Training</h3>
+                <h3 className="text-2xl font-bold">{t("courses.inHouse")}</h3>
               </div>
               <p className="text-muted-foreground mb-6">
-                Customized training delivered at your location, tailored to your organization's 
-                specific needs and industry context.
+                {t("courses.inHouseDesc")}
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Flexible scheduling at your convenience</span>
+                  <span className="text-sm">{t("courses.flexible")}</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Content customized to your processes</span>
+                  <span className="text-sm">{t("courses.customized")}</span>
                 </li>
                 <li className="flex items-start space-x-2">
                   <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">Cost-effective for larger teams</span>
+                  <span className="text-sm">{t("courses.costEffective")}</span>
                 </li>
               </ul>
             </Card>
@@ -127,9 +127,9 @@ const Courses = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Public Course Catalog</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("courses.catalog")}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Browse our upcoming training programs and register online
+              {t("courses.catalogDesc")}
             </p>
           </div>
 
@@ -138,10 +138,12 @@ const Courses = () => {
               <Card key={idx} className="p-6 hover:shadow-lg transition-all">
                 <div className="flex items-start justify-between mb-4">
                   <Badge variant={course.level === "Advanced" ? "default" : "secondary"}>
-                    {course.level}
+                    {course.level === "Advanced" ? t("courses.advanced") : 
+                     course.level === "Implementer" ? t("courses.implementer") : 
+                     t("courses.awareness")}
                   </Badge>
                   {course.hrdCorp && (
-                    <Badge className="bg-secondary">HRD Corp</Badge>
+                    <Badge className="bg-secondary">{t("courses.hrdCorp")}</Badge>
                   )}
                 </div>
                 <h3 className="font-bold text-lg mb-3">{course.title}</h3>
@@ -150,7 +152,7 @@ const Courses = () => {
                   <Calendar className="h-4 w-4" />
                   <span>{course.duration}</span>
                 </div>
-                <Button className="w-full" size="sm">View Details</Button>
+                <Button className="w-full" size="sm">{t("courses.viewDetails")}</Button>
               </Card>
             ))}
           </div>
@@ -160,28 +162,28 @@ const Courses = () => {
       {/* Course Levels */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Course Levels</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("courses.levels")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
               {
-                title: "Awareness",
+                title: t("courses.awareness"),
                 icon: GraduationCap,
-                description: "Introduction to ISO standards and fundamental concepts"
+                description: t("courses.awarenessDesc")
               },
               {
-                title: "Implementer",
+                title: t("courses.implementer"),
                 icon: Users,
-                description: "Practical skills for system implementation and maintenance"
+                description: t("courses.implementerDesc")
               },
               {
-                title: "Internal Auditor",
+                title: t("courses.internalAuditor"),
                 icon: CheckCircle,
-                description: "Comprehensive training for conducting internal audits"
+                description: t("courses.auditorDesc")
               },
               {
-                title: "Lead Auditor",
+                title: t("courses.leadAuditor"),
                 icon: Award,
-                description: "Advanced certification for lead auditor qualification"
+                description: t("courses.leadAuditorDesc")
               }
             ].map((level, idx) => (
               <Card key={idx} className="p-6 text-center hover:shadow-lg transition-all">
@@ -201,15 +203,15 @@ const Courses = () => {
       {/* Benefits */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Training Benefits</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("courses.benefits")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              "Expert instructors with real-world experience",
-              "Comprehensive course materials and resources",
-              "Hands-on practical exercises and case studies",
-              "International certification upon completion",
-              "HRD Corp claimable courses for eligible participants",
-              "Post-training support and consultation"
+              t("courses.benefit1"),
+              t("courses.benefit2"),
+              t("courses.benefit3"),
+              t("courses.benefit4"),
+              t("courses.benefit5"),
+              t("courses.benefit6")
             ].map((benefit, idx) => (
               <div key={idx} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-secondary flex-shrink-0 mt-1" />
@@ -224,19 +226,19 @@ const Courses = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Get Certified?</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("courses.readyToCertify")}</h2>
             <p className="text-lg mb-8 opacity-90">
-              Enroll in our training programs or request a customized in-house training solution
+              {t("courses.readyToCertifyDesc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                  Register Now
+                  {t("courses.registerNow")}
                 </Button>
               </Link>
               <Link to="/contact">
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  Request In-House Training
+                  {t("courses.requestInHouse")}
                 </Button>
               </Link>
             </div>
