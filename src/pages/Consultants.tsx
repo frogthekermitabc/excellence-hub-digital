@@ -1,4 +1,4 @@
-import { Users, Award, Globe } from "lucide-react";
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ConsultantCard from "@/components/ConsultantCard";
@@ -66,59 +66,6 @@ const Consultants = () => {
         </div>
       </section>
 
-      {/* Team Overview */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6">Industry-Leading Expertise</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Our consultants bring a wealth of knowledge from diverse industries and international markets. With
-              advanced qualifications, professional certifications, and extensive hands-on experience, they provide
-              strategic guidance that drives real results for your organization.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="p-6 bg-muted rounded-lg">
-                <Users className="h-10 w-10 text-primary mx-auto mb-3" />
-                <div className="text-3xl font-bold text-primary mb-2">100+</div>
-                <p className="text-sm text-muted-foreground">Combined Years of Experience</p>
-              </div>
-              <div className="p-6 bg-muted rounded-lg">
-                <Award className="h-10 w-10 text-primary mx-auto mb-3" />
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <p className="text-sm text-muted-foreground">Professional Certifications</p>
-              </div>
-              <div className="p-6 bg-muted rounded-lg">
-                <Globe className="h-10 w-10 text-primary mx-auto mb-3" />
-                <div className="text-3xl font-bold text-primary mb-2">3</div>
-                <p className="text-sm text-muted-foreground">Countries Served</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Major Clients Served */}
-          <div className="max-w-4xl mx-auto mb-16">
-            <h3 className="text-2xl font-bold mb-6 text-center">Trusted by Leading Organizations</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                "SPAN Malaysia",
-                "Ministry of Health",
-                "JPNIN",
-                "Government Agencies",
-                "Oil & Gas Companies",
-                "Manufacturing Sector",
-                "Healthcare Institutions",
-                "Educational Organizations",
-              ].map((client, idx) => (
-                <div key={idx} className="p-4 bg-muted rounded-lg text-center text-sm font-medium">
-                  {client}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Consultant Profiles */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
@@ -151,6 +98,31 @@ const Consultants = () => {
                   View Training Programs
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted by Leading Organizations */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center">Trusted by Leading Organizations</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                "SPAN Malaysia",
+                "Ministry of Health",
+                "JPNIN",
+                "Government Agencies",
+                "Oil & Gas Companies",
+                "Manufacturing Sector",
+                "Healthcare Institutions",
+                "Educational Organizations",
+              ].map((client, idx) => (
+                <div key={idx} className="p-4 bg-muted rounded-lg text-center text-sm font-medium">
+                  {client}
+                </div>
+              ))}
             </div>
           </div>
         </div>
