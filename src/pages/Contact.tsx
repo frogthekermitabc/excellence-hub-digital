@@ -15,6 +15,39 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { z } from "zod";
+
+// Comprehensive validation schema with security measures
+const contactSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(1, "Name is required")
+    .max(100, "Name must be less than 100 characters")
+    .refine(val => !/[\r\n]/.test(val), "Name contains invalid characters"),
+  email: z.string()
+    .trim()
+    .email("Invalid email address")
+    .max(255, "Email must be less than 255 characters")
+    .refine(val => !/[\r\n]/.test(val), "Email contains invalid characters"),
+  phone: z.string()
+    .trim()
+    .max(20, "Phone number must be less than 20 characters")
+    .optional()
+    .or(z.literal("")),
+  company: z.string()
+    .trim()
+    .max(100, "Company name must be less than 100 characters")
+    .optional()
+    .or(z.literal("")),
+  service: z.string()
+    .max(50, "Service selection is invalid")
+    .optional()
+    .or(z.literal("")),
+  message: z.string()
+    .trim()
+    .min(10, "Message must be at least 10 characters")
+    .max(2000, "Message must be less than 2000 characters")
+});
 
 const Contact = () => {
   const { toast } = useToast();
@@ -26,13 +59,41 @@ const Contact = () => {
     service: "",
     message: ""
   });
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Clear previous errors
+    setErrors({});
+    
+    // Validate form data with zod
+    const result = contactSchema.safeParse(formData);
+    
+    if (!result.success) {
+      // Extract and display validation errors
+      const fieldErrors: Record<string, string> = {};
+      result.error.errors.forEach((err) => {
+        if (err.path[0]) {
+          fieldErrors[err.path[0].toString()] = err.message;
+        }
+      });
+      setErrors(fieldErrors);
+      
+      toast({
+        title: "Validation Error",
+        description: "Please check the form for errors and try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // Form is valid, proceed with submission
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We'll get back to you within 24 hours.",
     });
+    
     setFormData({
       name: "",
       email: "",
@@ -141,7 +202,10 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="John Doe"
+                      maxLength={100}
+                      className={errors.name ? "border-destructive" : ""}
                     />
+                    {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
                   </div>
 
                   <div className="space-y-2">
@@ -153,7 +217,10 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="john@company.com"
+                      maxLength={255}
+                      className={errors.email ? "border-destructive" : ""}
                     />
+                    {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
                   </div>
                 </div>
 
@@ -166,7 +233,10 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+60 12-345 6789"
+                      maxLength={20}
+                      className={errors.phone ? "border-destructive" : ""}
                     />
+                    {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
                   </div>
 
                   <div className="space-y-2">
@@ -176,14 +246,17 @@ const Contact = () => {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="Your Company"
+                      maxLength={100}
+                      className={errors.company ? "border-destructive" : ""}
                     />
+                    {errors.company && <p className="text-sm text-destructive">{errors.company}</p>}
                   </div>
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="service">Service Interest</Label>
                   <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
-                    <SelectTrigger>
+                    <SelectTrigger className={errors.service ? "border-destructive" : ""}>
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
@@ -198,6 +271,7 @@ const Contact = () => {
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
+                  {errors.service && <p className="text-sm text-destructive">{errors.service}</p>}
                 </div>
 
                 <div className="space-y-2">
@@ -209,7 +283,11 @@ const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us about your requirements..."
                     rows={6}
+                    maxLength={2000}
+                    className={errors.message ? "border-destructive" : ""}
                   />
+                  {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+                  <p className="text-xs text-muted-foreground">{formData.message.length}/2000 characters</p>
                 </div>
 
                 <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-secondary">
