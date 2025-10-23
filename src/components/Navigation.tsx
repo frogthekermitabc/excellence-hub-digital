@@ -47,9 +47,42 @@ const Navigation = () => {
             <Link to="/">
               <Button variant={isActive("/") ? "default" : "ghost"}>{t("nav.home")}</Button>
             </Link>
-            <Link to="/about">
-              <Button variant={isActive("/about") ? "default" : "ghost"}>{t("nav.about")}</Button>
-            </Link>
+            
+            {/* Company Dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent">
+                    Company
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="grid w-[200px] gap-3 p-4">
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/about"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">About</div>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                      <li>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/consultants"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                          >
+                            <div className="text-sm font-medium leading-none">Consultants</div>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+
             <Link to="/services">
               <Button variant={isActive("/services") ? "default" : "ghost"}>{t("nav.services")}</Button>
             </Link>
@@ -84,9 +117,6 @@ const Navigation = () => {
               </NavigationMenuList>
             </NavigationMenu>
 
-            <Link to="/consultants">
-              <Button variant={isActive("/consultants") ? "default" : "ghost"}>{t("nav.consultants")}</Button>
-            </Link>
             <Link to="/courses">
               <Button variant={isActive("/courses") ? "default" : "ghost"}>{t("nav.courses")}</Button>
             </Link>
@@ -123,30 +153,38 @@ const Navigation = () => {
                 {t("nav.home")}
               </Button>
             </Link>
-            <Link to="/about" onClick={() => setIsOpen(false)}>
-              <Button variant={isActive("/about") ? "default" : "ghost"} className="w-full justify-start">
-                {t("nav.about")}
-              </Button>
-            </Link>
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-sm font-semibold">Company</div>
+              <div className="pl-4 space-y-1">
+                <Link to="/about" onClick={() => setIsOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start text-sm">
+                    About
+                  </Button>
+                </Link>
+                <Link to="/consultants" onClick={() => setIsOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start text-sm">
+                    Consultants
+                  </Button>
+                </Link>
+              </div>
+            </div>
             <Link to="/services" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/services") ? "default" : "ghost"} className="w-full justify-start">
                 {t("nav.services")}
               </Button>
             </Link>
-            <div className="pl-4 space-y-1">
-              {managementSystems.map((system) => (
-                <Link key={system.path} to={system.path} onClick={() => setIsOpen(false)}>
-                  <Button variant="ghost" className="w-full justify-start text-sm">
-                    {system.title}
-                  </Button>
-                </Link>
-              ))}
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-sm font-semibold">{t("nav.managementSystems")}</div>
+              <div className="pl-4 space-y-1">
+                {managementSystems.map((system) => (
+                  <Link key={system.path} to={system.path} onClick={() => setIsOpen(false)}>
+                    <Button variant="ghost" className="w-full justify-start text-sm">
+                      {system.title}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
             </div>
-            <Link to="/consultants" onClick={() => setIsOpen(false)}>
-              <Button variant={isActive("/consultants") ? "default" : "ghost"} className="w-full justify-start">
-                {t("nav.consultants")}
-              </Button>
-            </Link>
             <Link to="/courses" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/courses") ? "default" : "ghost"} className="w-full justify-start">
                 {t("nav.courses")}
