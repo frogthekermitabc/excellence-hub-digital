@@ -9,9 +9,9 @@ interface StatCardProps {
 
 const StatCard = ({ icon: Icon, value, label }: StatCardProps) => {
   return (
-    <Card className="p-6 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+    <Card variant="elevated" className="p-6 text-center hover:-translate-y-2 group">
       <div className="flex justify-center mb-3">
-        <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+        <div className="p-3 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
           <Icon className="h-8 w-8 text-primary" />
         </div>
       </div>

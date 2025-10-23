@@ -30,7 +30,7 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
+    <nav className="sticky top-0 z-50 bg-card/70 backdrop-blur-lg border-b border-white/20 shadow-[0_8px_32px_0_rgba(138,86,226,0.1)] dark:bg-card/60 dark:border-white/10">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}

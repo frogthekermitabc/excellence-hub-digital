@@ -20,9 +20,9 @@ const ConsultantCard = ({
   certifications 
 }: ConsultantCardProps) => {
   return (
-    <Card className="p-6 hover:shadow-lg transition-all duration-300">
+    <Card variant="glass" className="p-6 hover:-translate-y-2 group">
       <div className="flex items-start space-x-4 mb-4">
-        <div className="p-4 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+        <div className="p-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
           <User className="h-12 w-12 text-primary" />
         </div>
         <div className="flex-1">
