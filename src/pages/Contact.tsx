@@ -114,11 +114,11 @@ const Contact = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">Contact Us</AnimatedText>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("contact.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
-              Get in touch with our team to discuss your ISO certification needs
+              {t("contact.subtitle")}
             </AnimatedText>
           </AnimatedContent>
         </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                   <MapPin className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">Office Location</h3>
+              <h3 className="font-semibold mb-2">{t("contact.location")}</h3>
               <p className="text-sm text-muted-foreground">
                 No.11-3A, Jalan Bandar 12<br />
                 Pusat Bandar Puchong<br />
@@ -149,7 +149,7 @@ const Contact = () => {
                   <Phone className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">Phone</h3>
+              <h3 className="font-semibold mb-2">{t("contact.phone")}</h3>
               <p className="text-sm text-muted-foreground">
                 +6012-469 1606<br />
                 +6016-260 1606
@@ -162,7 +162,7 @@ const Contact = () => {
                   <Mail className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">Email</h3>
+              <h3 className="font-semibold mb-2">{t("contact.email")}</h3>
               <p className="text-sm text-muted-foreground">
                 info@qaims.com.my<br />
                 musri@qaims.com.my<br />
@@ -176,10 +176,10 @@ const Contact = () => {
                   <Clock className="h-8 w-8 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">Business Hours</h3>
+              <h3 className="font-semibold mb-2">{t("contact.hours")}</h3>
               <p className="text-sm text-muted-foreground">
-                Mon - Fri: 9:00 AM - 6:00 PM<br />
-                Sat: 9:00 AM - 1:00 PM
+                {t("contact.monFri")}<br />
+                {t("contact.sat")}
               </p>
             </Card>
           </div>
@@ -191,9 +191,9 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold mb-4">{t("contact.sendMessage")}</h2>
               <p className="text-muted-foreground">
-                Fill out the form below and our team will get back to you within 24 hours
+                {t("contact.formDesc")}
               </p>
             </div>
 
@@ -201,7 +201,7 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Full Name *</Label>
+                    <Label htmlFor="name">{t("contact.fullName")}</Label>
                     <Input
                       id="name"
                       required
@@ -215,7 +215,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address *</Label>
+                    <Label htmlFor="email">{t("contact.emailAddress")}</Label>
                     <Input
                       id="email"
                       type="email"
@@ -232,7 +232,7 @@ const Contact = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone Number</Label>
+                    <Label htmlFor="phone">{t("contact.phoneNumber")}</Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -246,7 +246,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="company">Company Name</Label>
+                    <Label htmlFor="company">{t("contact.companyName")}</Label>
                     <Input
                       id="company"
                       value={formData.company}
@@ -260,34 +260,34 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="service">Service Interest</Label>
+                  <Label htmlFor="service">{t("contact.serviceInterest")}</Label>
                   <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
                     <SelectTrigger className={errors.service ? "border-destructive" : ""}>
-                      <SelectValue placeholder="Select a service" />
+                      <SelectValue placeholder={t("contact.selectService")} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="training">Training Services</SelectItem>
-                      <SelectItem value="consulting">Consulting Services</SelectItem>
-                      <SelectItem value="auditing">Auditing Services</SelectItem>
-                      <SelectItem value="iso9001">ISO 9001 Certification</SelectItem>
-                      <SelectItem value="iso14001">ISO 14001 Certification</SelectItem>
-                      <SelectItem value="iso45001">ISO 45001 Certification</SelectItem>
-                      <SelectItem value="iso27001">ISO 27001 Certification</SelectItem>
-                      <SelectItem value="iso37001">ISO 37001 Certification</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="training">{t("contact.training")}</SelectItem>
+                      <SelectItem value="consulting">{t("contact.consulting")}</SelectItem>
+                      <SelectItem value="auditing">{t("contact.auditing")}</SelectItem>
+                      <SelectItem value="iso9001">{t("contact.iso9001")}</SelectItem>
+                      <SelectItem value="iso14001">{t("contact.iso14001")}</SelectItem>
+                      <SelectItem value="iso45001">{t("contact.iso45001")}</SelectItem>
+                      <SelectItem value="iso27001">{t("contact.iso27001")}</SelectItem>
+                      <SelectItem value="iso37001">{t("contact.iso37001")}</SelectItem>
+                      <SelectItem value="other">{t("contact.other")}</SelectItem>
                     </SelectContent>
                   </Select>
                   {errors.service && <p className="text-sm text-destructive">{errors.service}</p>}
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="message">Message *</Label>
+                  <Label htmlFor="message">{t("contact.message")}</Label>
                   <Textarea
                     id="message"
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us about your requirements..."
+                    placeholder={t("contact.messagePlaceholder")}
                     rows={6}
                     maxLength={2000}
                     className={errors.message ? "border-destructive" : ""}
@@ -297,7 +297,7 @@ const Contact = () => {
                 </div>
 
                 <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-primary to-secondary">
-                  Send Message
+                  {t("contact.send")}
                 </Button>
               </form>
             </Card>
@@ -308,7 +308,7 @@ const Contact = () => {
       {/* Map Placeholder */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Visit Our Office</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center">{t("contact.visitOffice")}</h2>
           <div className="max-w-5xl mx-auto">
             <div className="bg-muted rounded-lg h-96 flex flex-col items-center justify-center p-8">
               <MapPin className="h-16 w-16 text-primary mb-4" />
@@ -324,7 +324,7 @@ const Contact = () => {
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
-                  Open in Google Maps
+                  {t("contact.openGoogleMaps")}
                 </Button>
                 <Button
                   size="lg"
@@ -334,7 +334,7 @@ const Contact = () => {
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
-                  Open in Apple Maps
+                  {t("contact.openAppleMaps")}
                 </Button>
               </div>
             </div>

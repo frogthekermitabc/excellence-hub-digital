@@ -4,10 +4,12 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 
 const ISO37001 = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -21,14 +23,14 @@ const ISO37001 = () => {
               </div>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">ISO 37001:2018</AnimatedText>
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("iso37001.title")}</AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-2xl mb-4" delay={0.3}>Anti-Bribery Management System</AnimatedText>
+              <AnimatedText className="text-2xl mb-4" delay={0.3}>{t("iso37001.subtitle")}</AnimatedText>
             </AnimatedContent>
             <AnimatedContent>
               <AnimatedText className="text-lg opacity-90" delay={0.5}>
-                Combat corruption and demonstrate your commitment to ethical business practices
+                {t("iso37001.tagline")}
               </AnimatedText>
             </AnimatedContent>
           </div>
@@ -38,24 +40,16 @@ const ISO37001 = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">What is ISO 37001:2018?</h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              ISO 37001:2018 specifies requirements and provides guidance for establishing, implementing, 
-              maintaining, reviewing, and improving an anti-bribery management system (ABMS). The system 
-              can be standalone or integrated into an overall management system.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              It addresses bribery in the public, private, and not-for-profit sectors, helping organizations 
-              implement or enhance controls to help prevent, detect, and respond to bribery and comply with 
-              anti-bribery laws and voluntary commitments.
-            </p>
+            <h2 className="text-3xl font-bold mb-6 text-center">{t("iso37001.whatIs")}</h2>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("iso37001.description1")}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">{t("iso37001.description2")}</p>
           </div>
         </div>
       </section>
 
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Governance Benefits</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("iso37001.benefits")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-6">
               <div className="flex items-start space-x-4">
@@ -63,56 +57,41 @@ const ISO37001 = () => {
                   <Scale className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Legal Compliance</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Demonstrate compliance with anti-bribery and anti-corruption laws including 
-                    MACC Act and international legislation.
-                  </p>
+                  <h3 className="font-bold text-lg mb-2">{t("iso37001.benefit1Title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("iso37001.benefit1Desc")}</p>
                 </div>
               </div>
             </Card>
-
             <Card className="p-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-lg">
                   <CheckCircle className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Corporate Governance</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Strengthen governance framework and demonstrate commitment to ethical 
-                    business conduct at all levels.
-                  </p>
+                  <h3 className="font-bold text-lg mb-2">{t("iso37001.benefit2Title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("iso37001.benefit2Desc")}</p>
                 </div>
               </div>
             </Card>
-
             <Card className="p-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-lg">
                   <Users className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Stakeholder Confidence</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Build trust with investors, partners, and customers through transparent 
-                    anti-bribery policies and controls.
-                  </p>
+                  <h3 className="font-bold text-lg mb-2">{t("iso37001.benefit3Title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("iso37001.benefit3Desc")}</p>
                 </div>
               </div>
             </Card>
-
             <Card className="p-6">
               <div className="flex items-start space-x-4">
                 <div className="p-3 bg-gradient-to-br from-accent/10 to-secondary/10 rounded-lg">
                   <Building className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Business Opportunities</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Access government contracts and international markets that require 
-                    anti-bribery certification.
-                  </p>
+                  <h3 className="font-bold text-lg mb-2">{t("iso37001.benefit4Title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("iso37001.benefit4Desc")}</p>
                 </div>
               </div>
             </Card>
@@ -123,19 +102,17 @@ const ISO37001 = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-to-r from-accent to-secondary rounded-2xl p-12 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Strengthen Your Integrity</h2>
-            <p className="text-lg mb-8 opacity-90">
-              Implement ISO 37001 and build a culture of compliance and ethical conduct
-            </p>
+            <h2 className="text-3xl font-bold mb-4">{t("iso37001.cta")}</h2>
+            <p className="text-lg mb-8 opacity-90">{t("iso37001.ctaDesc")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                  Start Your Journey
+                  {t("iso37001.startJourney")}
                 </Button>
               </Link>
               <Link to="/courses">
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  ABMS Training
+                  {t("iso37001.abmsTraining")}
                 </Button>
               </Link>
             </div>
