@@ -16,6 +16,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { z } from "zod";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 // Comprehensive validation schema with security measures
 const contactSchema = z.object({
@@ -109,14 +110,18 @@ const Contact = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Get in touch with our team to discuss your ISO certification needs
-          </p>
+          <AnimatedContent>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-xl max-w-3xl mx-auto opacity-90">
+              Get in touch with our team to discuss your ISO certification needs
+            </p>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* Contact Information */}
       <section className="py-16">

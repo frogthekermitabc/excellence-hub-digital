@@ -4,26 +4,35 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const ISO45001 = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      <section className="py-20 bg-gradient-to-r from-accent to-primary text-white">
+      <AnimatedHero variant="gradient" className="bg-gradient-to-r from-accent to-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
-              <Shield className="h-16 w-16" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 45001:2018</h1>
-            <p className="text-2xl mb-4">Occupational Health & Safety Management</p>
-            <p className="text-lg opacity-90">
-              Protect your workforce and create safer, healthier working environments
-            </p>
+            <AnimatedContent>
+              <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
+                <Shield className="h-16 w-16" />
+              </div>
+            </AnimatedContent>
+            <AnimatedContent>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 45001:2018</h1>
+            </AnimatedContent>
+            <AnimatedContent>
+              <p className="text-2xl mb-4">Occupational Health & Safety Management</p>
+            </AnimatedContent>
+            <AnimatedContent>
+              <p className="text-lg opacity-90">
+                Protect your workforce and create safer, healthier working environments
+              </p>
+            </AnimatedContent>
           </div>
         </div>
-      </section>
+      </AnimatedHero>
 
       <section className="py-16">
         <div className="container mx-auto px-4">

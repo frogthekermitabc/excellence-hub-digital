@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import { Card } from "@/components/ui/card";
 import trainingImage from "@/assets/training-session.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -14,14 +15,18 @@ const Services = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("services.title")}</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
-            {t("services.subtitle")}
-          </p>
+          <AnimatedContent>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("services.title")}</h1>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-xl max-w-3xl mx-auto opacity-90">
+              {t("services.subtitle")}
+            </p>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* Training Services */}
       <section className="py-16">

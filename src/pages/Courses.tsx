@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const Courses = () => {
   const { t } = useLanguage();
@@ -59,14 +60,21 @@ const Courses = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("courses.title")}</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
-            {t("courses.subtitle")}
-          </p>
+          <AnimatedContent>
+            <GraduationCap className="h-16 w-16 mx-auto mb-6" />
+          </AnimatedContent>
+          <AnimatedContent>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("courses.title")}</h1>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-xl max-w-3xl mx-auto opacity-90">
+              {t("courses.subtitle")}
+            </p>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* Course Types */}
       <section className="py-16">

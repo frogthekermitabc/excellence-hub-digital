@@ -4,26 +4,35 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const ISO37001 = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      <section className="py-20 bg-gradient-to-r from-accent to-secondary text-white">
+      <AnimatedHero variant="gradient" className="bg-gradient-to-r from-accent to-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
-              <Scale className="h-16 w-16" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 37001:2018</h1>
-            <p className="text-2xl mb-4">Anti-Bribery Management System</p>
-            <p className="text-lg opacity-90">
-              Combat corruption and demonstrate your commitment to ethical business practices
-            </p>
+            <AnimatedContent>
+              <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
+                <Scale className="h-16 w-16" />
+              </div>
+            </AnimatedContent>
+            <AnimatedContent>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 37001:2018</h1>
+            </AnimatedContent>
+            <AnimatedContent>
+              <p className="text-2xl mb-4">Anti-Bribery Management System</p>
+            </AnimatedContent>
+            <AnimatedContent>
+              <p className="text-lg opacity-90">
+                Combat corruption and demonstrate your commitment to ethical business practices
+              </p>
+            </AnimatedContent>
           </div>
         </div>
-      </section>
+      </AnimatedHero>
 
       <section className="py-16">
         <div className="container mx-auto px-4">

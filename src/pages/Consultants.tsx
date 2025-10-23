@@ -1,9 +1,9 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ConsultantCard from "@/components/ConsultantCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const Consultants = () => {
   const consultants = [
@@ -57,14 +57,18 @@ const Consultants = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Expert Consultants</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Meet our team of highly qualified ISO certification experts with decades of combined experience
-          </p>
+          <AnimatedContent>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Expert Consultants</h1>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-xl max-w-3xl mx-auto opacity-90">
+              Meet our team of highly qualified ISO certification experts with decades of combined experience
+            </p>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* Consultant Profiles */}
       <section className="py-16 bg-muted">

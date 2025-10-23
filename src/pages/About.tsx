@@ -4,6 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const About = () => {
   const { t } = useLanguage();
@@ -23,14 +24,18 @@ const About = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
-            {t("about.subtitle")}
-          </p>
+          <AnimatedContent>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">{t("about.title")}</h1>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-xl max-w-3xl mx-auto opacity-90">
+              {t("about.subtitle")}
+            </p>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* Company Overview */}
       <section className="py-16">

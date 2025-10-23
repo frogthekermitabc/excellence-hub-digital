@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 
 const ISO9001 = () => {
   return (
@@ -11,20 +12,28 @@ const ISO9001 = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-white">
+      <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
-              <Shield className="h-16 w-16" />
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 9001:2015</h1>
-            <p className="text-2xl mb-4">Quality Management System</p>
-            <p className="text-lg opacity-90">
-              The world's most recognized quality management standard for operational excellence
-            </p>
+            <AnimatedContent>
+              <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
+                <Shield className="h-16 w-16" />
+              </div>
+            </AnimatedContent>
+            <AnimatedContent>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">ISO 9001:2015</h1>
+            </AnimatedContent>
+            <AnimatedContent>
+              <p className="text-2xl mb-4">Quality Management System</p>
+            </AnimatedContent>
+            <AnimatedContent>
+              <p className="text-lg opacity-90">
+                The world's most recognized quality management standard for operational excellence
+              </p>
+            </AnimatedContent>
           </div>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* What is ISO 9001 */}
       <section className="py-16">

@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StatCard from "@/components/StatCard";
 import ServiceCard from "@/components/ServiceCard";
+import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import heroImage from "@/assets/hero-office.jpg";
 
 const Index = () => {
@@ -16,7 +17,7 @@ const Index = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+      <AnimatedHero variant="image">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
@@ -27,29 +28,37 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            {t("home.heroTitle")}
-          </h1>
-          <p className="text-2xl text-white/95 mb-4 font-semibold">
-            {t("home.heroSubtitle")}
-          </p>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("home.heroDescription")}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" className="bg-accent hover:bg-accent/90">
-                {t("home.getFreeQuote")}
-              </Button>
-            </Link>
-            <Link to="/about">
-              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur text-white border-white hover:bg-white hover:text-primary">
-                {t("home.learnMore")}
-              </Button>
-            </Link>
-          </div>
+          <AnimatedContent>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              {t("home.heroTitle")}
+            </h1>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-2xl text-white/95 mb-4 font-semibold">
+              {t("home.heroSubtitle")}
+            </p>
+          </AnimatedContent>
+          <AnimatedContent>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              {t("home.heroDescription")}
+            </p>
+          </AnimatedContent>
+          <AnimatedContent>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button size="lg" className="bg-accent hover:bg-accent/90">
+                  {t("home.getFreeQuote")}
+                </Button>
+              </Link>
+              <Link to="/about">
+                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur text-white border-white hover:bg-white hover:text-primary">
+                  {t("home.learnMore")}
+                </Button>
+              </Link>
+            </div>
+          </AnimatedContent>
         </div>
-      </section>
+      </AnimatedHero>
 
       {/* Stats Section */}
       <section className="py-16 bg-muted">
