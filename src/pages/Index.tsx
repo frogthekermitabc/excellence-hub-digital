@@ -9,6 +9,7 @@ import ServiceCard from "@/components/ServiceCard";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import heroImage from "@/assets/hero-office.jpg";
+import qaiLogo from "@/assets/qai-logo.png";
 
 const Index = () => {
   const { t } = useLanguage();
@@ -29,6 +30,13 @@ const Index = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10 text-center">
+          <AnimatedContent>
+            <img 
+              src={qaiLogo} 
+              alt="QAI - Quality Assurance International" 
+              className="h-32 md:h-40 w-auto mx-auto mb-8"
+            />
+          </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-4xl md:text-6xl font-bold text-white mb-6" type="word">
               {t("home.heroTitle")}
