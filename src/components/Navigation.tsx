@@ -35,7 +35,7 @@ const Navigation = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={qaiLogo} alt="QAI - Quality Assurance International" className="h-16 md:h-20 w-auto" />
+            <img src={qaiLogo} alt="QAI - Quality Assurance International" className="h-12 md:h-14 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
