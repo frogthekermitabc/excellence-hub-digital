@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <img src={qaiLogo} alt="QAI Logo" className="h-16 w-auto mb-6" />
+            <img src={qaiLogo} alt="QAI Logo" className="h-32 md:h-40 w-auto mb-6" />
             <p className="text-sm text-muted-foreground mb-4">{t("footer.description")}</p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
               <span className="font-semibold">{t("footer.mofRegistered")}</span>
