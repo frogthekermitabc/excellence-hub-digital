@@ -34,7 +34,7 @@ const Index = () => {
             <img 
               src={qaiLogo} 
               alt="QAI - Quality Assurance International" 
-              className="h-32 md:h-40 w-auto mx-auto mb-8"
+              className="h-48 md:h-64 w-auto mx-auto mb-8"
             />
           </AnimatedContent>
           <AnimatedContent>
