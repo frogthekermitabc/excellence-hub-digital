@@ -282,6 +282,16 @@ const translations = {
       iso37001: "ISO 37001 Certification",
       other: "Other",
     },
+    consultants: {
+      title: "Our Expert Consultants",
+      subtitle: "Meet our team of highly qualified ISO certification experts with decades of combined experience",
+      teamTitle: "Meet Our Team",
+      workWithExperts: "Work With Our Experts",
+      workWithExpertsDesc: "Connect with our consultants to discuss your ISO certification needs and find the right solution for your organization",
+      requestConsultant: "Request a Consultant",
+      viewTraining: "View Training Programs",
+      trustedBy: "Trusted by Leading Organizations",
+    },
     iso9001: {
       title: "ISO 9001:2015",
       subtitle: "Quality Management System",
@@ -596,6 +606,7 @@ const translations = {
       title: "Perunding Pakar Kami",
       subtitle:
         "Temui pasukan pakar pensijilan ISO yang berkelayakan tinggi kami dengan pengalaman gabungan berdekad-dekad",
+      teamTitle: "Temui Pasukan Kami",
       expertise: "Kepakaran Terkemuka Industri",
       expertiseDesc:
         "Perunding kami membawa kekayaan pengetahuan dari pelbagai industri dan pasaran antarabangsa. Dengan kelayakan lanjutan, pensijilan profesional, dan pengalaman praktikal yang luas, mereka menyediakan panduan strategik yang menghasilkan hasil sebenar untuk organisasi anda.",

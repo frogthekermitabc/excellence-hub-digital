@@ -5,8 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Consultants = () => {
+  const { t } = useLanguage();
   const consultants = [
     {
       name: "Musri Tukiman",
@@ -61,11 +63,11 @@ const Consultants = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">Our Expert Consultants</AnimatedText>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("consultants.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
-              Meet our team of highly qualified ISO certification experts with decades of combined experience
+              {t("consultants.subtitle")}
             </AnimatedText>
           </AnimatedContent>
         </div>
@@ -74,7 +76,7 @@ const Consultants = () => {
       {/* Consultant Profiles */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Meet Our Team</h2>
+          <h2 className="text-3xl font-bold mb-12 text-center">{t("consultants.teamTitle")}</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {consultants.map((consultant, idx) => (
               <ConsultantCard key={idx} {...consultant} />
@@ -87,20 +89,19 @@ const Consultants = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Work With Our Experts</h2>
+            <h2 className="text-3xl font-bold mb-4">{t("consultants.workWithExperts")}</h2>
             <p className="text-lg mb-8 opacity-90">
-              Connect with our consultants to discuss your ISO certification needs and find the right solution for your
-              organization
+              {t("consultants.workWithExpertsDesc")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-                  Request a Consultant
+                  {t("consultants.requestConsultant")}
                 </Button>
               </Link>
               <Link to="/courses">
                 <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  View Training Programs
+                  {t("consultants.viewTraining")}
                 </Button>
               </Link>
             </div>
@@ -112,7 +113,7 @@ const Consultants = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">Trusted by Leading Organizations</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">{t("consultants.trustedBy")}</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 "SPAN Malaysia",
