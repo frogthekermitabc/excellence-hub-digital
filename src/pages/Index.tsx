@@ -73,11 +73,9 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <StatCard icon={Award} value="30+" label={t("home.yearsOfExcellence")} />
-            <StatCard icon={Users} value="1000+" label={t("home.satisfiedClients")} />
-            <StatCard icon={Globe} value="3" label={t("home.countriesServed")} />
-            <StatCard icon={TrendingUp} value="5000+" label={t("home.certificationsCompleted")} />
+            <StatCard icon={Users} value="300+" label={t("home.satisfiedClients")} />
           </div>
         </div>
       </section>
