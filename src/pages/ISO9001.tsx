@@ -43,8 +43,42 @@ const ISO9001 = () => {
         </div>
       </AnimatedHero>
 
+      {/* Page Navigation */}
+      <section className="py-8 bg-muted/50 sticky top-16 z-10 border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#schedule" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Course Schedule
+            </a>
+            <a href="#about" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              About ISO 9001
+            </a>
+            <a href="#benefits" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Key Benefits
+            </a>
+            <a href="#industries" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Industries
+            </a>
+            <a href="#process" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Implementation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Course Schedule */}
+      <section id="schedule" className="py-16 scroll-mt-32">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">ISO 9001 Course Schedule</h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            View our upcoming ISO 9001:2015 training sessions. Click JOIN to register your interest or contact us for in-house training.
+          </p>
+          <CourseScheduleTable courseType="ISO 9001" />
+        </div>
+      </section>
+
       {/* What is ISO 9001 */}
-      <section className="py-16">
+      <section id="about" className="py-16 bg-muted scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">{t("iso9001.whatIs")}</h2>
@@ -55,7 +89,7 @@ const ISO9001 = () => {
       </section>
 
       {/* Key Benefits */}
-      <section className="py-16 bg-muted">
+      <section id="benefits" className="py-16 scroll-mt-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">{t("iso9001.benefits")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -111,7 +145,7 @@ const ISO9001 = () => {
       </section>
 
       {/* Who Needs It */}
-      <section className="py-16">
+      <section id="industries" className="py-16 bg-muted scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-8 text-center">{t("iso9001.whoNeeds")}</h2>
@@ -140,7 +174,7 @@ const ISO9001 = () => {
       </section>
 
       {/* Implementation Process */}
-      <section className="py-16 bg-muted">
+      <section id="process" className="py-16 scroll-mt-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">{t("iso9001.process")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -175,17 +209,6 @@ const ISO9001 = () => {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Course Schedule */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">ISO 9001 Course Schedule</h2>
-          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            View our upcoming ISO 9001:2015 training sessions. Click JOIN to register your interest or contact us for in-house training.
-          </p>
-          <CourseScheduleTable courseType="ISO 9001" />
         </div>
       </section>
 

@@ -42,7 +42,35 @@ const ISO27001 = () => {
         </div>
       </AnimatedHero>
 
-      <section className="py-16">
+      {/* Page Navigation */}
+      <section className="py-8 bg-muted/50 sticky top-16 z-10 border-b">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            <a href="#schedule" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Course Schedule
+            </a>
+            <a href="#about" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              About ISO 27001
+            </a>
+            <a href="#benefits" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Key Benefits
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Course Schedule */}
+      <section id="schedule" className="py-16 scroll-mt-32">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">ISO 27001 Course Schedule</h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            View our upcoming ISO 27001:2022 Information Security Management System training sessions.
+          </p>
+          <CourseScheduleTable courseType="ISO 27001" />
+        </div>
+      </section>
+
+      <section id="about" className="py-16 bg-muted scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-6 text-center">{t("iso27001.whatIs")}</h2>
@@ -52,7 +80,7 @@ const ISO27001 = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-muted">
+      <section id="benefits" className="py-16 scroll-mt-32">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">{t("iso27001.benefits")}</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -101,17 +129,6 @@ const ISO27001 = () => {
               </div>
             </Card>
           </div>
-        </div>
-      </section>
-
-      {/* Course Schedule */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">ISO 27001 Course Schedule</h2>
-          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            View our upcoming ISO 27001:2022 Information Security Management System training sessions.
-          </p>
-          <CourseScheduleTable courseType="ISO 27001" />
         </div>
       </section>
 
