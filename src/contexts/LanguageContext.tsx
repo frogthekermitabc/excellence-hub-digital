@@ -50,6 +50,7 @@ const translations = {
       courses: "Courses",
       contact: "Contact",
       getQuote: "Get a Quote",
+      company: "Company",
     },
     footer: {
       description:

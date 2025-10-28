@@ -48,7 +48,7 @@ const Navigation = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent">{t("Company")}</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="bg-transparent">{t("nav.company")}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[200px] gap-3 p-4">
                       <li>
@@ -143,7 +143,7 @@ const Navigation = () => {
               </Button>
             </Link>
             <div className="space-y-1">
-              <div className="px-3 py-2 text-sm font-semibold">{t("Company")}</div>
+              <div className="px-3 py-2 text-sm font-semibold">{t("nav.company")}</div>
               <div className="pl-4 space-y-1">
                 <Link to="/about" onClick={() => setIsOpen(false)}>
                   <Button variant="ghost" className="w-full justify-start text-sm">
