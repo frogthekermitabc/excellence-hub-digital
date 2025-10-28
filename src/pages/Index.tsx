@@ -19,8 +19,8 @@ const Index = () => {
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section */}
-      <AnimatedHero variant="image">
+      {/* Hero Section - Banner Style */}
+      <AnimatedHero variant="image" className="!h-[400px]">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
@@ -35,22 +35,17 @@ const Index = () => {
             <img 
               src={qaiLogo} 
               alt="QAI - Quality Assurance International" 
-              className="h-32 md:h-40 lg:h-48 w-auto mx-auto mb-8"
+              className="h-24 md:h-32 w-auto mx-auto mb-6"
             />
           </AnimatedContent>
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-6xl font-bold text-white mb-6" type="word">
+            <AnimatedText className="text-3xl md:text-4xl font-bold text-white mb-4" type="word">
               {t("home.heroTitle")}
             </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <AnimatedText className="text-2xl text-white/95 mb-4 font-semibold" delay={0.3}>
+            <AnimatedText className="text-xl text-white/95 mb-3 font-semibold" delay={0.3}>
               {t("home.heroSubtitle")}
-            </AnimatedText>
-          </AnimatedContent>
-          <AnimatedContent>
-            <AnimatedText className="text-xl text-white/90 mb-8 max-w-2xl mx-auto" delay={0.5}>
-              {t("home.heroDescription")}
             </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
@@ -70,18 +65,33 @@ const Index = () => {
         </div>
       </AnimatedHero>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-muted">
+      {/* Page Navigation */}
+      <section className="py-6 bg-muted/50 sticky top-16 z-10 border-b">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <StatCard icon={Award} value="30+" label={t("home.yearsOfExcellence")} />
-            <StatCard icon={Users} value="300+" label={t("home.satisfiedClients")} />
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="#updates" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Latest Updates
+            </a>
+            <a href="#iso-systems" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              ISO Management Systems
+            </a>
+            <a href="#services" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Our Services
+            </a>
+            <a href="#credentials" className="px-4 py-2 rounded-full bg-primary/10 hover:bg-primary/20 text-sm font-medium transition-colors">
+              Our Credentials
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Core Competencies */}
-      <section className="py-16">
+      {/* Company Updates Section */}
+      <div id="updates" className="scroll-mt-32">
+        <CompanyUpdates />
+      </div>
+
+      {/* ISO Management Systems */}
+      <section id="iso-systems" className="py-16 scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.isoManagementSystems")}</AnimatedText>
@@ -132,7 +142,7 @@ const Index = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-16 bg-muted">
+      <section id="services" className="py-16 bg-muted scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.ourServices")}</AnimatedText>
@@ -164,8 +174,21 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Company Updates Section */}
-      <CompanyUpdates />
+      {/* Credentials Section */}
+      <section id="credentials" className="py-16 scroll-mt-32">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Credentials</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Trusted by hundreds of organizations across the Middle East
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <StatCard icon={Award} value="30+" label={t("home.yearsOfExcellence")} />
+            <StatCard icon={Users} value="300+" label={t("home.satisfiedClients")} />
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
