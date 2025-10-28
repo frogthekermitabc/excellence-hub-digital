@@ -8,6 +8,7 @@ import StatCard from "@/components/StatCard";
 import ServiceCard from "@/components/ServiceCard";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import CompanyUpdates from "@/components/CompanyUpdates";
 import heroImage from "@/assets/hero-office.jpg";
 import qaiLogo from "@/assets/qai-logo.png";
 
@@ -164,6 +165,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Company Updates Section */}
+      <CompanyUpdates />
 
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">

@@ -16,6 +16,9 @@ import ISO45001 from "./pages/ISO45001";
 import ISO27001 from "./pages/ISO27001";
 import ISO37001 from "./pages/ISO37001";
 import NotFound from "./pages/NotFound";
+import Auth from "./pages/Auth";
+import Admin from "./pages/Admin";
+import AdminUsers from "./pages/AdminUsers";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/iso-45001" element={<ISO45001 />} />
           <Route path="/iso-27001" element={<ISO27001 />} />
           <Route path="/iso-37001" element={<ISO37001 />} />
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/users" element={<AdminUsers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
