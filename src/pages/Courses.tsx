@@ -132,18 +132,11 @@ const Courses = () => {
                   <h3 className="text-xl font-bold text-primary mb-2">{idx + 1}. {course.title}</h3>
                   <p className="text-sm text-muted-foreground">{course.subtitle}</p>
                 </div>
-                <div className="flex flex-col gap-3">
-                  <Link to="/course-schedule" className="w-full">
-                    <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
-                      Registration
-                    </Button>
-                  </Link>
-                  <Link to={course.detailsLink} className="w-full">
-                    <Button variant="outline" className="w-full" size="lg">
-                      View Details
-                    </Button>
-                  </Link>
-                </div>
+                <Link to={course.detailsLink} className="w-full">
+                  <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90" size="lg">
+                    Learn More & Register
+                  </Button>
+                </Link>
               </Card>
             ))}
           </div>
