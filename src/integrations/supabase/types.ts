@@ -52,6 +52,7 @@ export type Database = {
       }
       course_schedules: {
         Row: {
+          availability_status: string
           course_type: string
           created_at: string
           duration: number
@@ -66,6 +67,7 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          availability_status?: string
           course_type: string
           created_at?: string
           duration?: number
@@ -80,6 +82,7 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          availability_status?: string
           course_type?: string
           created_at?: string
           duration?: number
