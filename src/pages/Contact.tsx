@@ -102,12 +102,12 @@ const Contact = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+            <AnimatedText className="text-3xl md:text-4xl font-bold mb-3" type="word">
               {t("contact.title")}
             </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
-            <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
+            <AnimatedText className="text-lg md:text-xl max-w-2xl mx-auto opacity-90" delay={0.3}>
               {t("contact.subtitle")}
             </AnimatedText>
           </AnimatedContent>
@@ -115,16 +115,16 @@ const Contact = () => {
       </AnimatedHero>
 
       {/* Contact Information */}
-      <section className="py-16">
+      <section className="py-12 md:py-14">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            <Card className="p-6 text-center hover:shadow-lg transition-all">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
-                  <MapPin className="h-8 w-8 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            <Card className="p-5 text-center hover:shadow-lg transition-all">
+              <div className="flex justify-center mb-3">
+                <div className="p-2.5 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+                  <MapPin className="h-7 w-7 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">{t("contact.location")}</h3>
+              <h3 className="font-semibold mb-1.5 text-sm">{t("contact.location")}</h3>
               <p className="text-sm text-muted-foreground">
                 No.11-3A, Jalan Bandar 12
                 <br />
@@ -136,13 +136,13 @@ const Contact = () => {
               </p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-all">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
-                  <Phone className="h-8 w-8 text-primary" />
+            <Card className="p-5 text-center hover:shadow-lg transition-all">
+              <div className="flex justify-center mb-3">
+                <div className="p-2.5 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+                  <Phone className="h-7 w-7 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">{t("contact.phone")}</h3>
+              <h3 className="font-semibold mb-1.5 text-sm">{t("contact.phone")}</h3>
               <p className="text-sm text-muted-foreground">
                 +60 12-469 1606
                 <br />
@@ -150,13 +150,13 @@ const Contact = () => {
               </p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-all">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
-                  <Mail className="h-8 w-8 text-primary" />
+            <Card className="p-5 text-center hover:shadow-lg transition-all">
+              <div className="flex justify-center mb-3">
+                <div className="p-2.5 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+                  <Mail className="h-7 w-7 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">{t("contact.email")}</h3>
+              <h3 className="font-semibold mb-1.5 text-sm">{t("contact.email")}</h3>
               <p className="text-sm text-muted-foreground">
                 info@qaims.com.my
                 <br />
@@ -166,13 +166,13 @@ const Contact = () => {
               </p>
             </Card>
 
-            <Card className="p-6 text-center hover:shadow-lg transition-all">
-              <div className="flex justify-center mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
-                  <Clock className="h-8 w-8 text-primary" />
+            <Card className="p-5 text-center hover:shadow-lg transition-all">
+              <div className="flex justify-center mb-3">
+                <div className="p-2.5 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+                  <Clock className="h-7 w-7 text-primary" />
                 </div>
               </div>
-              <h3 className="font-semibold mb-2">{t("contact.hours")}</h3>
+              <h3 className="font-semibold mb-1.5 text-sm">{t("contact.hours")}</h3>
               <p className="text-sm text-muted-foreground">
                 {t("contact.monFri")}
                 <br />
@@ -184,18 +184,18 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 bg-muted">
+      <section className="py-12 md:py-14 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">{t("contact.sendMessage")}</h2>
-              <p className="text-muted-foreground">{t("contact.formDesc")}</p>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">{t("contact.sendMessage")}</h2>
+              <p className="text-muted-foreground text-sm md:text-base">{t("contact.formDesc")}</p>
             </div>
 
-            <Card className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+            <Card className="p-6 md:p-8">
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                  <div className="space-y-1.5">
                     <Label htmlFor="name">{t("contact.fullName")}</Label>
                     <Input
                       id="name"
@@ -209,7 +209,7 @@ const Contact = () => {
                     {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <Label htmlFor="email">{t("contact.emailAddress")}</Label>
                     <Input
                       id="email"
@@ -225,8 +225,8 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+                  <div className="space-y-1.5">
                     <Label htmlFor="phone">{t("contact.phoneNumber")}</Label>
                     <Input
                       id="phone"
@@ -240,7 +240,7 @@ const Contact = () => {
                     {errors.phone && <p className="text-sm text-destructive">{errors.phone}</p>}
                   </div>
 
-                  <div className="space-y-2">
+                  <div className="space-y-1.5">
                     <Label htmlFor="company">{t("contact.companyName")}</Label>
                     <Input
                       id="company"
@@ -254,7 +254,7 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   <Label htmlFor="service">{t("contact.serviceInterest")}</Label>
                   <Select
                     value={formData.service}
@@ -278,7 +278,7 @@ const Contact = () => {
                   {errors.service && <p className="text-sm text-destructive">{errors.service}</p>}
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-1.5">
                   <Label htmlFor="message">{t("contact.message")}</Label>
                   <Textarea
                     id="message"
@@ -286,7 +286,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder={t("contact.messagePlaceholder")}
-                    rows={6}
+                    rows={5}
                     maxLength={2000}
                     className={errors.message ? "border-destructive" : ""}
                   />
@@ -304,18 +304,17 @@ const Contact = () => {
       </section>
 
       {/* Map Placeholder */}
-      <section className="py-16">
+      <section className="py-12 md:py-14">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">{t("contact.visitOffice")}</h2>
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-muted rounded-lg h-96 flex flex-col items-center justify-center p-8">
-              <MapPin className="h-16 w-16 text-primary mb-4" />
-              <p className="text-muted-foreground text-center mb-6 max-w-md">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">{t("contact.visitOffice")}</h2>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-muted rounded-lg h-80 md:h-96 flex flex-col items-center justify-center p-6 md:p-8">
+              <MapPin className="h-12 w-12 md:h-14 md:w-14 text-primary mb-3" />
+              <p className="text-muted-foreground text-center mb-5 max-w-md text-sm md:text-base">
                 No.11-3A, Jalan Bandar 12, Pusat Bandar Puchong, 47160 Puchong, Selangor
               </p>
-              <div className="flex gap-4 flex-wrap justify-center">
+              <div className="flex gap-3 flex-wrap justify-center">
                 <Button
-                  size="lg"
                   onClick={() =>
                     window.open(
                       "https://www.google.com/maps/search/?api=1&query=No.11-3A,+Jalan+Bandar+12,+Pusat+Bandar+Puchong,+47160+Puchong,+Selangor",
@@ -330,7 +329,6 @@ const Contact = () => {
                   {t("contact.openGoogleMaps")}
                 </Button>
                 <Button
-                  size="lg"
                   onClick={() =>
                     window.open(
                       "https://maps.apple.com/?q=No.11-3A,+Jalan+Bandar+12,+Pusat+Bandar+Puchong,+47160+Puchong,+Selangor",
