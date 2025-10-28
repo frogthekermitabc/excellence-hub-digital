@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import CourseScheduleTable from "@/components/CourseScheduleTable";
 
 const ISO45001 = () => {
   const { t } = useLanguage();
@@ -100,6 +101,17 @@ const ISO45001 = () => {
               </div>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Course Schedule */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 text-center">ISO 45001 Course Schedule</h2>
+          <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
+            View our upcoming ISO 45001:2018 Occupational Health & Safety training sessions.
+          </p>
+          <CourseScheduleTable courseType="ISO 45001" />
         </div>
       </section>
 
