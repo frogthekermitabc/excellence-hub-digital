@@ -13,46 +13,29 @@ const Courses = () => {
   const { t } = useLanguage();
   const publicCourses = [
     {
-      title: "ISO 9001:2015 Awareness",
-      duration: "1 Day",
-      level: "Awareness",
-      hrdCorp: true,
-      description: "Introduction to Quality Management System fundamentals"
+      title: "ISO 9001:2015 INTRODUCTION",
+      subtitle: "ISO 9001:2015 QUALITY MANAGEMENT SYSTEMS",
+      detailsLink: "/iso-9001"
     },
     {
-      title: "ISO 9001:2015 Internal Auditor",
-      duration: "2 Days",
-      level: "Implementer",
-      hrdCorp: true,
-      description: "Comprehensive training for conducting internal QMS audits"
+      title: "ISO 14001:2015 INTRODUCTION",
+      subtitle: "ISO 14001:2015 ENVIRONMENTAL MANAGEMENT SYSTEMS",
+      detailsLink: "/iso-14001"
     },
     {
-      title: "ISO 14001:2015 Internal Auditor",
-      duration: "2 Days",
-      level: "Implementer",
-      hrdCorp: true,
-      description: "Environmental management system auditing skills"
+      title: "ISO 45001:2018 INTRODUCTION",
+      subtitle: "ISO 45001:2018 OCCUPATIONAL HEALTH & SAFETY",
+      detailsLink: "/iso-45001"
     },
     {
-      title: "ISO 45001:2018 Internal Auditor",
-      duration: "2 Days",
-      level: "Implementer",
-      hrdCorp: true,
-      description: "Occupational health & safety auditing certification"
+      title: "ISO 27001:2022 INTRODUCTION",
+      subtitle: "ISO 27001:2022 INFORMATION SECURITY MANAGEMENT",
+      detailsLink: "/iso-27001"
     },
     {
-      title: "ISO 27001:2022 Lead Implementer",
-      duration: "3 Days",
-      level: "Advanced",
-      hrdCorp: true,
-      description: "Information security management implementation"
-    },
-    {
-      title: "ISO 37001:2018 Awareness",
-      duration: "1 Day",
-      level: "Awareness",
-      hrdCorp: false,
-      description: "Anti-bribery management system fundamentals"
+      title: "ISO 37001:2018 INTRODUCTION",
+      subtitle: "ISO 37001:2018 ANTI-BRIBERY MANAGEMENT SYSTEMS",
+      detailsLink: "/iso-37001"
     }
   ];
 
@@ -144,24 +127,23 @@ const Courses = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {publicCourses.map((course, idx) => (
-              <Card key={idx} className="p-6 hover:shadow-lg transition-all">
-                <div className="flex items-start justify-between mb-4">
-                  <Badge variant={course.level === "Advanced" ? "default" : "secondary"}>
-                    {course.level === "Advanced" ? t("courses.advanced") : 
-                     course.level === "Implementer" ? t("courses.implementer") : 
-                     t("courses.awareness")}
-                  </Badge>
-                  {course.hrdCorp && (
-                    <Badge className="bg-secondary">{t("courses.hrdCorp")}</Badge>
-                  )}
+              <Card key={idx} className="p-8 hover:shadow-lg transition-all border-2">
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-primary mb-2">{idx + 1}. {course.title}</h3>
+                  <p className="text-sm text-muted-foreground">{course.subtitle}</p>
                 </div>
-                <h3 className="font-bold text-lg mb-3">{course.title}</h3>
-                <p className="text-sm text-muted-foreground mb-4">{course.description}</p>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-4">
-                  <Calendar className="h-4 w-4" />
-                  <span>{course.duration}</span>
+                <div className="flex flex-col gap-3">
+                  <Link to="/course-schedule" className="w-full">
+                    <Button className="w-full bg-primary hover:bg-primary/90" size="lg">
+                      Registration
+                    </Button>
+                  </Link>
+                  <Link to={course.detailsLink} className="w-full">
+                    <Button variant="outline" className="w-full" size="lg">
+                      View Details
+                    </Button>
+                  </Link>
                 </div>
-                <Button className="w-full" size="sm">{t("courses.viewDetails")}</Button>
               </Card>
             ))}
           </div>

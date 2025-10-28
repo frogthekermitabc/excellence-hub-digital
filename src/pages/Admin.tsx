@@ -9,6 +9,7 @@ import UpdatesList from "@/components/admin/UpdatesList";
 import AddUpdateForm from "@/components/admin/AddUpdateForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { User } from "@supabase/supabase-js";
+import ScheduleManagement from "@/components/admin/ScheduleManagement";
 
 const Admin = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -100,9 +101,10 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="manage" className="w-full">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-4">
             <TabsTrigger value="manage">Manage Updates</TabsTrigger>
             <TabsTrigger value="add">Add Update</TabsTrigger>
+            <TabsTrigger value="schedules">Course Schedules</TabsTrigger>
             <TabsTrigger value="users">Manage Users</TabsTrigger>
           </TabsList>
           
@@ -112,6 +114,10 @@ const Admin = () => {
           
           <TabsContent value="add" className="mt-6">
             <AddUpdateForm />
+          </TabsContent>
+          
+          <TabsContent value="schedules" className="mt-6">
+            <ScheduleManagement />
           </TabsContent>
           
           <TabsContent value="users" className="mt-6">

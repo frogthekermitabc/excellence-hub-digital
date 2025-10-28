@@ -50,6 +50,51 @@ export type Database = {
         }
         Relationships: []
       }
+      course_schedules: {
+        Row: {
+          course_type: string
+          created_at: string
+          duration: number
+          end_date: string
+          fee: number
+          id: string
+          location: string
+          method: string
+          start_date: string
+          status: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          course_type: string
+          created_at?: string
+          duration?: number
+          end_date: string
+          fee: number
+          id?: string
+          location: string
+          method: string
+          start_date: string
+          status?: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          course_type?: string
+          created_at?: string
+          duration?: number
+          end_date?: string
+          fee?: number
+          id?: string
+          location?: string
+          method?: string
+          start_date?: string
+          status?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
