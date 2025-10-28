@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
 import qaiLogo from "@/assets/qai-logo.png";
+import { supabase } from "@/integrations/supabase/client";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,8 +17,33 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const location = useLocation();
   const { t } = useLanguage();
+
+  useEffect(() => {
+    checkAdminStatus();
+    
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
+      checkAdminStatus();
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const checkAdminStatus = async () => {
+    const { data: { session } } = await supabase.auth.getSession();
+    
+    if (!session?.user) {
+      setIsAdmin(false);
+      return;
+    }
+
+    const { data } = await supabase
+      .rpc('has_role', { _user_id: session.user.id, _role: 'admin' });
+    
+    setIsAdmin(data || false);
+  };
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -115,6 +141,14 @@ const Navigation = () => {
             <Link to="/contact">
               <Button variant={isActive("/contact") ? "default" : "ghost"}>{t("nav.contact")}</Button>
             </Link>
+            {isAdmin && (
+              <Link to="/admin">
+                <Button variant={isActive("/admin") ? "default" : "ghost"}>
+                  <Shield className="h-4 w-4 mr-2" />
+                  Admin
+                </Button>
+              </Link>
+            )}
             <LanguageToggle />
           </div>
 
@@ -184,6 +218,14 @@ const Navigation = () => {
                 {t("nav.contact")}
               </Button>
             </Link>
+            {isAdmin && (
+              <Link to="/admin" onClick={() => setIsOpen(false)}>
+                <Button variant={isActive("/admin") ? "default" : "ghost"} className="w-full justify-start">
+                  <Shield className="h-4 w-4 mr-2" />
+                  Admin
+                </Button>
+              </Link>
+            )}
           </div>
         )}
       </div>

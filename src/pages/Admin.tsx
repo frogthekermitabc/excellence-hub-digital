@@ -93,8 +93,13 @@ const Admin = () => {
     <div className="min-h-screen flex flex-col">
       <Navigation />
       <main className="flex-grow container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-4xl font-bold">Admin Dashboard</h1>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+          <div>
+            <h1 className="text-4xl font-bold">Admin Dashboard</h1>
+            <p className="text-muted-foreground mt-2">
+              Manage your website content, course schedules, and user accounts
+            </p>
+          </div>
           <Button onClick={handleLogout} variant="outline">
             Logout
           </Button>
