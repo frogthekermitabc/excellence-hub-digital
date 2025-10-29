@@ -10,10 +10,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Auth = () => {
-  const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -23,38 +21,18 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      if (isLogin) {
-        const { error } = await supabase.auth.signInWithPassword({
-          email,
-          password,
-        });
+      const { error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-        if (error) throw error;
+      if (error) throw error;
 
-        toast({
-          title: "Welcome back!",
-          description: "You have successfully logged in.",
-        });
-        navigate("/admin");
-      } else {
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: {
-              full_name: fullName,
-            },
-            emailRedirectTo: `${window.location.origin}/`,
-          },
-        });
-
-        if (error) throw error;
-
-        toast({
-          title: "Account created!",
-          description: "Please check your email to verify your account.",
-        });
-      }
+      toast({
+        title: "Welcome back!",
+        description: "You have successfully logged in.",
+      });
+      navigate("/admin");
     } catch (error: any) {
       toast({
         title: "Error",
@@ -72,27 +50,13 @@ const Auth = () => {
       <main className="flex-grow flex items-center justify-center px-4 py-12">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>{isLogin ? "Login" : "Sign Up"}</CardTitle>
+            <CardTitle>Login</CardTitle>
             <CardDescription>
-              {isLogin
-                ? "Enter your credentials to access the admin dashboard"
-                : "Create an account to get started"}
+              Enter your credentials to access the admin dashboard
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleAuth} className="space-y-4">
-              {!isLogin && (
-                <div className="space-y-2">
-                  <Label htmlFor="fullName">Full Name</Label>
-                  <Input
-                    id="fullName"
-                    type="text"
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
-                    required
-                  />
-                </div>
-              )}
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
@@ -115,17 +79,7 @@ const Auth = () => {
                 />
               </div>
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? "Loading..." : isLogin ? "Login" : "Sign Up"}
-              </Button>
-              <Button
-                type="button"
-                variant="ghost"
-                className="w-full"
-                onClick={() => setIsLogin(!isLogin)}
-              >
-                {isLogin
-                  ? "Don't have an account? Sign up"
-                  : "Already have an account? Login"}
+                {loading ? "Loading..." : "Login"}
               </Button>
             </form>
           </CardContent>
