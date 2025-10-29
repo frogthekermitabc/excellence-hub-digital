@@ -44,6 +44,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
     } catch (error) {
       console.error("Error in checkAdminStatus:", error);
       setIsAdmin(false);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -61,9 +63,8 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
           }, 0);
         } else {
           setIsAdmin(false);
+          setLoading(false);
         }
-        
-        setLoading(false);
       }
     );
 
@@ -74,9 +75,9 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       
       if (currentSession?.user) {
         checkAdminStatus(currentSession.user.id);
+      } else {
+        setLoading(false);
       }
-      
-      setLoading(false);
     });
 
     return () => subscription.unsubscribe();
