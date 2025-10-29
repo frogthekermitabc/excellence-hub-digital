@@ -67,6 +67,7 @@ All colors MUST be HSL.
     --gradient-ocean: linear-gradient(135deg, hsl(195 100% 50%), hsl(142 76% 45%));
     --gradient-purple-pink: linear-gradient(135deg, hsl(280 65% 60%), hsl(330 85% 60%));
     --gradient-rainbow: linear-gradient(135deg, hsl(260 60% 55%), hsl(195 100% 50%), hsl(142 76% 45%), hsl(38 92% 50%));
+    --gradient-energy: linear-gradient(136deg, hsl(32 91% 55%), hsl(48 100% 63%));
     
     /* Shadows with purple tint */
     --shadow-card: 0 4px 6px -1px hsl(260 60% 55% / 0.1), 0 2px 4px -2px hsl(260 60% 55% / 0.1);

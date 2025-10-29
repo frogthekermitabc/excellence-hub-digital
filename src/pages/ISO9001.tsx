@@ -95,8 +95,8 @@ const ISO9001 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
-                  <CheckCircle className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <CheckCircle className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit1Title")}</h3>
@@ -107,8 +107,8 @@ const ISO9001 = () => {
 
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
-                  <TrendingUp className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <TrendingUp className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit2Title")}</h3>
@@ -119,8 +119,8 @@ const ISO9001 = () => {
 
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
-                  <Users className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Users className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit3Title")}</h3>
@@ -131,8 +131,8 @@ const ISO9001 = () => {
 
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
-                  <Shield className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Shield className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso9001.benefit4Title")}</h3>
@@ -201,7 +201,7 @@ const ISO9001 = () => {
               },
             ].map((phase, idx) => (
               <Card key={idx} className="p-6 text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-2xl font-bold">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center text-white text-2xl font-bold" style={{ background: 'var(--gradient-energy)' }}>
                   {phase.step}
                 </div>
                 <h3 className="font-bold mb-2">{phase.title}</h3>

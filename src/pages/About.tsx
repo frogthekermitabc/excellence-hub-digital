@@ -65,8 +65,8 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-8">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
-                  <Eye className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Eye className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">{t("about.ourVision")}</h3>
               </div>
@@ -77,8 +77,8 @@ const About = () => {
 
             <Card className="p-8">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-lg">
-                  <Target className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Target className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">{t("about.ourMission")}</h3>
               </div>
@@ -121,7 +121,7 @@ const About = () => {
               {timeline.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold">
+                    <div className="w-20 h-20 rounded-full flex items-center justify-center text-white font-bold" style={{ background: 'var(--gradient-energy)' }}>
                       {item.year}
                     </div>
                   </div>
@@ -167,7 +167,7 @@ const About = () => {
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t">
-                <Badge className="bg-gradient-to-r from-primary to-secondary">
+                <Badge className="border-0 text-white" style={{ background: 'var(--gradient-energy)' }}>
                   {t("about.hrdCorpProvider")}
                 </Badge>
               </div>
