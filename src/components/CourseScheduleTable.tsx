@@ -153,7 +153,8 @@ const CourseScheduleTable = ({ courseType }: CourseScheduleTableProps) => {
                   variant="default" 
                   size="sm"
                   onClick={handleJoin}
-                  className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+                  className="w-full hover:opacity-90"
+                  style={{ background: 'linear-gradient(90deg, #e0f882, #38b789)' }}
                 >
                   JOIN NOW
                 </Button>
@@ -208,7 +209,8 @@ const CourseScheduleTable = ({ courseType }: CourseScheduleTableProps) => {
                       variant="default" 
                       size="sm"
                       onClick={handleJoin}
-                      className="min-w-[80px] bg-gradient-to-r from-primary to-secondary hover:opacity-90"
+                      className="min-w-[80px] hover:opacity-90"
+                      style={{ background: 'linear-gradient(90deg, #e0f882, #38b789)' }}
                     >
                       JOIN
                     </Button>
