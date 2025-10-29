@@ -131,7 +131,12 @@ const Navigation = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-primary to-secondary">{t("nav.getQuote")}</Button>
+              <Button 
+                className="hover:opacity-90 text-white font-semibold"
+                style={{ background: 'linear-gradient(90deg, #EF4444, #DC2626)' }}
+              >
+                {t("nav.getQuote")}
+              </Button>
             </Link>
           </div>
 
