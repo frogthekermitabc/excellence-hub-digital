@@ -106,11 +106,19 @@ const Admin = () => {
         </div>
 
         <Tabs defaultValue="manage" className="w-full">
-          <TabsList className="grid w-full grid-cols-4">
-            <TabsTrigger value="manage">Manage Updates</TabsTrigger>
-            <TabsTrigger value="add">Add Update</TabsTrigger>
-            <TabsTrigger value="schedules">Course Schedules</TabsTrigger>
-            <TabsTrigger value="users">Manage Users</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
+            <TabsTrigger value="manage" className="text-xs sm:text-sm py-3">
+              Manage Updates
+            </TabsTrigger>
+            <TabsTrigger value="add" className="text-xs sm:text-sm py-3">
+              Add Update
+            </TabsTrigger>
+            <TabsTrigger value="schedules" className="text-xs sm:text-sm py-3">
+              Schedules
+            </TabsTrigger>
+            <TabsTrigger value="users" className="text-xs sm:text-sm py-3">
+              Users
+            </TabsTrigger>
           </TabsList>
           
           <TabsContent value="manage" className="mt-6">
