@@ -9,7 +9,7 @@ import AnimatedText from "@/components/AnimatedText";
 
 const About = () => {
   const { t } = useLanguage();
-  
+
   const timeline = [
     { year: "1995", event: t("about.timeline.1995") },
     { year: "2000", event: t("about.timeline.2000") },
@@ -28,7 +28,9 @@ const About = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("about.title")}</AnimatedText>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+              {t("about.title")}
+            </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
@@ -43,18 +45,10 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <AnimatedText className="text-3xl font-bold mb-6 text-center">{t("about.whoWeAre")}</AnimatedText>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              {t("about.para1")}
-            </p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              {t("about.para2")}
-            </p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              {t("about.para3")}
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {t("about.para4")}
-            </p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para1")}</p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para2")}</p>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para3")}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed">{t("about.para4")}</p>
           </div>
         </div>
       </section>
@@ -65,26 +59,22 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-8">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                <div className="p-3 rounded-lg" style={{ background: "var(--gradient-energy)" }}>
                   <Eye className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">{t("about.ourVision")}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed">
-                {t("about.visionText")}
-              </p>
+              <p className="text-muted-foreground leading-relaxed">{t("about.visionText")}</p>
             </Card>
 
             <Card className="p-8">
               <div className="flex items-center space-x-3 mb-4">
-                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                <div className="p-3 rounded-lg" style={{ background: "var(--gradient-energy)" }}>
                   <Target className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold">{t("about.ourMission")}</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-3">
-                {t("about.missionText")}
-              </p>
+              <p className="text-muted-foreground leading-relaxed mb-3">{t("about.missionText")}</p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground">
                 <li>{t("about.mission1")}</li>
                 <li>{t("about.mission2")}</li>
@@ -104,9 +94,7 @@ const About = () => {
               <h2 className="text-3xl font-bold">{t("about.qualityPolicy")}</h2>
             </div>
             <Card className="p-8">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {t("about.qualityPolicyText")}
-              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">{t("about.qualityPolicyText")}</p>
             </Card>
           </div>
         </div>
@@ -121,7 +109,10 @@ const About = () => {
               {timeline.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 rounded-full flex items-center justify-center text-white font-bold" style={{ background: 'var(--gradient-energy)' }}>
+                    <div
+                      className="w-20 h-20 rounded-full flex items-center justify-center text-white font-bold"
+                      style={{ background: "var(--gradient-energy)" }}
+                    >
                       {item.year}
                     </div>
                   </div>
@@ -167,30 +158,11 @@ const About = () => {
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t">
-                <Badge className="border-0 text-white" style={{ background: 'var(--gradient-energy)' }}>
+                <Badge className="border-0 text-white" style={{ background: "var(--gradient-energy)" }}>
                   {t("about.hrdCorpProvider")}
                 </Badge>
               </div>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Geographic Reach */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">{t("about.ourGeographicReach")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {[
-              { country: "Malaysia", description: t("about.malaysiaDesc") },
-              { country: "Indonesia", description: t("about.indonesiaDesc") },
-              { country: "Singapore", description: t("about.singaporeDesc") },
-            ].map((location, idx) => (
-              <Card key={idx} className="p-6 text-center">
-                <h3 className="text-xl font-bold mb-2 text-primary">{location.country}</h3>
-                <p className="text-sm text-muted-foreground">{location.description}</p>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
