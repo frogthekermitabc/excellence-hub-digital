@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useAuth } from "@/contexts/AuthContext";
 import LanguageToggle from "@/components/LanguageToggle";
 import qaiLogo from "@/assets/qai-logo.png";
-import { supabase } from "@/integrations/supabase/client";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,33 +17,9 @@ import {
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const { isAdmin } = useAuth();
   const location = useLocation();
   const { t } = useLanguage();
-
-  useEffect(() => {
-    checkAdminStatus();
-    
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
-      checkAdminStatus();
-    });
-
-    return () => subscription.unsubscribe();
-  }, []);
-
-  const checkAdminStatus = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-    
-    if (!session?.user) {
-      setIsAdmin(false);
-      return;
-    }
-
-    const { data } = await supabase
-      .rpc('has_role', { _user_id: session.user.id, _role: 'admin' });
-    
-    setIsAdmin(data || false);
-  };
 
   const isActive = (path: string) => location.pathname === path;
 

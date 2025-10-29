@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -8,69 +8,28 @@ import Footer from "@/components/Footer";
 import UpdatesList from "@/components/admin/UpdatesList";
 import AddUpdateForm from "@/components/admin/AddUpdateForm";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { User } from "@supabase/supabase-js";
 import ScheduleManagement from "@/components/admin/ScheduleManagement";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Admin = () => {
-  const [user, setUser] = useState<User | null>(null);
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const { user, isAdmin, loading } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
 
   useEffect(() => {
-    checkAuth();
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        if (session?.user) {
-          setUser(session.user);
-          checkAdminStatus(session.user.id);
-        } else {
-          setUser(null);
-          setIsAdmin(false);
-          navigate("/auth");
-        }
+    if (!loading) {
+      if (!user) {
+        navigate("/auth");
+      } else if (!isAdmin) {
+        toast({
+          title: "Access Denied",
+          description: "You need admin privileges to access this page.",
+          variant: "destructive",
+        });
+        navigate("/");
       }
-    );
-
-    return () => subscription.unsubscribe();
-  }, [navigate]);
-
-  const checkAuth = async () => {
-    const { data: { session } } = await supabase.auth.getSession();
-    
-    if (!session?.user) {
-      navigate("/auth");
-      return;
     }
-
-    setUser(session.user);
-    await checkAdminStatus(session.user.id);
-    setLoading(false);
-  };
-
-  const checkAdminStatus = async (userId: string) => {
-    const { data, error } = await supabase
-      .rpc('has_role', { _user_id: userId, _role: 'admin' });
-
-    if (error) {
-      console.error("Error checking admin status:", error);
-      setIsAdmin(false);
-      return;
-    }
-
-    setIsAdmin(data || false);
-    
-    if (!data) {
-      toast({
-        title: "Access Denied",
-        description: "You need admin privileges to access this page.",
-        variant: "destructive",
-      });
-      navigate("/");
-    }
-  };
+  }, [user, isAdmin, loading, navigate, toast]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
