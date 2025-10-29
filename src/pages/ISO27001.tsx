@@ -86,8 +86,8 @@ const ISO27001 = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
-                  <Database className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Database className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso27001.benefit1Title")}</h3>
@@ -97,8 +97,8 @@ const ISO27001 = () => {
             </Card>
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
-                  <AlertTriangle className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <AlertTriangle className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso27001.benefit2Title")}</h3>
@@ -108,8 +108,8 @@ const ISO27001 = () => {
             </Card>
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
-                  <Shield className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Shield className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso27001.benefit3Title")}</h3>
@@ -119,8 +119,8 @@ const ISO27001 = () => {
             </Card>
             <Card className="p-6">
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg">
-                  <Lock className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-lg" style={{ background: 'var(--gradient-energy)' }}>
+                  <Lock className="h-6 w-6 text-white" />
                 </div>
                 <div>
                   <h3 className="font-bold text-lg mb-2">{t("iso27001.benefit4Title")}</h3>
