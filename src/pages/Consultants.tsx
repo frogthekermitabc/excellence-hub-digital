@@ -24,6 +24,7 @@ const Consultants = () => {
       expertise: ["ISO 9001", "ISO 21001", "Quality Management", "Strategic Planning", "Organizational Excellence"],
       certifications: ["Lead Assessor ISO 9000", "Lead Assessor ISO 21001", "Quality Management Expert"],
       image: musriImage,
+      linkedinUrl: "https://www.linkedin.com/in/musri-tukiman",
     },
     {
       name: "Wan Zainal Abidin Wan Hanafi",
@@ -41,6 +42,7 @@ const Consultants = () => {
       ],
       certifications: ["Lead Assessor (1992)", "APO Technical Expert - Asian Productivity Organisation, Tokyo, Japan"],
       image: wanZainalImage,
+      linkedinUrl: "https://www.linkedin.com/in/wan-zainal-abidin",
     },
     {
       name: "Abdul Wahab Ikhsan",
@@ -58,6 +60,7 @@ const Consultants = () => {
       ],
       certifications: ["IRCA Registered Lead QMS Auditor"],
       image: abdulWahabImage,
+      linkedinUrl: "https://www.linkedin.com/in/abdul-wahab-ikhsan",
     },
   ];
 

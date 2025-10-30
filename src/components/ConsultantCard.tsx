@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { User } from "lucide-react";
+import { User, Linkedin } from "lucide-react";
 
 interface ConsultantCardProps {
   name: string;
@@ -11,6 +11,7 @@ interface ConsultantCardProps {
   expertise: string[];
   certifications: string[];
   image?: string;
+  linkedinUrl?: string;
 }
 
 const ConsultantCard = ({ 
@@ -20,7 +21,8 @@ const ConsultantCard = ({
   experience, 
   expertise, 
   certifications,
-  image 
+  image,
+  linkedinUrl
 }: ConsultantCardProps) => {
   return (
     <Card variant="glass" className="p-6 hover:-translate-y-2 group">
@@ -41,6 +43,17 @@ const ConsultantCard = ({
           <h3 className="font-bold text-xl mb-1">{name}</h3>
           <p className="text-primary font-medium">{title}</p>
           <p className="text-sm text-muted-foreground mt-2">{experience}</p>
+          {linkedinUrl && (
+            <a 
+              href={linkedinUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 mt-2 text-xs text-primary hover:text-primary/80 transition-colors"
+            >
+              <Linkedin className="h-4 w-4" />
+              <span>LinkedIn Profile</span>
+            </a>
+          )}
         </div>
       </div>
 
