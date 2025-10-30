@@ -24,7 +24,7 @@ const Consultants = () => {
       expertise: ["ISO 9001", "ISO 21001", "Quality Management", "Strategic Planning", "Organizational Excellence"],
       certifications: ["Lead Assessor ISO 9000", "Lead Assessor ISO 21001", "Quality Management Expert"],
       image: musriImage,
-      linkedinUrl: "https://www.linkedin.com/in/musri-tukiman",
+      linkedinUrl: "https://www.linkedin.com/in/musri-tukiman-6581b248/",
     },
     {
       name: "Wan Zainal Abidin Wan Hanafi",
@@ -42,7 +42,7 @@ const Consultants = () => {
       ],
       certifications: ["Lead Assessor (1992)", "APO Technical Expert - Asian Productivity Organisation, Tokyo, Japan"],
       image: wanZainalImage,
-      linkedinUrl: "https://www.linkedin.com/in/wan-zainal-abidin",
+      linkedinUrl: "https://www.linkedin.com/in/wanzainalhanafi/?originalSubdomain=my",
     },
     {
       name: "Abdul Wahab Ikhsan",
@@ -60,7 +60,7 @@ const Consultants = () => {
       ],
       certifications: ["IRCA Registered Lead QMS Auditor"],
       image: abdulWahabImage,
-      linkedinUrl: "https://www.linkedin.com/in/abdul-wahab-ikhsan",
+      linkedinUrl: "https://www.linkedin.com/in/abd-wahab-ikhsan-488408105/",
     },
   ];
 
@@ -72,7 +72,9 @@ const Consultants = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("consultants.title")}</AnimatedText>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+              {t("consultants.title")}
+            </AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>
@@ -99,9 +101,7 @@ const Consultants = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto bg-gradient-to-r from-primary to-secondary rounded-2xl p-12 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">{t("consultants.workWithExperts")}</h2>
-            <p className="text-lg mb-8 opacity-90">
-              {t("consultants.workWithExpertsDesc")}
-            </p>
+            <p className="text-lg mb-8 opacity-90">{t("consultants.workWithExpertsDesc")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90">
@@ -109,7 +109,11 @@ const Consultants = () => {
                 </Button>
               </Link>
               <Link to="/courses">
-                <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-transparent border-white text-white hover:bg-white/10"
+                >
                   {t("consultants.viewTraining")}
                 </Button>
               </Link>
