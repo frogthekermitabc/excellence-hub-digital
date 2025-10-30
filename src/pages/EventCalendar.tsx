@@ -64,6 +64,10 @@ const EventCalendar = () => {
     return months[monthIndex];
   };
 
+  const formatMonthYear = (month: number, year: number) => {
+    return `${getMonthName(month)} ${year}`;
+  };
+
   const getCurrentMonthRange = () => {
     const today = new Date();
     const months = [];
@@ -136,8 +140,35 @@ const EventCalendar = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-lg">Loading calendar...</p>
+      <div className="min-h-screen">
+        <Navigation />
+        <AnimatedHero variant="gradient">
+          <div className="container mx-auto px-4 text-center">
+            <AnimatedContent>
+              <Calendar className="h-16 w-16 mx-auto mb-6" />
+            </AnimatedContent>
+            <AnimatedContent>
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+                ISO Training Event Calendar
+              </AnimatedText>
+            </AnimatedContent>
+          </div>
+        </AnimatedHero>
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="overflow-x-auto">
+              <div className="min-w-[1200px] bg-white shadow-lg rounded-lg p-8 animate-pulse">
+                <div className="h-12 bg-gray-200 rounded mb-4"></div>
+                <div className="space-y-3">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <div key={i} className="h-16 bg-gray-100 rounded"></div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <Footer />
       </div>
     );
   }
@@ -167,93 +198,88 @@ const EventCalendar = () => {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="overflow-x-auto">
-            <table className="w-full border-collapse bg-white shadow-lg rounded-lg">
-              {/* Header Row */}
-              <thead>
-                <tr className="bg-gray-800 text-white">
-                  <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-left">No</th>
-                  <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-left">Title</th>
-                  <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-center">Code</th>
-                  <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-center">Duration<br/>(Day)</th>
-                  <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-center">Fees/Pax<br/>(RM)<br/>Excl. SST</th>
-                  {monthRange.map((m, idx) => (
-                    <th key={idx} className="border border-gray-300 px-4 py-3 text-sm font-semibold text-center">
-                      {m.name}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
+            <div className="min-w-[1200px]">
+              <table className="w-full border-collapse bg-white shadow-lg rounded-lg table-fixed">
+                {/* Header Row */}
+                <thead className="sticky top-0 z-10">
+                  <tr className="bg-gray-800 text-white">
+                    <th className="border border-gray-300 px-3 py-3 text-xs font-semibold text-left w-12">No</th>
+                    <th className="border border-gray-300 px-3 py-3 text-xs font-semibold text-left w-64">Title</th>
+                    <th className="border border-gray-300 px-3 py-3 text-xs font-semibold text-center w-16">Code</th>
+                    <th className="border border-gray-300 px-3 py-3 text-xs font-semibold text-center w-20">Duration<br/>(Day)</th>
+                    <th className="border border-gray-300 px-3 py-3 text-xs font-semibold text-center w-24">Fees/Pax<br/>(RM)<br/>Excl. SST</th>
+                    {monthRange.map((m, idx) => (
+                      <th key={idx} className="border border-gray-300 px-2 py-3 text-xs font-semibold text-center w-24">
+                        {formatMonthYear(m.month, m.year)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
 
-              <tbody>
-                {isoStandards.map((isoStandard, stdIdx) => {
-                  const standardEvents = groupedEvents[isoStandard] || [];
-                  if (standardEvents.length === 0) return null;
+                <tbody>
+                  {isoStandards.map((isoStandard) => {
+                    const standardEvents = groupedEvents[isoStandard] || [];
+                    if (standardEvents.length === 0) return null;
 
-                  return (
-                    <tr key={isoStandard}>
-                      <td colSpan={17} className="p-0">
-                        <table className="w-full">
-                          {/* ISO Standard Header */}
-                          <thead>
-                            <tr className="bg-blue-200">
-                              <th colSpan={17} className="border border-gray-300 px-4 py-3 text-left font-bold text-gray-900">
-                                {getISOTitle(isoStandard)}
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {standardEvents.map((event, eventIdx) => (
-                              <tr 
-                                key={event.id} 
-                                className="hover:bg-gray-50 cursor-pointer transition-colors"
-                                onClick={() => handleCourseClick(isoStandard)}
-                              >
-                                <td className="border border-gray-300 px-4 py-3 text-sm text-center w-16">
-                                  {eventIdx + 1}
-                                </td>
-                                <td className="border border-gray-300 px-4 py-3 text-sm">
-                                  {event.title}
-                                </td>
-                                <td className="border border-gray-300 px-4 py-3 text-sm text-center">
-                                  -
-                                </td>
-                                <td className="border border-gray-300 px-4 py-3 text-sm text-center">
-                                  {event.duration}
-                                </td>
-                                <td className="border border-gray-300 px-4 py-3 text-sm text-center">
-                                  {event.fee.toFixed(0)}
-                                </td>
-                                {monthRange.map((m, monthIdx) => {
-                                  const monthEvents = getEventsByMonth([event], m.month, m.year);
-                                  return (
-                                    <td key={monthIdx} className="border border-gray-300 px-2 py-3 text-sm text-center">
-                                      {monthEvents.length > 0 && (
-                                        <div className="flex flex-col gap-1">
-                                          {monthEvents.map((evt, idx) => (
-                                            <div key={idx} className="text-xs">
-                                              <div className="font-semibold">
-                                                {formatDate(evt.start_date)}-{formatDate(evt.end_date)}
-                                              </div>
-                                              <div className="text-gray-600">
-                                                {evt.location}
-                                              </div>
-                                            </div>
-                                          ))}
+                    return (
+                      <>
+                        {/* ISO Standard Header */}
+                        <tr key={`header-${isoStandard}`} className="bg-blue-200">
+                          <th colSpan={17} className="border border-gray-300 px-4 py-3 text-left font-bold text-gray-900 text-sm">
+                            {getISOTitle(isoStandard)}
+                          </th>
+                        </tr>
+                        {/* Events for this standard */}
+                        {standardEvents.map((event, eventIdx) => (
+                          <tr 
+                            key={event.id} 
+                            className="hover:bg-gray-50 cursor-pointer transition-colors h-20"
+                            onClick={() => handleCourseClick(isoStandard)}
+                          >
+                            <td className="border border-gray-300 px-3 py-3 text-xs text-center align-middle">
+                              {eventIdx + 1}
+                            </td>
+                            <td className="border border-gray-300 px-3 py-3 text-xs align-middle">
+                              <div className="line-clamp-3">{event.title}</div>
+                            </td>
+                            <td className="border border-gray-300 px-3 py-3 text-xs text-center align-middle">
+                              -
+                            </td>
+                            <td className="border border-gray-300 px-3 py-3 text-xs text-center align-middle">
+                              {event.duration}
+                            </td>
+                            <td className="border border-gray-300 px-3 py-3 text-xs text-center align-middle">
+                              {event.fee.toFixed(0)}
+                            </td>
+                            {monthRange.map((m, monthIdx) => {
+                              const monthEvents = getEventsByMonth([event], m.month, m.year);
+                              return (
+                                <td key={monthIdx} className="border border-gray-300 px-2 py-3 text-xs text-center align-middle">
+                                  {monthEvents.length > 0 && (
+                                    <div className="flex flex-col gap-1">
+                                      {monthEvents.map((evt, idx) => (
+                                        <div key={idx} className="leading-tight">
+                                          <div className="font-semibold">
+                                            {formatDate(evt.start_date)}-{formatDate(evt.end_date)}
+                                          </div>
+                                          <div className="text-gray-600 text-[10px] truncate">
+                                            {evt.location}
+                                          </div>
                                         </div>
-                                      )}
-                                    </td>
-                                  );
-                                })}
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+                                      ))}
+                                    </div>
+                                  )}
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        ))}
+                      </>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {events.length === 0 && (
