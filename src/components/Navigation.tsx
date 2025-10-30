@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X, Shield, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useAuth } from "@/contexts/AuthContext";
@@ -90,6 +90,22 @@ const Navigation = () => {
                   <NavigationMenuTrigger className="bg-transparent">{t("nav.managementSystems")}</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
+                      <li className="col-span-2">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to="/event-calendar"
+                            className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground bg-primary/5"
+                          >
+                            <div className="text-sm font-medium leading-none flex items-center gap-2">
+                              <Calendar className="h-4 w-4" />
+                              Event Calendar
+                            </div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              View all upcoming ISO training events
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
                       {managementSystems.map((system) => (
                         <li key={system.path}>
                           <NavigationMenuLink asChild>
@@ -180,6 +196,12 @@ const Navigation = () => {
             <div className="space-y-1">
               <div className="px-3 py-2 text-sm font-semibold">{t("nav.managementSystems")}</div>
               <div className="pl-4 space-y-1">
+                <Link to="/event-calendar" onClick={() => setIsOpen(false)}>
+                  <Button variant="ghost" className="w-full justify-start text-sm">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    Event Calendar
+                  </Button>
+                </Link>
                 {managementSystems.map((system) => (
                   <Link key={system.path} to={system.path} onClick={() => setIsOpen(false)}>
                     <Button variant="ghost" className="w-full justify-start text-sm">

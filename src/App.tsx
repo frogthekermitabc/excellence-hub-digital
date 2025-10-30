@@ -20,6 +20,7 @@ import Auth from "./pages/Auth";
 import Admin from "./pages/Admin";
 import AdminUsers from "./pages/AdminUsers";
 import CourseSchedule from "./pages/CourseSchedule";
+import EventCalendar from "./pages/EventCalendar";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/users" element={<AdminUsers />} />
           <Route path="/course-schedule" element={<CourseSchedule />} />
+          <Route path="/event-calendar" element={<EventCalendar />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
