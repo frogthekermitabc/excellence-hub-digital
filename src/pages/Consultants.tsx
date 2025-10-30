@@ -7,6 +7,8 @@ import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import { useLanguage } from "@/contexts/LanguageContext";
 import musriImage from "@/assets/musri-tukiman.png";
+import abdulWahabImage from "@/assets/abdul-wahab.png";
+import wanZainalImage from "@/assets/wan-zainal.jpg";
 
 const Consultants = () => {
   const { t } = useLanguage();
@@ -38,6 +40,7 @@ const Consultants = () => {
         "Prevention of Recurrence (SBK)",
       ],
       certifications: ["Lead Assessor (1992)", "APO Technical Expert - Asian Productivity Organisation, Tokyo, Japan"],
+      image: wanZainalImage,
     },
     {
       name: "Abdul Wahab Ikhsan",
@@ -54,6 +57,7 @@ const Consultants = () => {
         "ASEAN Region Consulting",
       ],
       certifications: ["IRCA Registered Lead QMS Auditor"],
+      image: abdulWahabImage,
     },
   ];
 
