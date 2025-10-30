@@ -26,8 +26,8 @@ const ConsultantCard = ({
     <Card variant="glass" className="p-6 hover:-translate-y-2 group">
       <div className="flex items-start space-x-4 mb-4">
         {image ? (
-          <Avatar className="h-24 w-24 shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
-            <AvatarImage src={image} alt={name} className="object-cover" />
+          <Avatar className="h-28 w-28 shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
+            <AvatarImage src={image} alt={name} className="object-cover object-top" />
             <AvatarFallback className="bg-gradient-to-br from-primary/20 to-secondary/20">
               <User className="h-12 w-12 text-primary" />
             </AvatarFallback>
