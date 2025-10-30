@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { User } from "lucide-react";
 
 interface ConsultantCardProps {
@@ -9,6 +10,7 @@ interface ConsultantCardProps {
   experience: string;
   expertise: string[];
   certifications: string[];
+  image?: string;
 }
 
 const ConsultantCard = ({ 
@@ -17,14 +19,24 @@ const ConsultantCard = ({
   education, 
   experience, 
   expertise, 
-  certifications 
+  certifications,
+  image 
 }: ConsultantCardProps) => {
   return (
     <Card variant="glass" className="p-6 hover:-translate-y-2 group">
       <div className="flex items-start space-x-4 mb-4">
-        <div className="p-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
-          <User className="h-12 w-12 text-primary" />
-        </div>
+        {image ? (
+          <Avatar className="h-24 w-24 shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
+            <AvatarImage src={image} alt={name} className="object-cover" />
+            <AvatarFallback className="bg-gradient-to-br from-primary/20 to-secondary/20">
+              <User className="h-12 w-12 text-primary" />
+            </AvatarFallback>
+          </Avatar>
+        ) : (
+          <div className="p-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full shadow-[var(--neu-shadow-light),var(--neu-shadow-dark)] group-hover:shadow-[var(--shadow-md)] transition-all duration-300">
+            <User className="h-12 w-12 text-primary" />
+          </div>
+        )}
         <div className="flex-1">
           <h3 className="font-bold text-xl mb-1">{name}</h3>
           <p className="text-primary font-medium">{title}</p>

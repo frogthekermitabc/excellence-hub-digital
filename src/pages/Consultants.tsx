@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import { useLanguage } from "@/contexts/LanguageContext";
+import musriImage from "@/assets/musri-tukiman.png";
 
 const Consultants = () => {
   const { t } = useLanguage();
@@ -20,6 +21,7 @@ const Consultants = () => {
       experience: "30+ years in quality management and ISO certification",
       expertise: ["ISO 9001", "ISO 21001", "Quality Management", "Strategic Planning", "Organizational Excellence"],
       certifications: ["Lead Assessor ISO 9000", "Lead Assessor ISO 21001", "Quality Management Expert"],
+      image: musriImage,
     },
     {
       name: "Wan Zainal Abidin Wan Hanafi",
