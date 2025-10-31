@@ -11,27 +11,31 @@ import AnimatedText from "@/components/AnimatedText";
 import CompanyUpdates from "@/components/CompanyUpdates";
 import HeroCarousel from "@/components/HeroCarousel";
 import qaiLogo from "@/assets/qai-logo.png";
+import heroTeam1 from "@/assets/hero-team-1.jpg";
+import heroTraining1 from "@/assets/hero-training-1.jpg";
+import heroMeeting1 from "@/assets/hero-meeting-1.jpg";
+import heroTraining2 from "@/assets/hero-training-2.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
   
-  // Placeholder slides for the hero carousel
+  // Hero carousel slides
   const heroSlides = [
     {
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80",
-      alt: "Professional consulting team"
+      image: heroTeam1,
+      alt: "QAI training team photo"
     },
     {
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80",
-      alt: "Business professionals collaborating"
+      image: heroTraining1,
+      alt: "ISO training session in progress"
     },
     {
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1920&q=80",
-      alt: "Modern office workspace"
+      image: heroMeeting1,
+      alt: "Professional meeting with government officials"
     },
     {
-      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80",
-      alt: "Team meeting and training"
+      image: heroTraining2,
+      alt: "ISO certification training classroom"
     }
   ];
   
