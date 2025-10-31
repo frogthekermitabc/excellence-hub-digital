@@ -51,7 +51,7 @@ const HeroCarousel = ({ slides, autoplayDelay = 5000, children }: HeroCarouselPr
                   alt={slide.alt}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90" />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20" />
               </div>
             </CarouselItem>
           ))}
@@ -81,7 +81,9 @@ const HeroCarousel = ({ slides, autoplayDelay = 5000, children }: HeroCarouselPr
       {/* Content Overlay */}
       <div className="absolute inset-0 z-10 flex items-center justify-center">
         <div className="container mx-auto px-4 text-center">
-          {children}
+          <div className="bg-background/80 backdrop-blur-sm px-8 py-6 rounded-lg inline-block">
+            {children}
+          </div>
         </div>
       </div>
     </section>
