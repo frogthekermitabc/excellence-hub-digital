@@ -6,64 +6,73 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import StatCard from "@/components/StatCard";
 import ServiceCard from "@/components/ServiceCard";
-import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
+import { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CompanyUpdates from "@/components/CompanyUpdates";
-import heroImage from "@/assets/hero-office.jpg";
+import HeroCarousel from "@/components/HeroCarousel";
 import qaiLogo from "@/assets/qai-logo.png";
 
 const Index = () => {
   const { t } = useLanguage();
   
+  // Placeholder slides for the hero carousel
+  const heroSlides = [
+    {
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=80",
+      alt: "Professional consulting team"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80",
+      alt: "Business professionals collaborating"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1920&q=80",
+      alt: "Modern office workspace"
+    },
+    {
+      image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80",
+      alt: "Team meeting and training"
+    }
+  ];
+  
   return (
     <div className="min-h-screen">
       <Navigation />
 
-      {/* Hero Section - Banner Style */}
-      <AnimatedHero variant="image" className="!h-[400px]">
-        <div className="absolute inset-0">
+      {/* Hero Section - Carousel */}
+      <HeroCarousel slides={heroSlides} autoplayDelay={5000}>
+        <AnimatedContent>
           <img 
-            src={heroImage} 
-            alt="Professional consulting team" 
-            className="w-full h-full object-cover"
+            src={qaiLogo} 
+            alt="QAI - Quality Assurance International" 
+            className="h-24 md:h-32 w-auto mx-auto mb-6"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90" />
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <AnimatedContent>
-            <img 
-              src={qaiLogo} 
-              alt="QAI - Quality Assurance International" 
-              className="h-24 md:h-32 w-auto mx-auto mb-6"
-            />
-          </AnimatedContent>
-          <AnimatedContent>
-            <AnimatedText className="text-3xl md:text-4xl font-bold text-white mb-4" type="word">
-              {t("home.heroTitle")}
-            </AnimatedText>
-          </AnimatedContent>
-          <AnimatedContent>
-            <AnimatedText className="text-xl text-white/95 mb-3 font-semibold" delay={0.3}>
-              {t("home.heroSubtitle")}
-            </AnimatedText>
-          </AnimatedContent>
-          <AnimatedContent>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <Button size="lg" className="bg-accent hover:bg-accent/90">
-                  {t("home.getFreeQuote")}
-                </Button>
-              </Link>
-              <Link to="/about">
-                <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur text-white border-white hover:bg-white hover:text-primary">
-                  {t("home.learnMore")}
-                </Button>
-              </Link>
-            </div>
-          </AnimatedContent>
-        </div>
-      </AnimatedHero>
+        </AnimatedContent>
+        <AnimatedContent>
+          <AnimatedText className="text-3xl md:text-4xl font-bold text-white mb-4" type="word">
+            {t("home.heroTitle")}
+          </AnimatedText>
+        </AnimatedContent>
+        <AnimatedContent>
+          <AnimatedText className="text-xl text-white/95 mb-3 font-semibold" delay={0.3}>
+            {t("home.heroSubtitle")}
+          </AnimatedText>
+        </AnimatedContent>
+        <AnimatedContent>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact">
+              <Button size="lg" className="bg-accent hover:bg-accent/90">
+                {t("home.getFreeQuote")}
+              </Button>
+            </Link>
+            <Link to="/about">
+              <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur text-white border-white hover:bg-white hover:text-primary">
+                {t("home.learnMore")}
+              </Button>
+            </Link>
+          </div>
+        </AnimatedContent>
+      </HeroCarousel>
 
       {/* Page Navigation */}
       <section className="py-6 bg-muted/50 sticky top-16 z-10 border-b">
