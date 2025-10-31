@@ -58,8 +58,8 @@ const HeroCarousel = ({ slides, autoplayDelay = 5000, children }: HeroCarouselPr
         </CarouselContent>
 
         {/* Navigation Controls */}
-        <CarouselPrevious className="left-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30" />
-        <CarouselNext className="right-4 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30" />
+        <CarouselPrevious className="left-4 z-20 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30" />
+        <CarouselNext className="right-4 z-20 bg-white/20 backdrop-blur-sm border-white/40 text-white hover:bg-white/30" />
 
         {/* Dot Indicators */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
