@@ -13,6 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { z } from "zod";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import professionalTeam from "@/assets/professional-team.jpg";
 
 // Comprehensive validation schema with security measures
 const contactSchema = z.object({
@@ -117,6 +118,13 @@ const Contact = () => {
       {/* Contact Information */}
       <section className="py-12 md:py-14">
         <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto mb-12">
+            <img 
+              src={professionalTeam} 
+              alt="Our Team" 
+              className="rounded-lg shadow-xl w-full"
+            />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
             <Card className="p-5 text-center hover:shadow-lg transition-all">
               <div className="flex justify-center mb-3">

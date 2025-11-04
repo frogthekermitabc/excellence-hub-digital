@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
 import { Card } from "@/components/ui/card";
-import trainingImage from "@/assets/training-session.jpg";
+import trainingImage from "@/assets/training-meeting.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";

@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import teamPhoto from "@/assets/team-group.jpg";
+import professionalTeam from "@/assets/professional-team.jpg";
 
 const About = () => {
   const { t } = useLanguage();
@@ -43,12 +45,23 @@ const About = () => {
       {/* Company Overview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <AnimatedText className="text-3xl font-bold mb-6 text-center">{t("about.whoWeAre")}</AnimatedText>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para1")}</p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para2")}</p>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para3")}</p>
-            <p className="text-lg text-muted-foreground leading-relaxed">{t("about.para4")}</p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+              <div>
+                <AnimatedText className="text-3xl font-bold mb-6">{t("about.whoWeAre")}</AnimatedText>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para1")}</p>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para2")}</p>
+              </div>
+              <div>
+                <img 
+                  src={teamPhoto} 
+                  alt="QAI Team" 
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
+            </div>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed max-w-4xl mx-auto">{t("about.para3")}</p>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-4xl mx-auto">{t("about.para4")}</p>
           </div>
         </div>
       </section>
@@ -132,37 +145,46 @@ const About = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">{t("about.certificationsRegistrations")}</h2>
-          <div className="max-w-3xl mx-auto">
-            <Card className="p-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <strong className="text-primary">{t("about.registrationNumber")}:</strong>
-                  <p className="text-muted-foreground">199501025484 (354689-V)</p>
-                </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <Card className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <strong className="text-primary">{t("about.registrationNumber")}:</strong>
+                    <p className="text-muted-foreground">199501025484 (354689-V)</p>
+                  </div>
 
-                <div>
-                  <strong className="text-primary">{t("about.mofCertificateNo")}:</strong>
-                  <p className="text-muted-foreground">K60765123024091531</p>
+                  <div>
+                    <strong className="text-primary">{t("about.mofCertificateNo")}:</strong>
+                    <p className="text-muted-foreground">K60765123024091531</p>
+                  </div>
+                  <div>
+                    <strong className="text-primary">{t("about.mofRegRefNo")}:</strong>
+                    <p className="text-muted-foreground">357-02074092</p>
+                  </div>
+                  <div>
+                    <strong className="text-primary">{t("about.mofValidationPeriod")}:</strong>
+                    <p className="text-muted-foreground">03/02/2025 - 15/03/2028</p>
+                  </div>
+                  <div>
+                    <strong className="text-primary">{t("about.bumiputeraCertificateNo")}:</strong>
+                    <p className="text-muted-foreground">BP60765123024091531</p>
+                  </div>
                 </div>
-                <div>
-                  <strong className="text-primary">{t("about.mofRegRefNo")}:</strong>
-                  <p className="text-muted-foreground">357-02074092</p>
+                <div className="mt-4 pt-4 border-t">
+                  <Badge className="border-0 text-white" style={{ background: "var(--gradient-energy)" }}>
+                    {t("about.hrdCorpProvider")}
+                  </Badge>
                 </div>
-                <div>
-                  <strong className="text-primary">{t("about.mofValidationPeriod")}:</strong>
-                  <p className="text-muted-foreground">03/02/2025 - 15/03/2028</p>
-                </div>
-                <div>
-                  <strong className="text-primary">{t("about.bumiputeraCertificateNo")}:</strong>
-                  <p className="text-muted-foreground">BP60765123024091531</p>
-                </div>
+              </Card>
+              <div>
+                <img 
+                  src={professionalTeam} 
+                  alt="Professional Team" 
+                  className="rounded-lg shadow-xl w-full"
+                />
               </div>
-              <div className="mt-4 pt-4 border-t">
-                <Badge className="border-0 text-white" style={{ background: "var(--gradient-energy)" }}>
-                  {t("about.hrdCorpProvider")}
-                </Badge>
-              </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>

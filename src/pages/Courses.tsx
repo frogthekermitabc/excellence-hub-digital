@@ -8,6 +8,8 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import instructorTeaching from "@/assets/instructor-teaching.jpg";
+import instructorPresentation from "@/assets/instructor-presentation.jpg";
 
 const Courses = () => {
   const { t } = useLanguage();
@@ -63,54 +65,63 @@ const Courses = () => {
       {/* Course Types */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
-            <Card className="p-8 hover:shadow-lg transition-all">
-              <div className="flex items-center space-x-3 mb-4">
-                <Calendar className="h-8 w-8 text-primary" />
-                <h3 className="text-2xl font-bold">{t("courses.publicCourses")}</h3>
-              </div>
-              <p className="text-muted-foreground mb-6">
-                {t("courses.publicCoursesDesc")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{t("courses.hrdClaimable")}</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{t("courses.networking")}</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{t("courses.earlyBird")}</span>
-                </li>
-              </ul>
-            </Card>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <img 
+                src={instructorTeaching} 
+                alt="Instructor Teaching" 
+                className="rounded-lg shadow-xl w-full"
+              />
+            </div>
+            <div className="space-y-8">
+              <Card className="p-8 hover:shadow-lg transition-all">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Calendar className="h-8 w-8 text-primary" />
+                  <h3 className="text-2xl font-bold">{t("courses.publicCourses")}</h3>
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  {t("courses.publicCoursesDesc")}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{t("courses.hrdClaimable")}</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{t("courses.networking")}</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{t("courses.earlyBird")}</span>
+                  </li>
+                </ul>
+              </Card>
 
-            <Card className="p-8 hover:shadow-lg transition-all">
-              <div className="flex items-center space-x-3 mb-4">
-                <Users className="h-8 w-8 text-primary" />
-                <h3 className="text-2xl font-bold">{t("courses.inHouse")}</h3>
-              </div>
-              <p className="text-muted-foreground mb-6">
-                {t("courses.inHouseDesc")}
-              </p>
-              <ul className="space-y-2 mb-6">
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{t("courses.flexible")}</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{t("courses.customized")}</span>
-                </li>
-                <li className="flex items-start space-x-2">
-                  <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
-                  <span className="text-sm">{t("courses.costEffective")}</span>
-                </li>
-              </ul>
-            </Card>
+              <Card className="p-8 hover:shadow-lg transition-all">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Users className="h-8 w-8 text-primary" />
+                  <h3 className="text-2xl font-bold">{t("courses.inHouse")}</h3>
+                </div>
+                <p className="text-muted-foreground mb-6">
+                  {t("courses.inHouseDesc")}
+                </p>
+                <ul className="space-y-2 mb-6">
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{t("courses.flexible")}</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{t("courses.customized")}</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-5 w-5 text-secondary mt-0.5 flex-shrink-0" />
+                    <span className="text-sm">{t("courses.costEffective")}</span>
+                  </li>
+                </ul>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
@@ -147,39 +158,48 @@ const Courses = () => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">{t("courses.levels")}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {[
-              {
-                title: t("courses.awareness"),
-                icon: GraduationCap,
-                description: t("courses.awarenessDesc")
-              },
-              {
-                title: t("courses.implementer"),
-                icon: Users,
-                description: t("courses.implementerDesc")
-              },
-              {
-                title: t("courses.internalAuditor"),
-                icon: CheckCircle,
-                description: t("courses.auditorDesc")
-              },
-              {
-                title: t("courses.leadAuditor"),
-                icon: Award,
-                description: t("courses.leadAuditorDesc")
-              }
-            ].map((level, idx) => (
-              <Card key={idx} className="p-6 text-center hover:shadow-lg transition-all">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
-                    <level.icon className="h-8 w-8 text-primary" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  title: t("courses.awareness"),
+                  icon: GraduationCap,
+                  description: t("courses.awarenessDesc")
+                },
+                {
+                  title: t("courses.implementer"),
+                  icon: Users,
+                  description: t("courses.implementerDesc")
+                },
+                {
+                  title: t("courses.internalAuditor"),
+                  icon: CheckCircle,
+                  description: t("courses.auditorDesc")
+                },
+                {
+                  title: t("courses.leadAuditor"),
+                  icon: Award,
+                  description: t("courses.leadAuditorDesc")
+                }
+              ].map((level, idx) => (
+                <Card key={idx} className="p-6 text-center hover:shadow-lg transition-all">
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-full">
+                      <level.icon className="h-8 w-8 text-primary" />
+                    </div>
                   </div>
-                </div>
-                <h3 className="font-bold mb-2">{level.title}</h3>
-                <p className="text-sm text-muted-foreground">{level.description}</p>
-              </Card>
-            ))}
+                  <h3 className="font-bold mb-2">{level.title}</h3>
+                  <p className="text-sm text-muted-foreground">{level.description}</p>
+                </Card>
+              ))}
+            </div>
+            <div>
+              <img 
+                src={instructorPresentation} 
+                alt="Instructor Presentation" 
+                className="rounded-lg shadow-xl w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
