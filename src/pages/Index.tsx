@@ -10,6 +10,7 @@ import { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CompanyUpdates from "@/components/CompanyUpdates";
 import HeroCarousel from "@/components/HeroCarousel";
+import { SEO } from "@/components/SEO";
 import qaiLogo from "@/assets/qai-logo.png";
 import heroTeam1 from "@/assets/hero-team-1.jpg";
 import heroTraining1 from "@/assets/hero-training-1.jpg";
@@ -41,6 +42,12 @@ const Index = () => {
   
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO Certification Training & Consulting Malaysia"
+        description="Leading ISO training and consulting provider in Malaysia since 1995. Expert services for ISO 9001, 14001, 45001, 27001, and 37001. Get certified with QAI - Guide with Passion."
+        keywords="ISO certification Malaysia, ISO training Malaysia, ISO consultant, quality management, ISO 9001 training, ISO 14001, ISO 45001, Puchong Selangor"
+        canonicalUrl={window.location.origin + "/"}
+      />
       <Navigation />
 
       {/* Hero Section - Carousel */}

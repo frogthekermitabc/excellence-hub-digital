@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEO } from "@/components/SEO";
 import musriImage from "@/assets/musri-tukiman.png";
 import abdulWahabImage from "@/assets/abdul-wahab.png";
 import wanZainalImage from "@/assets/wan-zainal.jpg";
@@ -66,6 +67,12 @@ const Consultants = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Expert ISO Consultants Malaysia | Certified Lead Auditors | QAI"
+        description="Meet QAI's team of certified ISO consultants and lead auditors. Experienced professionals with expertise in ISO 9001, 14001, 45001, 27001, and 37001 implementation and training."
+        keywords="ISO consultant Malaysia, ISO lead auditor, ISO trainer, certified ISO consultant, ISO 9001 consultant, ISO implementation expert"
+        canonicalUrl={window.location.origin + "/consultants"}
+      />
       <Navigation />
 
       {/* Hero Section */}

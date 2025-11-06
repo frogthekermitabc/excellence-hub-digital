@@ -7,12 +7,19 @@ import trainingImage from "@/assets/training-meeting.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import { SEO } from "@/components/SEO";
 
 const Services = () => {
   const { t } = useLanguage();
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO Training, Consulting & Auditing Services Malaysia | QAI"
+        description="Comprehensive ISO services including training, consulting, and auditing for all ISO standards. Public courses, in-house training, gap analysis, system implementation, and certification support."
+        keywords="ISO training Malaysia, ISO consulting, ISO auditing, in-house training, ISO implementation, ISO certification support, gap analysis"
+        canonicalUrl={window.location.origin + "/services"}
+      />
       <Navigation />
 
       {/* Hero Section */}

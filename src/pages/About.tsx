@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import { SEO } from "@/components/SEO";
 import teamPhoto from "@/assets/team-group.jpg";
 import professionalTeam from "@/assets/professional-team.jpg";
 
@@ -24,6 +25,12 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About QAI - 30 Years of ISO Excellence in Malaysia | Est. 1995"
+        description="Learn about QAI Sdn Bhd, Malaysia's trusted ISO certification partner since 1995. Accredited training, expert consultants, and 300+ satisfied clients across diverse industries."
+        keywords="QAI Malaysia, ISO company history, ISO certification company, quality assurance Malaysia, ISO training provider, HRD Corp registered"
+        canonicalUrl={window.location.origin + "/about"}
+      />
       <Navigation />
 
       {/* Hero Section */}

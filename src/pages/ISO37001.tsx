@@ -8,11 +8,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CourseScheduleTable from "@/components/CourseScheduleTable";
+import { SEO } from "@/components/SEO";
 
 const ISO37001 = () => {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO 37001:2018 Training & Certification Malaysia | Anti-Bribery | QAI"
+        description="ISO 37001:2018 Anti-Bribery Management System training in Malaysia. Prevent corruption, ensure compliance, and build ethical business practices. Lead auditor courses available."
+        keywords="ISO 37001 training Malaysia, anti-bribery certification, anti-corruption training, compliance management, ISO 37001 lead auditor"
+        canonicalUrl={window.location.origin + "/iso-37001"}
+      />
       <Navigation />
 
       <AnimatedHero variant="gradient" className="bg-gradient-to-r from-accent to-secondary">

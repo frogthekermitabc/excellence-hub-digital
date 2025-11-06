@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import { SEO } from "@/components/SEO";
 import instructorTeaching from "@/assets/instructor-teaching.jpg";
 import instructorPresentation from "@/assets/instructor-presentation.jpg";
 
@@ -43,6 +44,12 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO Training Courses Malaysia | Public & In-House Programs | QAI"
+        description="Comprehensive ISO training courses in Malaysia. HRD Corp registered programs for ISO 9001, 14001, 45001, 27001, 37001. Awareness, implementer, internal auditor, and lead auditor courses."
+        keywords="ISO training courses Malaysia, ISO certification course, HRD Corp training, ISO lead auditor course, ISO internal auditor training, ISO awareness"
+        canonicalUrl={window.location.origin + "/courses"}
+      />
       <Navigation />
 
       {/* Hero Section */}

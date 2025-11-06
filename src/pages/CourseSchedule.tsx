@@ -7,6 +7,7 @@ import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
 
 interface CourseSchedule {
   id: string;
@@ -64,6 +65,12 @@ const CourseSchedule = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO Course Schedule 2025 Malaysia | Upcoming Training Dates | QAI"
+        description="View upcoming ISO training course schedules in Malaysia. Book your ISO certification training for 9001, 14001, 45001, 27001, 37001. Public and in-house courses available."
+        keywords="ISO course schedule Malaysia, ISO training dates 2025, book ISO course, ISO training calendar, upcoming ISO courses"
+        canonicalUrl={window.location.origin + "/course-schedule"}
+      />
       <Navigation />
 
       {/* Hero Section */}

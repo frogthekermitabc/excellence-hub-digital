@@ -8,11 +8,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CourseScheduleTable from "@/components/CourseScheduleTable";
+import { SEO } from "@/components/SEO";
 
 const ISO45001 = () => {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO 45001:2018 Training & Certification Malaysia | OHSMS | QAI"
+        description="ISO 45001:2018 Occupational Health & Safety Management System training in Malaysia. Reduce workplace accidents, ensure worker safety, and improve safety culture. Lead auditor courses available."
+        keywords="ISO 45001 training Malaysia, occupational health safety, OHSMS certification, workplace safety training, ISO 45001 lead auditor"
+        canonicalUrl={window.location.origin + "/iso-45001"}
+      />
       <Navigation />
 
       <AnimatedHero variant="gradient" className="bg-gradient-to-r from-accent to-primary">

@@ -8,11 +8,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CourseScheduleTable from "@/components/CourseScheduleTable";
+import { SEO } from "@/components/SEO";
 
 const ISO27001 = () => {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO 27001:2022 Training & Certification Malaysia | ISMS | QAI"
+        description="ISO 27001:2022 Information Security Management System training in Malaysia. Protect sensitive data, manage cybersecurity risks, and ensure compliance. Lead auditor courses available."
+        keywords="ISO 27001 training Malaysia, information security management, ISMS certification, cybersecurity training, ISO 27001 lead auditor"
+        canonicalUrl={window.location.origin + "/iso-27001"}
+      />
       <Navigation />
 
       <AnimatedHero variant="gradient" className="bg-gradient-to-r from-primary via-accent to-secondary">

@@ -8,11 +8,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CourseScheduleTable from "@/components/CourseScheduleTable";
+import { SEO } from "@/components/SEO";
 
 const ISO14001 = () => {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO 14001:2015 Training & Certification Malaysia | EMS | QAI"
+        description="ISO 14001:2015 Environmental Management System training in Malaysia. Reduce environmental impact, ensure compliance, and improve sustainability. Lead auditor and implementer courses available."
+        keywords="ISO 14001 training Malaysia, environmental management system, ISO 14001 certification, EMS training, sustainability certification"
+        canonicalUrl={window.location.origin + "/iso-14001"}
+      />
       <Navigation />
 
       <AnimatedHero variant="gradient" className="bg-gradient-to-r from-secondary to-primary">

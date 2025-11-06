@@ -13,6 +13,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { z } from "zod";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
+import { SEO } from "@/components/SEO";
 import professionalTeam from "@/assets/professional-team.jpg";
 
 // Comprehensive validation schema with security measures
@@ -97,6 +98,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Contact QAI ISO Consultants Puchong, Selangor | Get Free Quote"
+        description="Contact QAI for ISO certification training and consulting. Located in Puchong, Selangor. Call +60 12-469 1606 or email info@qaims.com.my for a free consultation quote."
+        keywords="contact QAI, ISO consultant Puchong, ISO training Selangor, free ISO quote, QAI contact details, ISO certification enquiry"
+        canonicalUrl={window.location.origin + "/contact"}
+      />
       <Navigation />
 
       {/* Hero Section */}

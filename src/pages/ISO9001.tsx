@@ -8,11 +8,18 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import AnimatedHero, { AnimatedContent } from "@/components/AnimatedHero";
 import AnimatedText from "@/components/AnimatedText";
 import CourseScheduleTable from "@/components/CourseScheduleTable";
+import { SEO } from "@/components/SEO";
 
 const ISO9001 = () => {
   const { t } = useLanguage();
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="ISO 9001:2015 Training & Certification Malaysia | QAI"
+        description="ISO 9001:2015 Quality Management System training and certification in Malaysia. Awareness, implementer, internal auditor, and lead auditor courses. Improve customer satisfaction and operational efficiency."
+        keywords="ISO 9001 training Malaysia, ISO 9001 certification, quality management system, ISO 9001 lead auditor course, QMS training"
+        canonicalUrl={window.location.origin + "/iso-9001"}
+      />
       <Navigation />
 
       {/* Hero Section */}
