@@ -62,7 +62,7 @@ const About = () => {
               <div>
                 <img 
                   src={teamPhoto} 
-                  alt="QAI Team" 
+                  alt="QAI Malaysia consulting team in Puchong, Selangor" 
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
@@ -187,7 +187,7 @@ const About = () => {
               <div>
                 <img 
                   src={professionalTeam} 
-                  alt="Professional Team" 
+                  alt="QAI Malaysia professional team office in Puchong" 
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>

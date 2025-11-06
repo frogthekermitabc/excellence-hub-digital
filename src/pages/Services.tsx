@@ -72,7 +72,7 @@ const Services = () => {
             <div>
               <img 
                 src={trainingImage} 
-                alt="Training session" 
+                alt="QAI Malaysia ISO training session" 
                 className="rounded-lg shadow-xl"
               />
             </div>

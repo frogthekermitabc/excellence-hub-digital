@@ -68,9 +68,9 @@ const Consultants = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Expert ISO Consultants Malaysia | Certified Lead Auditors | QAI"
-        description="Meet QAI's team of certified ISO consultants and lead auditors. Experienced professionals with expertise in ISO 9001, 14001, 45001, 27001, and 37001 implementation and training."
-        keywords="ISO consultant Malaysia, ISO lead auditor, ISO trainer, certified ISO consultant, ISO 9001 consultant, ISO implementation expert"
+        title="QAI Malaysia Expert ISO Consultants | Certified Lead Auditors"
+        description="Meet QAI Malaysia's team of certified ISO consultants and lead auditors. 30+ years experience in ISO 9001, 14001, 45001, 27001, and 37001 implementation and training in Puchong."
+        keywords="QAI Malaysia consultants, QAI Consulting Malaysia team, ISO consultant Malaysia, ISO lead auditor, ISO trainer, certified ISO consultant, ISO 9001 consultant, Puchong"
         canonicalUrl={window.location.origin + "/consultants"}
       />
       <Navigation />

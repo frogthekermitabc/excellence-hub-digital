@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <img src={qaiLogo} alt="QAI Logo" className="h-20 md:h-24 w-auto mb-6" />
+            <img src={qaiLogo} alt="QAI Malaysia Logo - ISO Certification Training and Consulting" className="h-20 md:h-24 w-auto mb-6" />
             <p className="text-sm text-gray-300 mb-4">{t("footer.description")}</p>
             <div className="flex items-center space-x-2 text-sm text-gray-300">
               <span className="font-semibold">{t("footer.mofRegistered")}</span>
@@ -120,7 +120,7 @@ const Footer = () => {
         <div className="md:hidden space-y-4">
           {/* Company Info - Always Visible */}
           <div>
-            <img src={qaiLogo} alt="QAI Logo" className="h-20 w-auto mb-4" />
+            <img src={qaiLogo} alt="QAI Malaysia Logo - ISO Certification Training and Consulting" className="h-20 w-auto mb-4" />
             <p className="text-sm text-gray-300 mb-4">{t("footer.description")}</p>
             <div className="flex flex-col gap-1 text-sm text-gray-300 mb-6">
               <span className="font-semibold">{t("footer.mofRegistered")}</span>

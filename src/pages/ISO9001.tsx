@@ -15,9 +15,9 @@ const ISO9001 = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="ISO 9001:2015 Training & Certification Malaysia | QAI"
-        description="ISO 9001:2015 Quality Management System training and certification in Malaysia. Awareness, implementer, internal auditor, and lead auditor courses. Improve customer satisfaction and operational efficiency."
-        keywords="ISO 9001 training Malaysia, ISO 9001 certification, quality management system, ISO 9001 lead auditor course, QMS training"
+        title="QAI Malaysia ISO 9001:2015 Training & Certification"
+        description="QAI Malaysia - ISO 9001:2015 Quality Management System training and certification. Awareness, implementer, internal auditor, and lead auditor courses in Puchong. Improve customer satisfaction and operational efficiency."
+        keywords="QAI Malaysia ISO 9001, ISO 9001 training Malaysia, ISO 9001 certification, quality management system, ISO 9001 lead auditor course, QMS training, Puchong"
         canonicalUrl={window.location.origin + "/iso-9001"}
       />
       <Navigation />

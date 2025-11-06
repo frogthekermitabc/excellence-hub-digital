@@ -24,19 +24,19 @@ const Index = () => {
   const heroSlides = [
     {
       image: heroTeam1,
-      alt: "QAI training team photo"
+      alt: "QAI Malaysia professional training team"
     },
     {
       image: heroTraining1,
-      alt: "ISO training session in progress"
+      alt: "QAI Malaysia ISO training session in progress"
     },
     {
       image: heroMeeting1,
-      alt: "Professional meeting with government officials"
+      alt: "QAI Malaysia professional meeting with government officials"
     },
     {
       image: heroTraining2,
-      alt: "ISO certification training classroom"
+      alt: "QAI Malaysia ISO certification training classroom"
     }
   ];
   
@@ -55,7 +55,7 @@ const Index = () => {
         <AnimatedContent>
           <img 
             src={qaiLogo} 
-            alt="QAI - Quality Assurance International" 
+            alt="QAI Malaysia Logo - Quality Assurance International" 
             className="h-24 md:h-32 w-auto mx-auto mb-6"
           />
         </AnimatedContent>
@@ -200,7 +200,7 @@ const Index = () => {
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Credentials</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Trusted by hundreds of organizations across the Middle East
+              QAI Malaysia - Trusted by hundreds of organisations across Malaysia since 1995
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">

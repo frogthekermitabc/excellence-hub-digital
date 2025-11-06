@@ -45,9 +45,9 @@ const Courses = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="ISO Training Courses Malaysia | Public & In-House Programs | QAI"
-        description="Comprehensive ISO training courses in Malaysia. HRD Corp registered programs for ISO 9001, 14001, 45001, 27001, 37001. Awareness, implementer, internal auditor, and lead auditor courses."
-        keywords="ISO training courses Malaysia, ISO certification course, HRD Corp training, ISO lead auditor course, ISO internal auditor training, ISO awareness"
+        title="QAI Malaysia ISO Training Courses | HRD Corp Registered"
+        description="QAI Malaysia (QAI Sdn Bhd) - Comprehensive ISO training courses. HRD Corp registered programs for ISO 9001, 14001, 45001, 27001, 37001. Awareness, implementer, internal auditor, and lead auditor courses in Puchong."
+        keywords="QAI Malaysia training, QAI Consulting Malaysia courses, ISO training courses Malaysia, ISO certification course, HRD Corp training, ISO lead auditor course, ISO internal auditor training, Puchong"
         canonicalUrl={window.location.origin + "/courses"}
       />
       <Navigation />
@@ -76,7 +76,7 @@ const Courses = () => {
             <div>
               <img 
                 src={instructorTeaching} 
-                alt="Instructor Teaching" 
+                alt="QAI Malaysia certified ISO instructor teaching a training course" 
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
@@ -203,7 +203,7 @@ const Courses = () => {
             <div>
               <img 
                 src={instructorPresentation} 
-                alt="Instructor Presentation" 
+                alt="QAI Malaysia expert consultant presenting ISO certification course" 
                 className="rounded-lg shadow-xl w-full"
               />
             </div>
