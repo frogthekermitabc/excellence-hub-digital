@@ -26,9 +26,9 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="About QAI - 30 Years of ISO Excellence in Malaysia | Est. 1995"
-        description="Learn about QAI Sdn Bhd, Malaysia's trusted ISO certification partner since 1995. Accredited training, expert consultants, and 300+ satisfied clients across diverse industries."
-        keywords="QAI Malaysia, ISO company history, ISO certification company, quality assurance Malaysia, ISO training provider, HRD Corp registered"
+        title="About QAI Malaysia - 30 Years of ISO Excellence | Est. 1995"
+        description="QAI Malaysia (QAI Sdn Bhd) - Trusted ISO certification and consulting partner since 1995. 300+ satisfied clients, HRD Corp registered, expert ISO training provider in Puchong, Selangor."
+        keywords="QAI Malaysia, QAI Consulting Malaysia, QAI Sdn Bhd, about QAI, ISO company history, ISO certification company Malaysia, quality assurance Malaysia, ISO training provider, HRD Corp registered, Puchong Selangor"
         canonicalUrl={window.location.origin + "/about"}
       />
       <Navigation />

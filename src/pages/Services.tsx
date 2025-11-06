@@ -15,9 +15,9 @@ const Services = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="ISO Training, Consulting & Auditing Services Malaysia | QAI"
-        description="Comprehensive ISO services including training, consulting, and auditing for all ISO standards. Public courses, in-house training, gap analysis, system implementation, and certification support."
-        keywords="ISO training Malaysia, ISO consulting, ISO auditing, in-house training, ISO implementation, ISO certification support, gap analysis"
+        title="QAI Malaysia ISO Training, Consulting & Auditing Services"
+        description="QAI Malaysia (QAI Sdn Bhd) - Comprehensive ISO services including training, consulting, and auditing for all ISO standards. Expert gap analysis, system implementation, and certification support in Puchong."
+        keywords="QAI Malaysia services, QAI Consulting Malaysia, ISO training Malaysia, ISO consulting services, ISO auditing, in-house training, ISO implementation, ISO certification support, gap analysis, Puchong"
         canonicalUrl={window.location.origin + "/services"}
       />
       <Navigation />

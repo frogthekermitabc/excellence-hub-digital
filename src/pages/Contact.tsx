@@ -99,9 +99,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Contact QAI ISO Consultants Puchong, Selangor | Get Free Quote"
-        description="Contact QAI for ISO certification training and consulting. Located in Puchong, Selangor. Call +60 12-469 1606 or email info@qaims.com.my for a free consultation quote."
-        keywords="contact QAI, ISO consultant Puchong, ISO training Selangor, free ISO quote, QAI contact details, ISO certification enquiry"
+        title="Contact QAI Malaysia - ISO Consultants Puchong | Free Quote"
+        description="Contact QAI Malaysia (QAI Sdn Bhd) for ISO certification training and consulting in Puchong, Selangor. Call +60 12-469 1606 or email info@qaims.com.my for a free consultation."
+        keywords="contact QAI Malaysia, QAI Consulting Malaysia contact, QAI Sdn Bhd, ISO consultant Puchong, ISO training Selangor, free ISO quote Malaysia, QAI contact details, ISO certification enquiry"
         canonicalUrl={window.location.origin + "/contact"}
       />
       <Navigation />
