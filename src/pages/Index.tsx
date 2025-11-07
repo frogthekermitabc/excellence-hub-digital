@@ -60,12 +60,12 @@ const Index = () => {
           />
         </AnimatedContent>
         <AnimatedContent>
-          <AnimatedText className="text-3xl md:text-4xl font-bold text-white mb-4" type="word">
+          <AnimatedText className="text-3xl md:text-4xl font-bold text-white mb-4 font-playfair" type="word">
             {t("home.heroTitle")}
           </AnimatedText>
         </AnimatedContent>
         <AnimatedContent>
-          <AnimatedText className="text-xl text-white/95 mb-3 font-semibold" delay={0.3}>
+          <AnimatedText className="text-xl text-white/95 mb-3 font-semibold font-playfair" delay={0.3}>
             {t("home.heroSubtitle")}
           </AnimatedText>
         </AnimatedContent>
@@ -114,7 +114,7 @@ const Index = () => {
       <section id="iso-systems" className="py-16 scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.isoManagementSystems")}</AnimatedText>
+            <AnimatedText className="text-3xl md:text-4xl font-bold mb-4 font-elm-sans">{t("home.isoManagementSystems")}</AnimatedText>
             <AnimatedText className="text-muted-foreground max-w-2xl mx-auto" delay={0.2}>
               {t("home.isoManagementSystemsDesc")}
             </AnimatedText>
@@ -165,7 +165,7 @@ const Index = () => {
       <section id="services" className="py-16 bg-muted scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.ourServices")}</AnimatedText>
+            <AnimatedText className="text-3xl md:text-4xl font-bold mb-4 font-elm-sans">{t("home.ourServices")}</AnimatedText>
             <AnimatedText className="text-muted-foreground max-w-2xl mx-auto" delay={0.2}>
               {t("home.ourServicesDesc")}
             </AnimatedText>
@@ -198,7 +198,7 @@ const Index = () => {
       <section id="credentials" className="py-16 scroll-mt-32">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Credentials</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-elm-sans">Our Credentials</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               QAI Malaysia - Trusted by hundreds of organisations across Malaysia since 1995
             </p>
@@ -213,7 +213,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <AnimatedText className="text-3xl md:text-4xl font-bold mb-4">{t("home.readyToCertify")}</AnimatedText>
+          <AnimatedText className="text-3xl md:text-4xl font-bold mb-4 font-elm-sans">{t("home.readyToCertify")}</AnimatedText>
           <AnimatedText className="text-xl mb-8 max-w-2xl mx-auto opacity-90" delay={0.2}>
             {t("home.readyToCertifyDesc")}
           </AnimatedText>

@@ -31,7 +31,7 @@ const ISO27001 = () => {
               </div>
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6 font-playfair" type="word">
                 {t("iso27001.title")}
               </AnimatedText>
             </AnimatedContent>

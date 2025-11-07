@@ -59,7 +59,7 @@ const Courses = () => {
             <GraduationCap className="h-16 w-16 mx-auto mb-6" />
           </AnimatedContent>
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("courses.title")}</AnimatedText>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6 font-playfair" type="word">{t("courses.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>

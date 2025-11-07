@@ -63,7 +63,7 @@ const translations = {
       allRightsReserved: "All rights reserved",
     },
     home: {
-      heroTitle: "QAI Sdn Bhd",
+      heroTitle: "QAI",
       heroSubtitle: "Inspiring Excellence Through Quality & Integrity Since 1995",
       heroDescription: "Leading ISO certification consultancy serving Malaysia, Indonesia, and Singapore",
       getFreeQuote: "Get a Free Quote",
@@ -458,7 +458,7 @@ const translations = {
       allRightsReserved: "Hak cipta terpelihara",
     },
     home: {
-      heroTitle: "QAI Sdn Bhd",
+      heroTitle: "QAI",
       heroSubtitle: "Memberi Inspirasi Kecemerlangan Melalui Kualiti & Integriti Sejak 1995",
       heroDescription: "Perunding pensijilan ISO terkemuka yang melayani Malaysia, Indonesia, dan Singapura",
       getFreeQuote: "Dapatkan Sebut Harga Percuma",

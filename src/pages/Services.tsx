@@ -26,7 +26,7 @@ const Services = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">{t("services.title")}</AnimatedText>
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6 font-playfair" type="word">{t("services.title")}</AnimatedText>
           </AnimatedContent>
           <AnimatedContent>
             <AnimatedText className="text-xl max-w-3xl mx-auto opacity-90" delay={0.3}>

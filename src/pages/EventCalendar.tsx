@@ -148,7 +148,7 @@ const EventCalendar = () => {
               <Calendar className="h-16 w-16 mx-auto mb-6" />
             </AnimatedContent>
             <AnimatedContent>
-              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+              <AnimatedText className="text-4xl md:text-5xl font-bold mb-6 font-playfair" type="word">
                 ISO Training Event Calendar
               </AnimatedText>
             </AnimatedContent>

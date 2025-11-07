@@ -109,7 +109,7 @@ const Contact = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-primary via-primary to-secondary py-8 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">{t("contact.title")}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2 font-playfair">{t("contact.title")}</h1>
           <p className="text-base md:text-lg max-w-2xl mx-auto opacity-90">{t("contact.subtitle")}</p>
         </div>
       </div>

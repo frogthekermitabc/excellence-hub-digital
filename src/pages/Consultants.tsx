@@ -79,7 +79,7 @@ const Consultants = () => {
       <AnimatedHero variant="gradient">
         <div className="container mx-auto px-4 text-center">
           <AnimatedContent>
-            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6" type="word">
+            <AnimatedText className="text-4xl md:text-5xl font-bold mb-6 font-playfair" type="word">
               {t("consultants.title")}
             </AnimatedText>
           </AnimatedContent>
