@@ -25,7 +25,7 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
-      <SEO 
+      <SEO
         title="About QAI Malaysia - 30 Years of ISO Excellence | Est. 1995"
         description="QAI Malaysia (QAI Sdn Bhd) - Trusted ISO certification and consulting partner since 1995. 300+ satisfied clients, HRD Corp registered, expert ISO training provider in Puchong, Selangor."
         keywords="QAI Malaysia, QAI Consulting Malaysia, QAI Sdn Bhd, about QAI, ISO company history, ISO certification company Malaysia, quality assurance Malaysia, ISO training provider, HRD Corp registered, Puchong Selangor"
@@ -60,9 +60,9 @@ const About = () => {
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">{t("about.para2")}</p>
               </div>
               <div>
-                <img 
-                  src={teamPhoto} 
-                  alt="QAI Malaysia consulting team in Puchong, Selangor" 
+                <img
+                  src={teamPhoto}
+                  alt="QAI Malaysia consulting team in Puchong, Selangor"
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
@@ -185,9 +185,9 @@ const About = () => {
                 </div>
               </Card>
               <div>
-                <img 
-                  src={professionalTeam} 
-                  alt="QAI Malaysia professional team office in Puchong" 
+                <img
+                  src={professionalTeam}
+                  alt="QAI Malaysia professional team office in Puchong"
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>

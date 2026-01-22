@@ -10,8 +10,8 @@ const Footer = () => {
   const [openSections, setOpenSections] = useState<string[]>([]);
 
   const toggleSection = (section: string) => {
-    setOpenSections(prev => 
-      prev.includes(section) 
+    setOpenSections(prev =>
+      prev.includes(section)
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -58,6 +58,16 @@ const Footer = () => {
                 <Link to="/courses" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className={linkClasses}>
                   {t("nav.courses")}
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://qaidataanalytics.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClasses}
+                >
+                  {t("footer.analytics")}
+                </a>
               </li>
             </ul>
           </div>
@@ -155,6 +165,16 @@ const Footer = () => {
                   <Link to="/courses" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className={linkClasses}>
                     {t("nav.courses")}
                   </Link>
+                </li>
+                <li>
+                  <a
+                    href="https://qaidataanalytics.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={linkClasses}
+                  >
+                    {t("footer.analytics")}
+                  </a>
                 </li>
               </ul>
             </CollapsibleContent>

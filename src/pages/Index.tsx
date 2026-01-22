@@ -19,7 +19,7 @@ import heroTraining2 from "@/assets/hero-training-2.jpg";
 
 const Index = () => {
   const { t } = useLanguage();
-  
+
   // Hero carousel slides
   const heroSlides = [
     {
@@ -39,10 +39,10 @@ const Index = () => {
       alt: "QAI Malaysia ISO certification training classroom"
     }
   ];
-  
+
   return (
     <div className="min-h-screen">
-      <SEO 
+      <SEO
         title="QAI Malaysia - ISO Certification Training & Consulting | Est. 1995"
         description="QAI Malaysia (QAI Sdn Bhd) - Leading ISO certification training and consulting provider in Malaysia since 1995. Expert ISO 9001, 14001, 45001, 27001, and 37001 services in Puchong, Selangor."
         keywords="QAI Malaysia, QAI Consulting Malaysia, QAI Sdn Bhd, ISO certification Malaysia, ISO training Malaysia, ISO consultant Puchong, quality management Malaysia, ISO 9001 training, ISO 14001, ISO 45001, ISO 27001, Puchong Selangor"
@@ -53,9 +53,9 @@ const Index = () => {
       {/* Hero Section - Carousel */}
       <HeroCarousel slides={heroSlides} autoplayDelay={5000}>
         <AnimatedContent>
-          <img 
-            src={qaiLogo} 
-            alt="QAI Malaysia Logo - Quality Assurance International" 
+          <img
+            src={qaiLogo}
+            alt="QAI Malaysia Logo - Quality Assurance International"
             className="h-24 md:h-32 w-auto mx-auto mb-6"
           />
         </AnimatedContent>
@@ -121,37 +121,37 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ServiceCard 
+            <ServiceCard
               icon={Shield}
               title="ISO 9001:2015"
               description={t("home.iso9001Desc")}
               link="/iso-9001"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={Globe}
               title="ISO 14001:2015"
               description={t("home.iso14001Desc")}
               link="/iso-14001"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={Shield}
               title="ISO 45001:2018"
               description={t("home.iso45001Desc")}
               link="/iso-45001"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={FileCheck}
               title="ISO 27001:2022"
               description={t("home.iso27001Desc")}
               link="/iso-27001"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={Award}
               title="ISO 37001:2018"
               description={t("home.iso37001Desc")}
               link="/iso-37001"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={BookOpen}
               title="ISO 21001"
               description={t("home.iso21001Desc")}
@@ -172,19 +172,19 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <ServiceCard 
+            <ServiceCard
               icon={GraduationCap}
               title={t("home.trainingServices")}
               description={t("home.trainingServicesDesc")}
               link="/courses"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={Users}
               title={t("home.consultingServices")}
               description={t("home.consultingServicesDesc")}
               link="/services"
             />
-            <ServiceCard 
+            <ServiceCard
               icon={FileCheck}
               title={t("home.auditingServices")}
               description={t("home.auditingServicesDesc")}
@@ -206,6 +206,56 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <StatCard icon={Award} value="30+" label={t("home.yearsOfExcellence")} />
             <StatCard icon={Users} value="300+" label={t("home.satisfiedClients")} />
+          </div>
+        </div>
+      </section>
+
+      {/* QAI Analytics Promotion */}
+      <section className="py-16 bg-card border-y border-white/10 scroll-mt-32">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2">
+              <div className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                NEW: QAI Analytics Platform
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 font-elm-sans leading-tight">
+                Unlock Data-Driven Insights with QAI Analytics
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Take your management systems to the next level. Our new Data Analytics Platform provides real-time monitoring,
+                automated reporting, and professional data visualization to help you make informed decisions.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://qaidataanalytics.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button size="lg" className="bg-primary hover:bg-primary/90">
+                    Visit QAI Analytics
+                  </Button>
+                </a>
+                <Link to="/contact">
+                  <Button size="lg" variant="outline">
+                    Learn More
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 aspect-video group">
+                <img
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+                  alt="QAI Analytics Dashboard Preview"
+                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8">
+                  <p className="text-white font-medium italic">
+                    "Professional data analytics and management platform with bilingual support"
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

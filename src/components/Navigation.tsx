@@ -144,10 +144,22 @@ const Navigation = () => {
             <LanguageToggle />
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-3">
+            <a
+              href="https://qaidataanalytics.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/5 font-semibold"
+              >
+                {t("nav.analytics")}
+              </Button>
+            </a>
             <Link to="/contact">
-              <Button 
+              <Button
                 className="hover:opacity-90 text-white font-semibold"
                 style={{ background: 'linear-gradient(90deg, #EF4444, #DC2626)' }}
               >
@@ -216,6 +228,16 @@ const Navigation = () => {
                 {t("nav.courses")}
               </Button>
             </Link>
+            <a
+              href="https://qaidataanalytics.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+            >
+              <Button variant="outline" className="w-full justify-start border-primary text-primary mb-2">
+                {t("nav.analytics")}
+              </Button>
+            </a>
             <Link to="/contact" onClick={() => setIsOpen(false)}>
               <Button variant={isActive("/contact") ? "default" : "ghost"} className="w-full justify-start">
                 {t("nav.contact")}

@@ -51,6 +51,7 @@ const translations = {
       contact: "Contact",
       getQuote: "Get a Quote",
       company: "Company",
+      analytics: "QAI Analytics",
     },
     footer: {
       description:
@@ -61,6 +62,7 @@ const translations = {
       mofRegistered: "MOF Registered",
       hrdCorp: "HRD Corp",
       allRightsReserved: "All rights reserved",
+      analytics: "QAI Analytics",
     },
     home: {
       heroTitle: "QAI",
@@ -446,6 +448,7 @@ const translations = {
       courses: "Kursus",
       contact: "Hubungi",
       getQuote: "Dapatkan Sebut Harga",
+      analytics: "QAI Analytics",
     },
     footer: {
       description:
@@ -456,6 +459,7 @@ const translations = {
       mofRegistered: "Berdaftar MOF",
       hrdCorp: "HRD Corp",
       allRightsReserved: "Hak cipta terpelihara",
+      analytics: "QAI Analytics",
     },
     home: {
       heroTitle: "QAI",
